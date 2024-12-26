@@ -1,0 +1,143 @@
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+
+import Text from "@/components/ui/Text";
+
+import arrow from "@/public/images/press/white arrow.png";
+import blog1 from "@/public/images/press/approvedblog.png";
+import blog2 from "@/public/images/press/blog2.png";
+import blog3 from "@/public/images/press/blog3.png";
+import blog4 from "@/public/images/press/blog4.png";
+import blog5 from "@/public/images/press/blog5.png";
+import blogb from "@/public/images/press/blogb.png";
+
+const Blog = () => {
+  // const title = "1";
+  // const slug = title.toLowerCase().replace(/\s+/g, "-");
+
+  return (
+    <div className=" pt-16">
+      <div className="w-full max-w-[1200px] flex flex-wrap justify-center gap-[24px] mb-[44px] mob:mb-[24px] mx-auto">
+        <div className="max-w-[267px] border border-black rounded-[10px]">
+          <Image src={blog1} alt="" width={267} height={192} className="rounded-t-xl"/>
+          <div className="p-4">
+            <Text className="text-white">Blog</Text>
+            <Text className="text-white text-[20px] leading-[28px] my-2">
+              Do you need a soils report or civil engineer for an addition in
+              Bellevue?
+            </Text>
+            <Text className="text-gray-400  text-sm">
+              When planning to build an addition in Bellevue, Washington,
+              understanding the city’s zoning regulations is essential for a
+              smooth and compliant construction process. Bellevue’s zoning
+            </Text>
+
+
+          </div>
+        </div>
+        <div className="max-w-[267px] border border-black rounded-[10px]">
+          <Image src={blog2} alt="" width={267} height={192} className="rounded-t-xl"/>
+          <div className="p-4">
+            <Text className="text-white">Press</Text>
+            <Text className="text-white text-[20px] leading-[28px] my-2">
+              The Cost of Architecture
+            </Text>
+            <Text className="text-gray-400  text-sm">
+              The cost of architecture is a contentious topic and a difficult
+              one to find a consensus on. The American Institute of Architects
+              suggests that design
+            </Text>
+
+          </div>
+        </div>
+        <div className="max-w-[267px] border border-black rounded-[10px]">
+          <Image src={blog3} alt="" width={267} height={192} className="rounded-t-xl"/>
+          <div className="p-4">
+            <Text className="text-white">Blog</Text>
+            <Text className="text-white text-[20px] leading-[28px] my-2">
+              Are you being ripped off by your insurance company?
+            </Text>
+            <Text className="text-gray-400  text-sm">
+              Are you feeling the weight of uncertainty after filing a water
+              damage claim with your insurance company? Have you ever wondered
+              if the estimate you
+            </Text>
+
+          </div>
+        </div>
+        <div className="max-w-[267px] border border-black rounded-[10px]">
+          <Image src={blog4} alt="" width={267} height={192} className="rounded-t-xl"/>
+          <div className="p-4">
+            <Text className="text-white">Blog</Text>
+            <Text className="text-white text-[20px] leading-[28px] my-2">
+              New construction CRM app JobSync available on apple app store
+            </Text>
+            <Text className="text-gray-400  text-sm ">
+              In the fast-paced world of construction management, efficiency and
+              precision are paramount. That’s why we’re excited to introduce
+              JobSync, our revolutionary proprietary software that seamlessly
+            </Text>
+
+
+          </div>
+        </div>
+      </div>
+      {/* row2 */}
+      <div className="w-full max-w-[1200px] flex flex-wrap justify-center gap-[24px] mb-[24px] mx-auto">
+        <div className="max-w-[558px] border border-black rounded-[10px]">
+          <Image src={blogb} alt="" width={558} height={294} className="rounded-t-xl" />
+          <div className="p-4">
+            <Text className="text-white">Blog</Text>
+            <Text className="text-white text-[20px] leading-[28px] my-2">
+              The Best CRM and Construction Project Management Software
+            </Text>
+            <Text className="text-gray-400  text-sm">
+              In the intricate world of construction, effective management of
+              both customer relationships and project timelines is paramount for
+              success. Construction companies operate within a dynamic
+            </Text>
+            <Link href={`/blogs/5`} className="text-white flex items-center mt-5">
+              LEARN MORE <Image className="-ms-4" src={arrow} alt="" width={55} height={55} />
+            </Link>
+
+          </div>
+        </div>
+
+        <div className="max-w-[267px] border border-black rounded-[10px]">
+          <Image src={blog5} alt="" width={267} height={192} className="rounded-t-xl"/>
+          <div className="p-4">
+            <Text className="text-white">Press</Text>
+            <Text className="text-white text-[20px] leading-[28px] my-2">
+              Why aren’t general contractors getting back to me?
+            </Text>
+            <Text className="text-gray-400  text-sm ">
+              When getting bids for construction, it can be quite a daunting
+              process. When you reach out to a general contractor and ask for a
+              bid,
+            </Text>
+
+
+          </div>
+        </div>
+        <div className="max-w-[267px] border border-black rounded-[10px]">
+          <Image src={blog2} alt="" width={267} height={192} className="rounded-t-xl"/>
+          <div className="p-4">
+            <Text className="text-white">Press</Text>
+            <Text className="text-white text-[20px] leading-[28px] my-2">
+              Why Do I Need a Project Manager?
+            </Text>
+            <Text className="text-gray-400  text-sm ">
+              A project manager is absolutely crucial to the construction
+              process for several reasons:Coordination, budget control....
+            </Text>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Blog;
