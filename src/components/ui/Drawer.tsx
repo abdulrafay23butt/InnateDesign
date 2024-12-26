@@ -27,7 +27,7 @@ const Drawer: React.FC<DrawerProps> = ({
         // onClose();
       }
     },
-    [onClose]
+    []
   );
 
   useEffect(() => {

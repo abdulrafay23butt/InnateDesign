@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import Image from "next/image";
 
 import Text from "@/components/ui/Text";
@@ -20,15 +20,16 @@ interface Step5Props {
 const Step5: React.FC<Step5Props> = ({ onNext, onPrevious, onChange }) => {
   const [selectedId, setSelectedId] = useState<number | null>(null);
 
-  const styles = [
+  const styles = useMemo(() => [
     { id: 1, imageSrc: s1, title: "Modern", description: "Streamlined, functional spaces with sleek materials" },
     { id: 2, imageSrc: s2, title: "Mid-Century", description: "Streamlined, functional spaces with sleek materials" },
     { id: 3, imageSrc: s3, title: "Spanish", description: "Streamlined, functional spaces with sleek materials" },
     { id: 4, imageSrc: s4, title: "Coastal", description: "Cozy spaces and beachy vibes" },
     { id: 5, imageSrc: s5, title: "Farmhouse", description: "Rustic Materials" },
     { id: 6, imageSrc: s6, title: "Other", description: "Share your vision" },
-  ];
+  ], []);
 
+  
   useEffect(() => {
     if (selectedId !== null) {
       const selectedStyle = styles.find((style) => style.id === selectedId);
