@@ -7,11 +7,11 @@ import React from 'react'
 const PressPage = () => {
   return (
     <>
-     <Navbar />
-      <HeroPress/>
+      <Navbar />
+      <HeroPress />
       <div className="gradient">
-      <Blog/>
-      <Contact/>
+        <Blog />
+        <Contact />
       </div>
     </>
   )

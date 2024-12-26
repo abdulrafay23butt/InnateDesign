@@ -5,6 +5,7 @@ import Step1 from "./Step1";
 import Step2 from "./Step2";
 import Step3 from "./Step3";
 import Step4 from "./Step4";
+import Step4Alternative from "./Step4Alternative";
 import Step5 from "./Step5";
 import Step6 from "./Step6";
 import Step7 from "./Step7";
@@ -27,12 +28,12 @@ const OnBoarding: React.FC = () => {
   interface FormData {
     [key: string]: string | number | object | unknown[]; // Add supported data types
   }
-  
+
   const [formData, setFormData] = useState<FormData>(() => {
     const savedData = localStorage.getItem("formData");
     return savedData ? (JSON.parse(savedData) as FormData) : {}; // Retrieve data from localStorage
   });
-  
+
 
   useEffect(() => {
     // Save the current step to localStorage
@@ -44,31 +45,59 @@ const OnBoarding: React.FC = () => {
     localStorage.setItem("formData", JSON.stringify(formData));
   }, [formData]);
 
-  const handleNext = () =>
-    setCurrentStep((prev) => (prev < totalSteps ? prev + 1 : prev));
-  const handlePrevious = () =>
-    setCurrentStep((prev) => (prev > 0 ? prev - 1 : prev));
+  const handleNext = () => {
+    setCurrentStep((prev) => {
+      // If currently on Step 3, check the selection from Step1 to decide the next step
+      if (prev === 3) {
+        const step1Data = formData["step1"] as { selectedOptions: string[] };
+        if (step1Data?.selectedOptions?.includes("Accessory Dwelling Unit (ADU)")) {
+          return 4.5; // Arbitrary number for Step4Alternative
+        }
+      }
+      if (prev === 4.5) {
+        return 5
+      }
+      // Default navigation
+      return prev < totalSteps ? prev + 1 : prev;
+    });
+  };
+  const handlePrevious = () => {
+    setCurrentStep((prev) => {
+      // If currently on Step 3, check the selection from Step1 to decide the next step
+      if (prev === 5) {
+        const step1Data = formData["step1"] as { selectedOptions: string[] };
+        if (step1Data?.selectedOptions?.includes("Accessory Dwelling Unit (ADU)")) {
+          return 4.5; // Arbitrary number for Step4Alternative
+        }
+      }
+      if (prev === 4.5) {
+        return 3
+      }
+      // Default navigation
+      return prev > 0 ? prev - 1 : prev;
+    });
+  };
 
   const handleInputChange = (step: number, data: string | number | object | unknown[]) => {
     // Only update the state if the data has changed
     if (JSON.stringify(formData[`step${step}`]) !== JSON.stringify(data)) {
       console.log(`Step ${step} data:`, data); // Log the data
-  
+
       setFormData((prev: FormData) => ({
         ...prev,
         [`step${step}`]: data, // Ensure alignment with FormData
       }));
     }
   };
-  
-  
+
+
 
   const handleStep8Next = async (): Promise<void> => {
     console.log("All data collected so far:", formData);
-  
+
     // Define your API endpoint
     const apiEndpoint = "/api/contactFlow"; // Replace with your actual API URL
-  
+
     try {
       // Check if formData is valid before sending the API request
       if (!formData || Object.keys(formData).length === 0) {
@@ -95,16 +124,16 @@ const OnBoarding: React.FC = () => {
         body: JSON.stringify(formDataWithImages),
       });
       console.log("API response:", formDataWithImages);
-  
+
       // Check if the response is successful
       if (!response.ok) {
         throw new Error(`API call failed with status: ${response.status}`);
       }
-  
+
       // Parse the API response
       const data: { success: boolean; message: string } = await response.json();
       console.log("API response:", data);
-  
+
       // Check the response success
       if (data.success) {
         handleNext(); // Proceed to the next step
@@ -116,9 +145,9 @@ const OnBoarding: React.FC = () => {
       alert("Something went wrong. Please try again.");
     }
   };
-  
-  
-  
+
+
+
 
   // Calculate progress as a percentage
   const progress = ((currentStep / totalSteps) * 100).toFixed(2);
@@ -192,6 +221,12 @@ const OnBoarding: React.FC = () => {
           onPrevious={handlePrevious}
           onChange={(data) => handleInputChange(4, data)}
         />
+      )}
+      {currentStep === 4.5 && (
+        <Step4Alternative
+          onNext={handleNext}
+          onPrevious={handlePrevious}
+          onChange={(data) => handleInputChange(4, data)} />
       )}
       {currentStep === 5 && (
         <Step5

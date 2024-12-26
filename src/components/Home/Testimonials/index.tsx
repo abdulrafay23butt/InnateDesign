@@ -10,7 +10,7 @@ import profile3 from "@/public/images/home/profile (2).png";
 const Testimonials = () => {
   return (
     <div className="max-w-[1140px] w-full mx-auto py-32 tab:px-5">
-      
+
 
       <div
         className="flex flex-wrap justify-center gap-[20px]"
@@ -31,10 +31,10 @@ const Testimonials = () => {
                 <Text className=" text-[20px]  leading-[28px] text-white ">
                   Pellegrino Remodel
                 </Text>
-                <Text className="mt-1 text-white ">CEO at TechCorp</Text>
+                <Text className="mt-1 text-gray-400 ">CEO at TechCorp</Text>
               </div>
             </div>
-            <Text className="text-white  mt-3 ">This service is amazing!</Text>
+            <Text className="text-gray-400  text-sm  mt-3 ">This service is amazing!</Text>
           </div>
         </div>
         <div className="w-full max-w-[364px] border border-[#0000001A] rounded-[10px]">
@@ -53,10 +53,10 @@ const Testimonials = () => {
                 <Text className=" text-[20px]  leading-[28px] text-white ">
                   Norman Remodel
                 </Text>
-                <Text className="mt-1 text-white ">CEO at TechCorp</Text>
+                <Text className="mt-1 text-gray-400 ">CEO at TechCorp</Text>
               </div>
             </div>
-            <Text className="text-white  mt-3 ">This service is amazing!</Text>
+            <Text className="text-gray-400  text-sm  mt-3 ">This service is amazing!</Text>
           </div>
         </div>
         <div className="w-full max-w-[364px] border border-[#0000001A] rounded-[10px]">
@@ -75,10 +75,10 @@ const Testimonials = () => {
                 <Text className=" text-[20px]  leading-[28px] text-white ">
                   Eleanor Pena
                 </Text>
-                <Text className="mt-1 text-white ">CEO at TechCorp</Text>
+                <Text className="mt-1 text-gray-400 ">CEO at TechCorp</Text>
               </div>
             </div>
-            <Text className="text-white  mt-3 ">This service is amazing!</Text>
+            <Text className="text-gray-400  text-sm  mt-3 ">This service is amazing!</Text>
           </div>
         </div>
       </div>

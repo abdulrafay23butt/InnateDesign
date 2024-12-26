@@ -95,7 +95,7 @@ const Navbar = () => {
                       <Link
                         href="/about"
                         onClick={() => handleTabChange("/about")}
-                        className={`block text-[16px] font-inter font-light leading-[25.5px] ${
+                        className={`block text-[16px] font-inter font-light leading-[25.5px] hover:text-[#2CFF06] ${
                           activeTab === "/about"
                             ? "text-[#2CFF06]"
                             : "text-[#FFFFFF]"
@@ -108,7 +108,7 @@ const Navbar = () => {
                       <Link
                         href="/work"
                         onClick={() => handleTabChange("/work")}
-                        className={`block text-[16px] font-inter font-light leading-[25.5px] ${
+                        className={`block text-[16px] font-inter font-light leading-[25.5px] hover:text-[#2CFF06] ${
                           activeTab === "/work"
                             ? "text-[#2CFF06]"
                             : "text-[#FFFFFF]"
@@ -121,7 +121,7 @@ const Navbar = () => {
                       <Link
                         href="/services"
                         onClick={() => handleTabChange("/services")}
-                        className={`block text-[16px] font-inter font-light leading-[25.5px]  ${
+                        className={`block text-[16px] font-inter font-light leading-[25.5px] hover:text-[#2CFF06] ${
                           activeTab === "/services"
                             ? "text-[#2CFF06]"
                             : "text-[#FFFFFF]"
@@ -203,7 +203,7 @@ const Navbar = () => {
                       <Link
                         href="/press"
                         onClick={() => handleTabChange("/press")}
-                        className={`block text-[16px] font-inter font-light leading-[25.5px] ${
+                        className={`block text-[16px] font-inter font-light leading-[25.5px] hover:text-[#2CFF06] ${
                           activeTab === "/press"
                             ? "text-[#2CFF06]"
                             : "text-[#FFFFFF]"
@@ -216,7 +216,7 @@ const Navbar = () => {
                       <Link
                         href="/contact"
                         onClick={() => handleTabChange("/contact")}
-                        className={`block text-[16px] font-inter font-light leading-[25.5px] ${
+                        className={`block text-[16px] font-inter font-light leading-[25.5px] hover:text-[#2CFF06] ${
                           activeTab === "/contact"
                             ? "text-[#2CFF06]"
                             : "text-[#FFFFFF]"

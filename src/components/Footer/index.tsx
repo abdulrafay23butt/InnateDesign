@@ -27,27 +27,34 @@ const Footer = () => {
         </div>
         <div className="">
           <div className="flex gap-4 ml-3">
-            <Image
-              src={insta}
-              alt="Instagram"
-              width={32}
-              height={32}
-              className="transition-transform duration-300 hover:scale-[1.1] cursor-pointer"
-            />
-            <Image
-              src={fb}
-              alt="Facebook"
-              width={32}
-              height={32}
-              className="transition-transform duration-300  hover:scale-[1.1] cursor-pointer"
-            />
-            <Image
-              src={linkedin}
-              alt="LinkedIn"
-              width={32}
-              height={32}
-              className="transition-transform duration-300 hover:scale-[1.1] cursor-pointer"
-            />
+            <a href="https://www.instagram.com/innate_aec/" target="_blank">
+              <Image
+                src={insta}
+                alt="Instagram"
+                width={32}
+                height={32}
+                className="transition-transform duration-300 hover:scale-[1.1] cursor-pointer"
+                
+              />
+            </a>
+            <a href="https://www.facebook.com/innateaec" target="_blank">
+              <Image
+                src={fb}
+                alt="Facebook"
+                width={32}
+                height={32}
+                className="transition-transform duration-300  hover:scale-[1.1] cursor-pointer"
+              />
+            </a>
+            <a href="https://www.linkedin.com/company/innate-nw/" target="_blank">
+              <Image
+                src={linkedin}
+                alt="LinkedIn"
+                width={32}
+                height={32}
+                className="transition-transform duration-300 hover:scale-[1.1] cursor-pointer"
+              />
+            </a>
           </div>
           <Text className="text-[#D9D9D9] mt-3">© Innate NW, LLC</Text>
         </div>

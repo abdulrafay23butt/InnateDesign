@@ -47,7 +47,7 @@ const Services = () => {
                 width={95}
                 height={95}
               />
-              <Text className="text-[24px] font-medium text-center my-4">
+              <Text className="text-[24px] font-light text-center my-4">
                 Roofing
               </Text>
               <div className="flex justify-center w-full">
@@ -79,7 +79,7 @@ const Services = () => {
                 width={95}
                 height={95}
               />
-              <Text className="text-[24px] font-medium text-center my-4">
+              <Text className="text-[24px] font-light text-center my-4">
                 Decks
               </Text>
               <div className="flex justify-center w-full">
@@ -110,7 +110,7 @@ const Services = () => {
                 width={95}
                 height={95}
               />
-              <Text className="text-[24px] font-medium text-center my-4">
+              <Text className="text-[24px] font-light text-center my-4">
                 Kitchens & Bathrooms
               </Text>
               <div className="flex justify-center w-full">
@@ -143,7 +143,7 @@ const Services = () => {
                 width={95}
                 height={95}
               />
-              <Text className="text-[24px] font-medium text-center my-4">
+              <Text className="text-[24px] font-light text-center my-4">
                 Architectural Services
               </Text>
               <div className="flex justify-center">
@@ -175,7 +175,7 @@ const Services = () => {
                 width={95}
                 height={95}
               />
-              <Text className="text-[24px] font-medium text-center my-4">
+              <Text className="text-[24px] font-light text-center my-4">
                 New Construction & ADU
               </Text>
               <div className="flex justify-center">
@@ -209,7 +209,7 @@ const Services = () => {
                 width={95}
                 height={95}
               />
-              <Text className="text-[24px] font-medium text-center my-4">
+              <Text className="text-[24px] font-light text-center my-4">
                 Siding
               </Text>
               <div className="flex justify-center w-full">
@@ -240,7 +240,7 @@ const Services = () => {
                 width={95}
                 height={95}
               />
-              <Text className="text-[24px] font-medium text-center my-4">
+              <Text className="text-[24px] font-light text-center my-4">
                 Windows & Doors
               </Text>
               <div className="flex justify-center w-full">
@@ -271,8 +271,8 @@ const Services = () => {
                 width={95}
                 height={95}
               />
-              <Text className="text-[24px] font-medium text-center my-4">
-                Interior Design
+              <Text className="text-[24px] font-light text-center my-4">
+                Natural Disaster Migitation
               </Text>
               <div className="flex justify-center w-full">
                 <Button className="w-[136px] bg-transparent text-white border border-white hover:bg-white hover:text-black hover:border-black transition duration-300">
