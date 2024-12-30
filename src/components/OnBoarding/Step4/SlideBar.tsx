@@ -1,6 +1,5 @@
 import React from "react";
 import SliderFilter from "./SLiderFilter";
-
 interface Step4Props {
   onChange: (data: { selectedOptions: string[] }) => void; // Adjusted data structure
 }
@@ -12,17 +11,13 @@ const SlideBar: React.FC<Step4Props> = ({ onChange }) => {
   // Update local state and notify parent
   const handleSliderChange = (
     start: React.SetStateAction<number>,
-    end: React.SetStateAction<number>
-  ) => {
-    const newStart = typeof start === "function" ? start(rangeStart) : start;
-    const newEnd = typeof end === "function" ? end(rangeEnd) : end;
-
-    setRangeStart(newStart);
-    setRangeEnd(newEnd);
+    end: React.SetStateAction<number>) => {
+    setRangeStart(start);
+    setRangeEnd(end);
 
     // Format data to match `selectedOptions` structure
     onChange({
-      selectedOptions: [`Range: ${newStart}K - ${newEnd}K`],
+      selectedOptions: [`Range: ${start}K - ${end}K`],
     });
   };
 
@@ -31,12 +26,10 @@ const SlideBar: React.FC<Step4Props> = ({ onChange }) => {
       <SliderFilter
         rangeStart={rangeStart}
         rangeEnd={rangeEnd}
-        setRangeStart={(value) => handleSliderChange(value, rangeEnd)}
-        setRangeEnd={(value) => handleSliderChange(rangeStart, value)}
+        setRangeStart={(value) => handleSliderChange(value, rangeEnd)} // Updates rangeStart
+        setRangeEnd={(value) => handleSliderChange(rangeStart, value)} // Updates rangeEnd
         onChange={(data) => {
-          onChange({
-            selectedOptions: [`Range: ${data.rangeStart}K - ${data.rangeEnd}K`],
-          });
+          handleSliderChange(data.rangeStart, data.rangeEnd); // Ensure synchronization
         }}
       />
     </div>

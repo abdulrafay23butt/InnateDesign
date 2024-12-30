@@ -18,7 +18,6 @@ const ServicesPage = () => {
       <HeroService />
       <Collective />
       <LatestProjects />
-      <Services />
       <Testimonials />
       <OurProcess />
       
