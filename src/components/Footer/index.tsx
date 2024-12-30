@@ -4,9 +4,9 @@ import Image from "next/image";
 import Text from "../ui/Text";
 
 import logo from "@/public/logo-innate.png";
-import insta from "@/public/instagaram.svg";
-import fb from "@/public/facebook.svg";
-import linkedin from "@/public/linkedin.svg";
+import insta from "@/public/insta.svg";
+import fb from "@/public/fb.svg";
+import linkedin from "@/public/ln.svg";
 
 const Footer = () => {
   return (

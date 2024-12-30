@@ -27,6 +27,10 @@ body {
   background: linear-gradient(to left, #0e1637 0%, #080a1c 25%,  #000000 100%);
 
 }
+.lowergradient{
+  background: linear-gradient(to top left, #0e1637 0%,#080a1c 20%, #000000 40%, #000000 100%);
+}
+
 .gradient2{
   background: linear-gradient(to left, #171d37 5%, #0f1221 25%, #0f1015 100%);
 

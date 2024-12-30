@@ -15,6 +15,8 @@ import native from "@/public/images/blog/native.png";
 interface Content {
   type: "text" | "image";
   text?: string;
+  text1?: string;
+  text2?: string;
   src?: string | StaticImageData;
   alt?: string;
 }
@@ -107,14 +109,18 @@ const Blog: FC<ArticleProps> = ({ id }) => {
       title: "Additional Insights on Carbon Credit",
       publishedDate: "15 December, 2023", // Add the publication date here
       content: [
-        {
-          type: "text",
-          text: "Lorem ipsum dolor sit amet consectetur. Auctor enim nec posuere augue eu varius auctor...",
-        },
+
         {
           type: "image",
           src: frame2, // Image imported
           alt: "Image description",
+        },
+        {
+          type: "text",
+          text: "In the fast-paced world of construction management, efficiency and precision are paramount. That’s why we’re excited to introduce JobSync, our revolutionary proprietary software that seamlessly integrates CRM functionality with construction management software tools, all while harnessing the power of AI to predict pricing based on job type and other factors. With JobSync, we’re not just offering a one-stop solution for project management; we’re revolutionizing the way construction businesses operate, streamlining processes, and enhancing decision-making capabilities. Let’s delve into how JobSync can transform your workflow and propel your projects towards success.",
+          text1: "JobSync isn’t just another CRM or construction management software; it’s a comprehensive solution designed to meet the unique challenges of the construction industry. By integrating CRM features, JobSync allows you to effortlessly manage client interactions, track leads, and maintain communication channels, ensuring that no opportunity slips through the cracks. Simultaneously, its construction management tools provide a centralized platform for project planning, scheduling, and resource allocation, facilitating smooth collaboration among team members and stakeholders. What sets JobSync apart, however, is its AI-driven pricing prediction capability. Leveraging advanced algorithms and data analytics, JobSync analyzes job types, local market trends, and median incomes to provide accurate pricing estimates, empowering you to make informed decisions and stay competitive in a dynamic market landscape.",
+          text2:"In conclusion, JobSync represents a paradigm shift in construction management software, offering a holistic solution that combines CRM functionality, construction management tools, and AI-driven insights. By adopting JobSync, construction businesses can streamline their operations, enhance client relationships, and optimize project outcomes. Whether you’re a small contracting firm or a large construction company, JobSync provides the tools and intelligence needed to thrive in today’s competitive environment. Experience the power of JobSync and take your construction projects to new heights of efficiency and profitability."
+
         },
       ],
     },
@@ -178,15 +184,19 @@ const Blog: FC<ArticleProps> = ({ id }) => {
           </div>
           {section.content.map((item, index) => (
             <div key={index} className="mb-4">
-              {item.type === "text" ? (
-                <p>{item.text}</p>
-              ) : item.type === "image" && item.src ? (
+              {item.type === "image" && item.src ? (
                 <Image
                   src={item.src}
                   alt={item.alt!}
                   width={770}
                   height={400.48}
                 />
+              ) : item.type === "text" ? (
+                <>
+                  <p>{item.text}</p><br />
+                  <p>{item.text1}</p><br />
+                  <p>{item.text2}</p>
+                </>
               ) : null}
             </div>
           ))}

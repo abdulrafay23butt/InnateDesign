@@ -17,7 +17,7 @@ const BlogPage = () => {
 
     console.log("params", id); // Check the converted number
     return (
-        <div className="bg-gradient-to-r to-[#141E4C] via-[#00000040] from-[#0f1015] py-20">
+        <div className=" py-20">
             {/* Pass the numeric id as a prop */}
             <Blog id={id} />
         </div>
