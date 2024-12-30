@@ -9,7 +9,7 @@ import ADU from "@/public/images/onboarding/ADU.png"
 interface Step5Props {
     onNext: () => void;
     onPrevious: () => void;
-    onChange: (data: { selectedStyle: { id: number | null; title: string; description: string } }) => void;
+    onChange: (data: { selectedOptions: { id: number | null; title: string; description: string } }) => void;
 }
 
 const Step4Alternative: React.FC<Step5Props> = ({ onNext, onPrevious, onChange }) => {
@@ -24,9 +24,9 @@ const Step4Alternative: React.FC<Step5Props> = ({ onNext, onPrevious, onChange }
 
     useEffect(() => {
         if (selectedId !== null) {
-            const selectedStyle = styles.find((style) => style.id === selectedId);
-            if (selectedStyle) {
-                onChange({ selectedStyle }); // Pass the selected style to the parent
+            const selectedOptions = styles.find((style) => style.id === selectedId);
+            if (selectedOptions) {
+                onChange({ selectedOptions }); // Pass the selected style to the parent
             }
         }
     }, [selectedId, onChange, styles]);

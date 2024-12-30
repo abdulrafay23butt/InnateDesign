@@ -46,14 +46,30 @@ const Step2: React.FC<Step2Props> = ({ onNext, onPrevious, onChange }) => {
 
         <div className="flex flex-col gap-3">
           {options.map((option, index) => (
-            <label key={index} className="flex items-center gap-[14px]">
+            <label key={index} className="flex items-center gap-[14px] w-fit">
               <input
                 type="checkbox"
                 value={option}
                 checked={selectedOptions.includes(option)}
                 onChange={() => handleCheckboxChange(option)}
-                className="h-5 w-5 accent-blue-500"
+                className="hidden"
               />
+              <div className={`h-5 w-5 border border-gray-500 flex items-center justify-center rounded ${selectedOptions.includes(option) ? 'bg-blue-500' : 'bg-transparent'}`}>
+                {selectedOptions.includes(option) && (
+                  <svg
+                    className="h-5 w-5 text-white"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M16.707 5.293a1 1 0 00-1.414 0L9 11.586 6.707 9.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l7-7a1 1 0 000-1.414z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                )}
+              </div>
               <span className="text-[20px] text-[#D9D9D9]">{option}</span>
             </label>
           ))}

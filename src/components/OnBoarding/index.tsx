@@ -57,6 +57,10 @@ const OnBoarding: React.FC = () => {
       if (prev === 4.5) {
         return 5
       }
+      if(prev===8)
+      {
+        return 9
+      }
       // Default navigation
       return prev < totalSteps ? prev + 1 : prev;
     });
@@ -114,7 +118,7 @@ const OnBoarding: React.FC = () => {
           instagram: instagaram.src,
         },
       };
-      console.log("API response:", formDataWithImages);
+      // console.log("API response:", formDataWithImages);
       // Call the API with the collected data
       const response: Response = await fetch(apiEndpoint, {
         method: "POST",
@@ -123,7 +127,7 @@ const OnBoarding: React.FC = () => {
         },
         body: JSON.stringify(formDataWithImages),
       });
-      console.log("API response:", formDataWithImages);
+      // console.log("API response:", response);
 
       // Check if the response is successful
       if (!response.ok) {
@@ -132,7 +136,7 @@ const OnBoarding: React.FC = () => {
 
       // Parse the API response
       const data: { success: boolean; message: string } = await response.json();
-      console.log("API response:", data);
+      // console.log("API response:", data);
 
       // Check the response success
       if (data.success) {
