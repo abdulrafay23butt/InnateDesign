@@ -50,11 +50,11 @@ const Step4Alternative: React.FC<Step5Props> = ({ onNext, onPrevious, onChange }
                         <button
                             key={id}
                             onClick={() => setSelectedId(id)}
-                            className={`flex flex-col items-center justify-start gap-5 mx-auto w-[300px] h-[254px] rounded-[10px] p-[16px] 
+                            className={`flex flex-col items-center justify-start gap-5 mx-auto w-[30%] rounded-[10px] p-[16px] 
                             ${selectedId === id ? "border border-white bg-[#1F1F1F]" : "border border-[#FFFFFF3D] bg-transparent"}`}
                         >
-                            <div className="w-[264px] h-[128px]">
-                                <Image src={imageSrc} alt="" width={264} height={128} className="rounded-[4px]" />
+                            <div className="w-[100%] relative aspect-[10/5]">
+                                <Image src={imageSrc} alt=""  className="rounded-[4px] " fill/>
                             </div>
                             <div className="text-center">
                                 <Text className="text-[20px] leading-[28px] mb-1 text-left">{title}</Text>
