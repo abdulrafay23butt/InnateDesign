@@ -29,7 +29,7 @@ const Collective = () => {
               Learn More
             </Button>
           </div>
-          <div className=" flex-grow mob:px-0 justify-items-center  w-2/4">
+          <div className=" flex-grow mob:px-0 justify-items-end  w-2/4">
             <Image
               data-aos="zoom-in"
               data-aos-duration="1000"
