@@ -18,7 +18,7 @@ import roof4 from "@/public/images/home/roof4.png";
 import roof5 from "@/public/images/home/roof5.png";
 import roof6 from "@/public/images/home/roof6.png";
 import roof7 from "@/public/images/home/roof7.png";
-import roof8 from "@/public/images/home/roof8.png";
+import roof8 from "@/public/images/home/natural Disaster Logo.png";
 
 const Services = () => {
   return (
