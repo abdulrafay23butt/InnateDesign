@@ -8,7 +8,7 @@ import frame4 from "@/public/images/home/Frame4.png";
 import frame5 from "@/public/images/home/Frame5.png";
 import frame6 from "@/public/images/home/Frame6.png";
 import frame7 from "@/public/images/home/Frame7.png";
-import frame8 from "@/public/images/home/Frame8.png";
+import frame8 from "@/public/images/home/natural Disaster.jpg";
 import Text from "@/components/ui/Text";
 import Button from "@/components/ui/Button";
 import roof1 from "@/public/images/home/Roof 1.png";

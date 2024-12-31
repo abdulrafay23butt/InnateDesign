@@ -50,12 +50,12 @@ export default function RootLayout({
       >
         <MyProvider>
           <TabProvider>
-           
+
             {children}
             <Footer />
           </TabProvider>
         </MyProvider>
-        
+
       </body>
     </html>
   );

@@ -43,6 +43,27 @@ const Navbar = () => {
       });
     }
   }, [isOpen]);
+  const saveTabTitle = (tab: string) => {
+    const tabTitles: Record<string, string> = {
+      "/": "Home",
+      "/about": "About",
+      "/contact": "Contact",
+      "/services": "Services",
+      "/onboarding": "on Boarding",
+      "/press": "Press",
+      "/work": "Work",
+      // Add more mappings as needed
+    };
+
+    // Update the document's title based on the active tab
+    document.title = tabTitles[tab] || "My App";
+  };
+
+  // Automatically set the tab title when `activeTab` changes
+  useEffect(() => {
+    saveTabTitle(activeTab);
+  }, [activeTab]);
+
 
   return (
     <>
