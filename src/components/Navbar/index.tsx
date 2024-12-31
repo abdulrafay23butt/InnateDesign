@@ -13,7 +13,7 @@ import { useTabContext } from "@/context/TabContsxt";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { activeTab, setActiveTab } = useTabContext();
-  const onClose = () => setIsOpen(false);
+  const onClose = () => {setIsOpen(false);setIsDropdownOpen(false)}
   const onOpen = () => setIsOpen(true);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
@@ -289,7 +289,7 @@ const Navbar = () => {
                         <Link
                           href="/about"
                           onClick={() => handleTabChange("/about")}
-                          className={`block  text-[20px] font-inter font-medium leading-[25.5px] text-[#FFFFFF] ${activeTab === "/about"
+                          className={`block  text-[20px] font-inter font-medium leading-[25.5px] text-[#FFFFFF] hover:text-[#2CFF06] ${activeTab === "/about"
                             ? "text-[#2CFF06]"
                             : "text-[#FFFFFF]"
                             }`}
@@ -303,7 +303,7 @@ const Navbar = () => {
                         <Link
                           href="/work"
                           onClick={() => handleTabChange("/work")}
-                          className={`block  text-[20px] font-inter font-medium leading-[25.5px] text-[#FFFFFF] ${activeTab === "/work"
+                          className={`block  text-[20px] font-inter font-medium leading-[25.5px] text-[#FFFFFF] hover:text-[#2CFF06] ${activeTab === "/work"
                             ? "text-[#2CFF06]"
                             : "text-[#FFFFFF]"
                             }`}
@@ -314,24 +314,99 @@ const Navbar = () => {
                         </Link>
                         <hr className="h-px  bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr>
 
-                        <Link
-                          href="/services"
-                          onClick={() => handleTabChange("/services")}
-                          className={`block  text-[20px] font-inter font-medium leading-[25.5px] text-[#FFFFFF] ${activeTab === "/services"
-                            ? "text-[#2CFF06]"
-                            : "text-[#FFFFFF]"
-                            }`}
-                        >
-                          <li className="flex justify-center py-[15px] list-items">
-                            Services
-                          </li>
-                        </Link>
+                        <li className="flex justify-center py-[15px] list-items group relative">
+                          <div
+                            onClick={() => {
+                              toggleDropdown();
+                            }}
+                            className={`block text-center text-[20px] font-inter font-medium leading-[25.5px] ${activeTab === "/services" ? "text-[#2CFF06]" : "text-[#FFFFFF]"
+                              } hover:text-[#2CFF06]`}
+                          >
+                            <div className="flex items-center gap-1">
+                              Services
+                              <Image src={arrow} alt="" width={24} height={24} />
+                            </div>
+                          </div>
+
+                          {/* Dropdown menu */}
+                          <div className="relative">
+                            {isDropdownOpen && (
+                              <ul className="absolute left-1 bg-[#333333] text-white shadow-lg rounded-lg z-[1000] min-w-[180px]">
+                                <li>
+                                  <Link
+                                    href=""
+                                    className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
+                                  >
+                                    Architecture
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link
+                                    href=""
+                                    className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
+                                  >
+                                    Kitchens & Bathrooms
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link
+                                    href=""
+                                    className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
+                                  >
+                                    Construction
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link
+                                    href=""
+                                    className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
+                                  >
+                                    Roofing
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link
+                                    href=""
+                                    className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
+                                  >
+                                    Decks & Patio Covers
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link
+                                    href=""
+                                    className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
+                                  >
+                                    Siding
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link
+                                    href=""
+                                    className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
+                                  >
+                                    Windows & Doors
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link
+                                    href=""
+                                    className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
+                                  >
+                                    Interior Design
+                                  </Link>
+                                </li>
+                              </ul>
+                            )}
+                          </div>
+                        </li>
+
                         <hr className="h-px  bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr>
 
                         <Link
                           href="/press"
                           onClick={() => handleTabChange("/press")}
-                          className={`block  text-[20px] font-inter font-medium leading-[25.5px] text-[#FFFFFF] ${activeTab === "/press"
+                          className={`block  text-[20px] font-inter font-medium leading-[25.5px] text-[#FFFFFF] hover:text-[#2CFF06] ${activeTab === "/press"
                             ? "text-[#2CFF06]"
                             : "text-[#FFFFFF]"
                             }`}
@@ -345,7 +420,7 @@ const Navbar = () => {
                         <Link
                           href="/contact"
                           onClick={() => handleTabChange("/contact")}
-                          className={`block  text-[20px] font-inter font-medium leading-[25.5px] text-[#FFFFFF] ${activeTab === "/contact"
+                          className={`block  text-[20px] font-inter font-medium leading-[25.5px] text-[#FFFFFF] hover:text-[#2CFF06] ${activeTab === "/contact"
                             ? "text-[#2CFF06]"
                             : "text-[#FFFFFF]"
                             }`}
