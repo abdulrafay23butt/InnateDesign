@@ -4,7 +4,7 @@ import Image from "next/image";
 import Text from "@/components/ui/Text";
 
 import arrow from "@/public/images/onboarding/majesticons_arrow-up-line.png";
-import ADU from "@/public/images/onboarding/ADU.png"
+import ADU from "@/public/images/onboarding/ADU_enhanced.png"
 
 interface Step5Props {
     onNext: () => void;
@@ -45,7 +45,7 @@ const Step4Alternative: React.FC<Step5Props> = ({ onNext, onPrevious, onChange }
                 <Text as="h1" className="text-[40px] font-firaSans font-normal mb-8">
                     What type of Accessory Dwelling Unit (ADU) are you planning to build?
                 </Text>
-                
+
                 <div className="flex flex-wrap gap-5">
                     {styles.map(({ id, imageSrc, title, description }) => (
                         <button
