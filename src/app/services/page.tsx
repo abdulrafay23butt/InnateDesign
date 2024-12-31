@@ -1,5 +1,5 @@
 import ReviewsSlider from "@/components/Home/Reviews/Slider";
-import Services from "@/components/Home/Services";
+// import Services from "@/components/Home/Services";
 import Testimonials from "@/components/Home/Testimonials";
 import Navbar from "@/components/Navbar";
 import Collective from "@/components/Services/Collective";

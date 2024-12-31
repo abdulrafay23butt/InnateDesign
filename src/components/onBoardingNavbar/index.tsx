@@ -3,8 +3,8 @@ import React, { useEffect, useState } from "react";
 // import Image from "next/image";
 import Link from "next/link";
 import { gsap } from "gsap";
-import arrow from "@/public/Arrow (1).png"
-import Drawer from "../ui/Drawer";
+// import arrow from "@/public/Arrow (1).png"
+// import Drawer from "../ui/Drawer";
 
 import logo from "@/public/logo-innate.png";
 import Image from "next/image";
@@ -12,15 +12,15 @@ import { useTabContext } from "@/context/TabContsxt";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const { activeTab, setActiveTab } = useTabContext();
-  const onClose = () => setIsOpen(false);
+  const { setActiveTab } = useTabContext();
+  // const onClose = () => setIsOpen(false);
   const onOpen = () => setIsOpen(true);
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  // const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-  const toggleDropdown = () => {
-    setIsDropdownOpen((prev) => !prev);
-    console.log(isDropdownOpen);
-  };
+  // const toggleDropdown = () => {
+  //   setIsDropdownOpen((prev) => !prev);
+  //   console.log(isDropdownOpen);
+  // };
   const handleTabChange = (tab: string) => {
     setActiveTab(tab); // Update context
   };

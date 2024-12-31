@@ -15,13 +15,13 @@ const Footer = () => {
         <div className="">
           <Image src={logo} alt="" width={222.17} height={48} />
         </div>
-        <div className="max-w-[160px] mob:max-w-full">
+        <div className="max-w-[20%] mob:max-w-full">
           <Text>Northwest</Text>
-          <Text className="text-[#D9D9D9] mt-3">
-            12819 SE 38th St #340 Bellevue, WA 98006 (425) 866-5206
+          <Text className="text-[#D9D9D9] mt-3 ">
+            12819 SE 38th St #340 <br /> Bellevue, WA 98006 <br /> (425) 866-5206
           </Text>
         </div>
-        <div className="max-w-[142px] mob:max-w-full">
+        <div className="max-w-[20%] mob:max-w-full">
           <Text>Vancouver</Text>
           <Text className="text-[#D9D9D9] mt-3">Appointment Only</Text>
         </div>
