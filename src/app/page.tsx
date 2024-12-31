@@ -17,17 +17,17 @@ export default function Home() {
   return (
     <>
       <div className="gradient">
-      <Navbar />
-      <HomeSlider />
-      <Collective />
-      <Services />
-      <DesignAndBuild />
+        <Navbar />
+        <HomeSlider />
+        <Collective />
+        <Services />
+        <DesignAndBuild />
         <Philosophy />
         <ReviewsSlider />
         <Testimonials />
-        <Confidence/>
-      <ContactHome />
-      <OurPartners />
+        <Confidence />
+        <ContactHome />
+        <OurPartners />
       </div>
     </>
   );

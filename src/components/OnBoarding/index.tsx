@@ -57,10 +57,7 @@ const OnBoarding: React.FC = () => {
       if (prev === 4.5) {
         return 5
       }
-      if(prev===8)
-      {
-        return 9
-      }
+      
       // Default navigation
       return prev < totalSteps ? prev + 1 : prev;
     });
@@ -256,7 +253,11 @@ const OnBoarding: React.FC = () => {
           onChange={(data) => handleInputChange(8, data)}
         />
       )}
-      {currentStep === 9 && <LastStep onPrevious={handlePrevious} />}
+      {currentStep === 9 && (
+        <LastStep
+          onPrevious={handlePrevious}
+           />
+      )}
     </div>
   );
 };
