@@ -19,8 +19,8 @@ const Blog = () => {
   return (
     <div className=" pt-16">
       <div className="w-full max-w-[90%] flex flex-wrap justify-center gap-[24px] mb-[44px] mob:mb-[24px] mx-auto">
-        <div className="max-w-[23%] border border-black rounded-[10px]">
-          <Image src={blog1} alt="" height={192} className="rounded-t-xl w-[100%]"/>
+        <div className="max-w-[22%] border border-black rounded-[10px]">
+          <Link href={`/blogs/5`}><Image src={blog1} alt="" height={192} className="rounded-t-xl w-[100%]" /></Link>
           <div className="p-4">
             <Text className="text-white">Blog</Text>
             <Text className="text-white text-[20px] leading-[28px] my-2">
@@ -36,8 +36,8 @@ const Blog = () => {
 
           </div>
         </div>
-        <div className="max-w-[23%] border border-black rounded-[10px]">
-          <Image src={blog2} alt=""  height={192} className="rounded-t-xl w-[100%]"/>
+        <div className="max-w-[22%] border border-black rounded-[10px]">
+          <Link href={`/blogs/5`}><Image src={blog2} alt="" height={192} className="rounded-t-xl w-[100%]" /></Link>
           <div className="p-4">
             <Text className="text-white">Press</Text>
             <Text className="text-white text-[20px] leading-[28px] my-2">
@@ -51,8 +51,8 @@ const Blog = () => {
 
           </div>
         </div>
-        <div className="max-w-[23%] border border-black rounded-[10px]">
-          <Image src={blog3} alt="" height={192} className="rounded-t-xl w-[100%]"/>
+        <div className="max-w-[22%] border border-black rounded-[10px]">
+          <Link href={`/blogs/5`}><Image src={blog3} alt="" height={192} className="rounded-t-xl w-[100%]" /></Link>
           <div className="p-4">
             <Text className="text-white">Blog</Text>
             <Text className="text-white text-[20px] leading-[28px] my-2">
@@ -66,8 +66,8 @@ const Blog = () => {
 
           </div>
         </div>
-        <div className="max-w-[23%] border border-black rounded-[10px]">
-          <Image src={blog4} alt="" height={192} className="rounded-t-xl w-[100%]"/>
+        <div className="max-w-[22%] border border-black rounded-[10px]">
+          <Link href={`/blogs/5`}><Image src={blog4} alt="" height={192} className="rounded-t-xl w-[100%]" /></Link>
           <div className="p-4">
             <Text className="text-white">Blog</Text>
             <Text className="text-white text-[20px] leading-[28px] my-2">
@@ -85,8 +85,8 @@ const Blog = () => {
       </div>
       {/* row2 */}
       <div className="w-full max-w-[90%] flex flex-wrap justify-center gap-[24px] mb-[24px] mx-auto">
-        <div className="max-w-[45%] border border-black rounded-[10px]">
-          <Image src={blogb} alt=""  height={294} className="rounded-t-xl w-[100%]" />
+        <div className="max-w-[44%] border border-black rounded-[10px]">
+          <Link href={`/blogs/5`}> <Image src={blogb} alt="" height={294} className="rounded-t-xl w-[100%]" /></Link>
           <div className="p-4">
             <Text className="text-white">Blog</Text>
             <Text className="text-white text-[20px] leading-[28px] my-2">
@@ -97,15 +97,13 @@ const Blog = () => {
               both customer relationships and project timelines is paramount for
               success. Construction companies operate within a dynamic
             </Text>
-            <Link href={`/blogs/5`} className="text-white flex items-center mt-5">
-              LEARN MORE <Image className="-ms-4" src={arrow} alt="" width={55} height={55} />
-            </Link>
+
 
           </div>
         </div>
 
-        <div className="max-w-[24%] border border-black rounded-[10px]">
-          <Image src={blog5} alt=""  height={192} className="rounded-t-xl w-[100%]"/>
+        <div className="max-w-[23%] border border-black rounded-[10px]">
+          <Link href={`/blogs/5`}><Image src={blog5} alt="" height={192} className="rounded-t-xl w-[100%]" /></Link>
           <div className="p-4">
             <Text className="text-white">Press</Text>
             <Text className="text-white text-[20px] leading-[28px] my-2">
@@ -120,8 +118,8 @@ const Blog = () => {
 
           </div>
         </div>
-        <div className="max-w-[24%] border border-black rounded-[10px]">
-          <Image src={blog2} alt="" height={192} className="rounded-t-xl w-[100%]"/>
+        <div className="max-w-[23%] border border-black rounded-[10px]">
+          <Link href={`/blogs/5`}><Image src={blog2} alt="" height={192} className="rounded-t-xl w-[100%]" /></Link>
           <div className="p-4">
             <Text className="text-white">Press</Text>
             <Text className="text-white text-[20px] leading-[28px] my-2">
@@ -136,7 +134,7 @@ const Blog = () => {
           </div>
         </div>
       </div>
-    </div>
+    </div >
   );
 };
 

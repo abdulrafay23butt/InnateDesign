@@ -29,7 +29,7 @@ const Step6: React.FC<Step6Props> = ({ onNext, onPrevious, onChange }) => {
   };
 
   return (
-    <div className="gradient flex items-center justify-center px-5">
+    <div className="gradient flex items-center justify-center px-5 min-h-[858px]">
       <div className="max-w-[90%] w-full py-20">
         <div>
           <Text as="h1" className="text-[40px] font-firaSans font-normal mb-3">

@@ -51,6 +51,7 @@ const Step8: React.FC<Step8Props> = ({ onNext, onPrevious, onChange }) => {
             onChange={handleNameChange} // Handle name change
             className="pl-4 mt-7 w-full max-w-[900px] h-[60px] border border-[#FFFFFF3D] bg-transparent outline-none text-white text-[16px] placeholder:text-[16px] placeholder:text-white"
           />
+          <br />
           <input
             placeholder="Phone"
             type="number"

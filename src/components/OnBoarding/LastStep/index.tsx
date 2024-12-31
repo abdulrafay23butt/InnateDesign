@@ -12,7 +12,7 @@ interface LastStepProps {
 
 const LastStep: React.FC<LastStepProps> = ({  onPrevious }) => {
   return (
-    <div className="gradient flex items-center justify-center px-5">
+    <div className="gradient flex items-center justify-center px-5 min-h-[858px]">
       <div className="max-w-[1140px] w-full py-20">
         <div className="">
           <Text

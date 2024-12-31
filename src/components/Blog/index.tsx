@@ -38,13 +38,9 @@ const Blog: FC<ArticleProps> = ({ id }) => {
   const sections: ArticleSection[] = [
     {
       id: 1,
-      title: "The Positive Impact of Carbon Credits on Indigenous Communities",
-      publishedDate: "11 December, 2023", // Add the publication date here
+      title: "Do you need a soils report or civil engineer for an addition in Bellevue?",
+      publishedDate: "17 August, 2024", // Add the publication date here
       content: [
-        {
-          type: "text",
-          text: "Lorem ipsum dolor sit amet consectetur. In amet leo dictum quis morbi id...",
-        },
         {
           type: "image",
           src: frame1, // Image imported
@@ -52,7 +48,9 @@ const Blog: FC<ArticleProps> = ({ id }) => {
         },
         {
           type: "text",
-          text: "Sed proin eget nec quam pretium ornare eu est...",
+          text: "When planning to build an addition in Bellevue, Washington, understanding the city’s zoning regulations is essential for a smooth and compliant construction process. Bellevue’s zoning regulations are designed to ensure that new developments align with the city’s overall planning objectives, maintain neighborhood character, and address community concerns. These regulations cover various aspects, including setback requirements, height limits, lot coverage, and the use of the property. Before beginning any construction, it is crucial to review these rules to ensure that your addition adheres to the specific zoning district requirements, protecting both the integrity of your project and the community’s standards.",
+          text1: "For a single-family home addition of less than 3,000 square feet in Bellevue, Washington, several documents are required to obtain the necessary permits. Homeowners must submit a complete building permit application, which includes detailed site plans that outline the existing and proposed structures, property boundaries, and setback measurements. Architectural drawings or of the addition must also be provided, showing floor plans, elevations, and sections. Additionally, structural drawings of the foundation and framing are required to ensure the addition’s stability. If the project affects utilities or drainage, utility plans and a drainage report might be necessary. Depending on the scope and location of the project, homeowners may also need to include energy code compliance forms, proof of property ownership, and any applicable environmental impact assessments. Ensuring that all required documents are prepared and submitted accurately is key to avoiding delays in the permit approval process.",
+          text2: "When constructing an addition in Bellevue, Washington, particularly one that alters the footprint of the home or impacts the surrounding landscape, a Stormwater Drainage Report and Stormwater Site Plan are often required. These documents assess and outline how stormwater will be managed on the property, ensuring that the new construction does not negatively affect drainage patterns or contribute to flooding in the area. These reports typically include detailed analyses of the existing site conditions, proposed changes, and the methods by which stormwater runoff will be controlled, such as through the use of detention systems, permeable surfaces, or landscaping solutions.",
         },
       ],
     },

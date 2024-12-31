@@ -16,7 +16,7 @@ const Step4: React.FC<Step2Props> = ({ onNext, onPrevious, onChange }) => {
  
 
   return (
-    <div className=" gradient flex py-20 items-center justify-center px-5">
+    <div className=" gradient flex py-20 items-center justify-center px-5 min-h-[858px]">
       <div className="max-w-[90%] w-full ">
         <div className="">
           <Text className="text-[20px]  font-firaSans font-normal mb-2 ">

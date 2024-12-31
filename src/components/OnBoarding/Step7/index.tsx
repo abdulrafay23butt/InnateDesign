@@ -13,7 +13,7 @@ interface Step7Props {
 
 const Step7: React.FC<Step7Props> = ({ onNext, onPrevious }) => {
   return (
-    <div className=" gradient flex items-center justify-center px-5">
+    <div className=" gradient flex items-center justify-center px-5 min-h-[858px]">
       <div className="max-w-[90%] w-full py-20">
         <div className="flex flex-wrap items-center justify-around mob:gap-10">
           <div className="max-w-[90%]">

@@ -38,7 +38,7 @@ const Step2: React.FC<Step2Props> = ({ onNext, onPrevious, onChange }) => {
   };
 
   return (
-    <div className="py-20 gradient flex items-start justify-center">
+    <div className="py-20 gradient flex items-start justify-center min-h-[858px]">
       <div className="w-full max-w-[90%] ">
         <Text as="h1" className="text-[40px] font-firaSans font-normal mb-10">
           Got it! What professional do you need help finding?
