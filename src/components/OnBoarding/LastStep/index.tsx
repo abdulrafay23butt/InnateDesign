@@ -25,6 +25,7 @@ const LastStep: React.FC<LastStepProps> = ({  onPrevious }) => {
           <Link
             href="/"
             className="mt-16 flex items-center justify-center gap-2 border border-[#FFFFFF] w-[126px]      bg-transparent   h-[50px] text-[16px] text-white leading-[22.4px]"
+            onClick={()=>localStorage.setItem("currentStep","0")}
           >
             Home
             <Image src={arrow} alt="" width={24} height={24} />
@@ -49,6 +50,7 @@ const LastStep: React.FC<LastStepProps> = ({  onPrevious }) => {
             <Link
               href="/"
               className="flex items-center justify-center gap-2 border border-[#FFFFFF] w-[116px]     bg-transparent   h-[50px] text-[16px] text-white leading-[22.4px]"
+              onClick={()=>localStorage.setItem("currentStep","0")}
             >
               Next
               <Image src={arrow} alt="" width={24} height={24} />

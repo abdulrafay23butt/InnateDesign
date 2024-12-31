@@ -21,7 +21,7 @@ const HeroAbout = () => {
       </Text>
       <div className="w-full max-w-[90%] mx-auto flex lg:flex-wrap justify-around lg:gap-10 items-center ">
         <Image src={firm} alt="" className="w-1/2" height={598} />
-        <div className="w-full max-w-1/2 ms-5">
+        <div className="w-full max-w-1/2 ms-10">
           <Text as="h1" className="font-inter font-light">The Firm</Text>
           <Text className="text-[24px] font-medium leading-[31.2px] my-5">
             Culture
@@ -37,7 +37,7 @@ const HeroAbout = () => {
         </div>
       </div>
       <div className="w-full max-w-[90%] mx-auto flex lg:flex-wrap justify-between lg:gap-10 items-center py-16 ">
-        <div className="w-full max-w-1/3 me-5">
+        <div className="w-full max-w-1/3 me-10">
           <Text as="h1" className="font-inter font-light">Michael Wishart</Text>
           <Text className="text-[24px] font-medium leading-[31.2px] my-5">
             Founder
@@ -69,7 +69,7 @@ const HeroAbout = () => {
       <div className="w-full max-w-[90%] mx-auto flex lg:flex-wrap gap-[25px] justify-center  items-center py-16 ">
         <div className="w-full max-w-[25%]">
           <Image className="" src={gelberg} alt="" width={266} height={261} />
-          <Text className="text-[30px] font-semibold leading-[39px] mt-5">
+          <Text className="text-[30px] font-semibold leading-[39px] mt-10">
             Ran Gelberg
           </Text>
           <div className="flex items-center">
@@ -79,7 +79,7 @@ const HeroAbout = () => {
         </div>
         <div className="w-full max-w-[25%]">
           <Image className="" src={sophia} alt="" width={266} height={261} />
-          <Text className="text-[30px] font-semibold leading-[39px] mt-5">
+          <Text className="text-[30px] font-semibold leading-[39px] mt-10">
           Sophia Assis
           </Text>
           <div className="flex items-center">
@@ -89,7 +89,7 @@ const HeroAbout = () => {
         </div>
         <div className="w-full max-w-[25%]">
           <Image className="" src={mridul} alt="" width={266} height={261} />
-          <Text className="text-[30px] font-semibold leading-[39px] mt-5">
+          <Text className="text-[30px] font-semibold leading-[39px] mt-10">
           Mridul Alif
           </Text>
           <div className="flex items-center">
@@ -99,7 +99,7 @@ const HeroAbout = () => {
         </div>
         <div className="w-full max-w-[25%]">
           <Image className="" src={amin} alt="" width={266} height={261} />
-          <Text className="text-[30px] font-semibold leading-[39px] mt-5">
+          <Text className="text-[30px] font-semibold leading-[39px] mt-10">
           Amin Foysal
           </Text>
           <div className="flex items-center">
