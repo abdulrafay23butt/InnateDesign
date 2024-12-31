@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 
 import frame1 from "@/public/images/home/Frame1.png";
-import frame2 from "@/public/images/home/Frame2.jpg";
+import frame2 from "@/public/images/home/Frame2.png";
 import frame3 from "@/public/images/home/Frame3.png";
 import frame4 from "@/public/images/home/Frame4.png";
 import frame5 from "@/public/images/home/Frame5.png";
@@ -23,8 +23,8 @@ import roof8 from "@/public/images/home/natural Disaster Logo.png";
 const Services = () => {
   return (
     <div className="py-32">
-      <div className="flex flex-wrap justify-center w-full  mx-auto">
-        <div className="w-[33.3%] min-h-[484px] border-[0.5px] border-white tab:w-full group relative overflow-hidden">
+      <div className="flex flex-wrap justify-center w-full mx-auto">
+        <div className="w-[33.3%] border-[0.5px] border-white tab:w-full group relative overflow-hidden aspect-[5/5]">
           <div className="overflow-hidden h-full flex justify-center items-center relative">
             {/* Overlay */}
             <div className="absolute inset-0 bg-black bg-opacity-40 z-10 transition-opacity duration-300 ease-in-out group-hover:opacity-0"></div>
@@ -33,23 +33,14 @@ const Services = () => {
             <Image
               src={frame1}
               alt="Roofing Service"
-              width={480}
-              height={484}
-              className="transition-transform absolute z-0 top-0 h-full duration-300 ease-in-out transform group-hover:scale-105 w-full max-h-[484px]"
+              fill
+              className="transition-transform absolute z-0 top-0 h-full w-full object-cover duration-300 ease-in-out transform group-hover:scale-105"
             />
 
             {/* Content */}
             <div className="relative z-10">
-              <Image
-                className="mx-auto"
-                src={roof1}
-                alt=""
-                width={95}
-                height={95}
-              />
-              <Text className="text-[24px] font-light text-center my-4">
-                Roofing
-              </Text>
+              <Image className="mx-auto" src={roof1} alt="" width={95} height={95} />
+              <Text className="text-[24px] font-light text-center my-4">Roofing</Text>
               <div className="flex justify-center w-full">
                 <Button className="w-[136px] bg-transparent text-white border border-white hover:bg-white hover:text-black hover:border-black transition duration-300">
                   Learn More
@@ -59,18 +50,20 @@ const Services = () => {
           </div>
         </div>
 
-        <div className="w-[33.3%] border-l-0 border-r-0  border-[0.5px] border-white  min-h-[484px] tab:w-full group relative overflow-hidden ">
+        {/* Repeat the same for other items */}
+        <div className="w-[33.3%] border-l-0 border-r-0 border-[0.5px] border-white min-h-[484px] tab:w-full group relative overflow-hidden">
           <div className="overflow-hidden h-full flex justify-center items-center relative">
             {/* Overlay */}
             <div className="absolute inset-0 bg-black bg-opacity-40 z-10 transition-opacity duration-300 ease-in-out group-hover:opacity-0"></div>
 
             <Image
               src={frame2}
-              alt="Roofing Service"
+              alt="Decks Service"
               width={480}
               height={484}
-              className="transition-transform absolute z-0 top-0 h-full object-cover  border border-white duration-300 ease-in-out transform group-hover:scale-105 w-full max-h-[487px]"
+              className="transition-transform absolute z-0 top-0 h-full w-full object-cover duration-300 ease-in-out transform group-hover:scale-105"
             />
+
             <div className="relative z-10">
               <Image
                 className="mx-auto"
@@ -79,29 +72,29 @@ const Services = () => {
                 width={95}
                 height={95}
               />
-              <Text className="text-[24px] font-light text-center my-4">
-                Decks
-              </Text>
+              <Text className="text-[24px] font-light text-center my-4">Decks</Text>
               <div className="flex justify-center w-full">
                 <Button className="w-[136px] bg-transparent text-white border border-white hover:bg-white hover:text-black hover:border-black transition duration-300">
                   Learn More
-                </Button>{" "}
+                </Button>
               </div>
             </div>
           </div>
         </div>
-        <div className="w-[33.4%] border-[0.5px] border-white  min-h-[484px] tab:w-full group relative overflow-hidden ">
+
+        <div className="w-[33.4%] border-[0.5px] border-white min-h-[484px] tab:w-full group relative overflow-hidden">
           <div className="overflow-hidden h-full flex justify-center items-center relative">
             {/* Overlay */}
             <div className="absolute inset-0 bg-black bg-opacity-40 z-10 transition-opacity duration-300 ease-in-out group-hover:opacity-0"></div>
 
             <Image
               src={frame3}
-              alt="Roofing Service"
+              alt="Kitchens & Bathrooms Service"
               width={480}
               height={484}
-              className="transition-transform absolute z-0 top-0 h-full border border-white duration-300 ease-in-out transform group-hover:scale-105 w-full max-h-[484px]"
+              className="transition-transform absolute z-0 top-0 h-full w-full object-cover duration-300 ease-in-out transform group-hover:scale-105"
             />
+
             <div className="relative z-10">
               <Image
                 className="mx-auto"
@@ -116,15 +109,16 @@ const Services = () => {
               <div className="flex justify-center w-full">
                 <Button className="w-[136px] bg-transparent text-white border border-white hover:bg-white hover:text-black hover:border-black transition duration-300">
                   Learn More
-                </Button>{" "}
+                </Button>
               </div>
             </div>
           </div>
         </div>
       </div>
+
       {/*  */}
       <div className="flex flex-wrap justify-center w-full min-h-[484px]  overflow-hidden   mx-auto">
-        <div className="w-[50%] border-[0.5px] border-y-0 border-r-0 border-white  tab:w-full relative group">
+        <div className="w-[50%] border-[0.5px] border-y-0 border-r-0 border-white  tab:w-full relative group aspect-[5/5]">
           <div className="overflow-hidden h-full flex justify-center items-center relative">
             {/* Overlay */}
             <div className="absolute inset-0 bg-black bg-opacity-40 z-10 transition-opacity duration-300 ease-in-out group-hover:opacity-0"></div>
@@ -133,7 +127,7 @@ const Services = () => {
               alt="Roofing Service"
               width={480}
               height={484}
-              className="transition-transform absolute z-0 top-0 h-full border border-white duration-300 ease-in-out transform group-hover:scale-105 w-full max-h-[484px]"
+              className="transition-transform absolute z-0 top-0 h-full border border-white duration-300 ease-in-out transform group-hover:scale-105 w-full object-cover"
             />
             <div className="relative z-10">
               <Image
@@ -165,7 +159,7 @@ const Services = () => {
               alt="Roofing Service"
               width={480}
               height={484}
-              className="transition-transform absolute z-0 top-0 h-full border border-white duration-300 ease-in-out transform group-hover:scale-105 w-full max-h-[484px]"
+              className="transition-transform absolute z-0 top-0 h-full border border-white duration-300 ease-in-out transform group-hover:scale-105 w-full object-cover"
             />
             <div className="relative z-10">
               <Image
@@ -189,7 +183,7 @@ const Services = () => {
       </div>
       {/*  */}
       <div className="flex flex-wrap justify-center w-full   mx-auto">
-        <div className="w-[33.3%] border-[0.5px] border-white  min-h-[484px] tab:w-full group relative overflow-hidden ">
+        <div className="w-[33.3%] border-[0.5px] border-white  min-h-[484px] tab:w-full group relative overflow-hidden aspect-[3/5]">
           <div className="overflow-hidden h-full flex justify-center items-center relative">
             {/* Overlay */}
             <div className="absolute inset-0 bg-black bg-opacity-40 z-10 transition-opacity duration-300 ease-in-out group-hover:opacity-0"></div>
@@ -199,7 +193,7 @@ const Services = () => {
               alt="Roofing Service"
               width={480}
               height={484}
-              className="transition-transform absolute z-0 top-0 h-full border border-white duration-300 ease-in-out transform group-hover:scale-105 w-full max-h-[484px]"
+              className="transition-transform absolute z-0 top-0 h-full border border-white duration-300 ease-in-out transform group-hover:scale-105 w-full object-cover"
             />
             <div className="relative z-10">
               <Image
@@ -230,7 +224,7 @@ const Services = () => {
               alt="Roofing Service"
               width={480}
               height={484}
-              className="transition-transform absolute z-0 top-0 h-full border border-white duration-300 ease-in-out transform group-hover:scale-105 w-full max-h-[484px]"
+              className="transition-transform absolute z-0 top-0 h-full border border-white duration-300 ease-in-out transform group-hover:scale-105 w-full object-cover"
             />
             <div className="relative z-10">
               <Image
@@ -261,7 +255,7 @@ const Services = () => {
               alt="Roofing Service"
               width={480}
               height={484}
-              className="transition-transform absolute z-0 top-0 h-full border border-white duration-300 ease-in-out transform group-hover:scale-105 w-full max-h-[484px]"
+              className="transition-transform absolute z-0 top-0 h-full border border-white duration-300 ease-in-out transform group-hover:scale-105 w-full object-cover"
             />
             <div className="relative z-10">
               <Image
