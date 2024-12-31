@@ -4,7 +4,7 @@ import Link from "next/link";
 
 import Text from "@/components/ui/Text";
 
-import arrow from "@/public/images/press/white arrow.png";
+// import arrow from "@/public/images/press/white arrow.png";
 import blog1 from "@/public/images/press/approvedblog.png";
 import blog2 from "@/public/images/press/blog2.png";
 import blog3 from "@/public/images/press/blog3.png";
