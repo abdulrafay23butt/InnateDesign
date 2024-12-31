@@ -119,7 +119,7 @@ const Blog: FC<ArticleProps> = ({ id }) => {
           type: "text",
           text: "In the fast-paced world of construction management, efficiency and precision are paramount. That’s why we’re excited to introduce JobSync, our revolutionary proprietary software that seamlessly integrates CRM functionality with construction management software tools, all while harnessing the power of AI to predict pricing based on job type and other factors. With JobSync, we’re not just offering a one-stop solution for project management; we’re revolutionizing the way construction businesses operate, streamlining processes, and enhancing decision-making capabilities. Let’s delve into how JobSync can transform your workflow and propel your projects towards success.",
           text1: "JobSync isn’t just another CRM or construction management software; it’s a comprehensive solution designed to meet the unique challenges of the construction industry. By integrating CRM features, JobSync allows you to effortlessly manage client interactions, track leads, and maintain communication channels, ensuring that no opportunity slips through the cracks. Simultaneously, its construction management tools provide a centralized platform for project planning, scheduling, and resource allocation, facilitating smooth collaboration among team members and stakeholders. What sets JobSync apart, however, is its AI-driven pricing prediction capability. Leveraging advanced algorithms and data analytics, JobSync analyzes job types, local market trends, and median incomes to provide accurate pricing estimates, empowering you to make informed decisions and stay competitive in a dynamic market landscape.",
-          text2:"In conclusion, JobSync represents a paradigm shift in construction management software, offering a holistic solution that combines CRM functionality, construction management tools, and AI-driven insights. By adopting JobSync, construction businesses can streamline their operations, enhance client relationships, and optimize project outcomes. Whether you’re a small contracting firm or a large construction company, JobSync provides the tools and intelligence needed to thrive in today’s competitive environment. Experience the power of JobSync and take your construction projects to new heights of efficiency and profitability."
+          text2: "In conclusion, JobSync represents a paradigm shift in construction management software, offering a holistic solution that combines CRM functionality, construction management tools, and AI-driven insights. By adopting JobSync, construction businesses can streamline their operations, enhance client relationships, and optimize project outcomes. Whether you’re a small contracting firm or a large construction company, JobSync provides the tools and intelligence needed to thrive in today’s competitive environment. Experience the power of JobSync and take your construction projects to new heights of efficiency and profitability."
 
         },
       ],
@@ -168,7 +168,7 @@ const Blog: FC<ArticleProps> = ({ id }) => {
   return (
     <>
       <div className="w-full max-w-[90%] flex gap-[90px] lg:flex-wrap lg:gap-[50px] mx-auto pt-28 lg:px-5">
-        <div className="w-full max-w-[90%]">
+        <div className="w-full max-w-[90%] ">
           <h2 className="text-[40px] font-medium leading-[52px] mob:text-[35px]">
             {section.title}
           </h2>
@@ -185,12 +185,14 @@ const Blog: FC<ArticleProps> = ({ id }) => {
           {section.content.map((item, index) => (
             <div key={index} className="mb-4">
               {item.type === "image" && item.src ? (
-                <Image
-                  src={item.src}
-                  alt={item.alt!}
-                  width={770}
-                  height={400.48}
-                />
+                <div className="relative w-full aspect-[10/5]">
+                  <Image
+                    src={item.src}
+                    alt={item.alt!}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
               ) : item.type === "text" ? (
                 <>
                   <p>{item.text}</p><br />
