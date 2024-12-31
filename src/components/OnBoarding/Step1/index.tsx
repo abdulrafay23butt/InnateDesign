@@ -47,8 +47,8 @@ const Step1: React.FC<Step1Props> = ({ onNext, onPrevious, onChange }) => {
   };
 
   return (
-    <div className="gradient flex items-center justify-center py-20">
-      <div className="w-full max-w-[1180px]">
+    <div className="gradient flex items-start justify-center py-20">
+      <div className="w-full max-w-[90%]">
         <Text as="h1" className="text-[40px] font-firaSans font-normal mb-10">
           How do you want to get started?
         </Text>

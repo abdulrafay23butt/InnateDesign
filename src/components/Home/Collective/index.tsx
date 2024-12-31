@@ -10,8 +10,8 @@ const Collective = () => {
     <>
       <div className="lowergradient h-10 border-none"></div>
       <div className="flex justify-center items-center  py-20 mob:my-12 px-5">
-        <div className="w-full max-w-[1203px] flex mob:flex-wrap items-center justify-between">
-          <div className="max-w-[517px]">
+        <div className="w-full flex mob:flex-wrap items-center justify-between">
+          <div className="flex-grow px-16 mob:px-0 w-1/2">
             <Text className="text-[24px] font-medium leading-[31.2px] mb-4">
               We are a collective of architects, engineers and craftsmen
               collaborating to create beautiful spaces and structures that meet
@@ -29,7 +29,7 @@ const Collective = () => {
               Learn More
             </Button>
           </div>
-          <div className="mob:mt-5">
+          <div className=" flex-grow mob:px-0 justify-items-center  w-2/4">
             <Image
               data-aos="zoom-in"
               data-aos-duration="1000"

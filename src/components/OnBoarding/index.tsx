@@ -161,7 +161,7 @@ const OnBoarding: React.FC = () => {
       {currentStep !== 0 && (
         <div className="pt-40 flex justify-center mob:px-5">
           <div
-            className="max-w-[1180px] relative"
+            className="max-w-[90%] relative"
             style={{
               width: "100%",
               height: "3px",

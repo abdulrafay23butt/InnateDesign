@@ -13,8 +13,8 @@ interface Step1Props {
 
 const Step3: React.FC<Step1Props> = ({ onNext, onPrevious }) => {
   return (
-    <div className="gradient py-20 flex items-center justify-center px-5">
-      <div className="max-w-[1140px] w-full ">
+    <div className="gradient py-20 flex items-start justify-center px-5">
+      <div className="max-w-[90%] w-full ">
         <div className="flex flex-wrap items-center justify-between mob:gap-10">
           <div className="max-w-[499px]">
             <Text

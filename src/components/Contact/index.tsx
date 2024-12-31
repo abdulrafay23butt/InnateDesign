@@ -10,8 +10,8 @@ import Link from "next/link";
 const Contact = () => {
   return (
     <div className="gradient pb-16 pt-44 px-5">
-      <div className="mx-auto w-full max-w-[1200px] flex justify-center lg:flex-wrap gap-[170px] lg:gap-[50px]">
-        <div className="max-w-[444px]">
+      <div className="mx-auto w-full max-w-[90%] flex justify-start lg:flex-wrap gap-[170px] lg:gap-[50px]">
+        <div className="max-w-[50%]">
           <Text as="h1" className="text-[40px] text-white font-medium ">
             Contact Us
           </Text>

@@ -1,10 +1,11 @@
 import Contact from '@/components/Contact'
 import React from 'react'
-
+import Navbar from '@/components/Navbar'
 const ContactPage = () => {
   return (
     <div>
-   <Contact/>
+      <Navbar />
+      <Contact />
     </div>
   )
 }

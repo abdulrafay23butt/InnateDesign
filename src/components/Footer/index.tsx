@@ -11,7 +11,7 @@ import linkedin from "@/public/ln.svg";
 const Footer = () => {
   return (
     <div className=" pt-16 pb-12 mob:pt-12 px-5">
-      <div className="mx-auto w-full max-w-[1140px] flex tab:flex-wrap tab:gap-[20px] justify-between ">
+      <div className="mx-auto w-full max-w-[90%] flex tab:flex-wrap tab:gap-[20px] justify-between ">
         <div className="">
           <Image src={logo} alt="" width={222.17} height={48} />
         </div>

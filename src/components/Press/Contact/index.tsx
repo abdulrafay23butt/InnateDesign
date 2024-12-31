@@ -8,8 +8,8 @@ import Link from "next/link";
 const Contact = () => {
   return (
     <div className="py-16 px-5">
-      <div className="mx-auto w-full max-w-[1140px] flex justify-center lg:flex-wrap gap-[200px] lg:gap-[50px]">
-        <div className="max-w-[444px]">
+      <div className="mx-auto w-full max-w-[90%] flex justify-center lg:flex-wrap gap-[200px] lg:gap-[50px]">
+        <div className="max-w-[50%]">
           <Text as="h1" className="text-[40px] font-medium text-white">
             Contact Us
           </Text>

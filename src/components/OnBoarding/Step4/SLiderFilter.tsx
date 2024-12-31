@@ -50,52 +50,52 @@ const SliderFilter: React.FC<SliderFilterProps> = ({
   };
   return (
     <>
-<div className="flex justify-center bg-[#141414] py-10">
-<div className="w-full">
+      <div className="flex justify-center bg-[#141414] py-10">
+        <div className="w-full ">
 
-<div className="flex flex-wrap mb-14 items-center justify-center gap-6">
-    <div className="px-4 py-2 border border-[#FFFFFF3D]">
-        <Text className="text-center text-[20px]"> {"<"}${rangeStart}K</Text>
-        <Text className="text-center">Target budget</Text>
-    </div>
-    <div className="h-[1px] w-[24px] bg-white"></div>
-    <div className="px-4 py-2 border border-[#FFFFFF3D]">
-        <Text className="text-center text-[20px]">${rangeEnd}K+</Text>
-        <Text className="text-center">Target budget</Text>
-    </div>
-</div>
+          <div className="flex flex-wrap mb-14 items-center justify-center gap-6">
+            <div className="px-4 py-2 border border-[#FFFFFF3D]">
+              <Text className="text-center text-[20px]"> {"<"}${rangeStart}K</Text>
+              <Text className="text-center">Target budget</Text>
+            </div>
+            <div className="h-[1px] w-[24px] bg-white"></div>
+            <div className="px-4 py-2 border border-[#FFFFFF3D]">
+              <Text className="text-center text-[20px]">${rangeEnd}K+</Text>
+              <Text className="text-center">Target budget</Text>
+            </div>
+          </div>
 
-    <div className="w-full ">
-    <Box   sx={{
-        width: "100%", // Full width of the parent container
-        maxWidth: "653px", // Max width of 653px
-        margin: "0 auto", // Centers the box horizontally
-      }}>
-      <CustomSlider
-            getAriaLabel={() => "Budget range"}
-            value={[rangeStart, rangeEnd]}
-            onChange={handleChange}
-            getAriaValueText={valuetext}
-            max={70}
-          />
-      </Box>
-    </div>
-      <div className="mx-auto flex justify-between max-w-[653px] w-full mt-[-8px]">
-        <Text
-          as="p"
-          className="text-[16px] text-white  font-arial font-normal  my-2 "
-        >
-          {"<"}${rangeStart}K
-        </Text>
-        <Text
-          as="p"
-          className="text-[16px]  text-white  font-arial font-normal  my-2 "
-        >
-          ${rangeEnd}K+
-        </Text>
+          <div className="w-full  items-center justify-items-center ">
+            <Box sx={{
+              width: "100%", // Full width of the parent container
+              maxWidth: "90%", // Max width of 653px
+              
+            }}>
+              <CustomSlider
+                getAriaLabel={() => "Budget range"}
+                value={[rangeStart, rangeEnd]}
+                onChange={handleChange}
+                getAriaValueText={valuetext}
+                max={70}
+              />
+            </Box>
+          </div>
+          <div className="mx-auto flex justify-between max-w-[90%] w-full mt-[-8px]">
+            <Text
+              as="p"
+              className="text-[16px] text-white  font-arial font-normal  my-2 "
+            >
+              {"<"}${rangeStart}K
+            </Text>
+            <Text
+              as="p"
+              className="text-[16px]  text-white  font-arial font-normal  my-2 "
+            >
+              ${rangeEnd}K+
+            </Text>
+          </div>
+        </div>
       </div>
-    </div>
-</div>
     </>
   );
 };

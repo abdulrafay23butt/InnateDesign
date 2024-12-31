@@ -1,10 +1,12 @@
 import OnBoarding from '@/components/OnBoarding'
+import Navbar from '@/components/onBoardingNavbar'
 import React from 'react'
 
 const OnboardingPage = () => {
   return (
     <div>
-      <OnBoarding/>
+      <Navbar />
+      <OnBoarding />
     </div>
   )
 }

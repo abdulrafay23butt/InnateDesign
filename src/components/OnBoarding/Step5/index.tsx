@@ -49,7 +49,7 @@ const Step5: React.FC<Step5Props> = ({ onNext, onPrevious, onChange }) => {
 
   return (
     <div className="gradient flex items-center justify-center px-5">
-      <div className="max-w-[1140px] w-full py-20">
+      <div className="max-w-[90%] w-full py-20">
         <Text as="h1" className="text-[40px] font-firaSans font-normal mb-8">
           What style best fits your vision?
         </Text>
@@ -58,7 +58,7 @@ const Step5: React.FC<Step5Props> = ({ onNext, onPrevious, onChange }) => {
             <button
               key={id}
               onClick={() => setSelectedId(id)}
-              className={`flex items-center justify-start gap-[15px] w-[364px] h-[154px] rounded-[10px] p-[16px] ${
+              className={`flex items-center justify-start gap-[15px] w-[30%] h-[154px] rounded-[10px] p-[16px] ${
                 selectedId === id ? "border border-white" : "border border-[#FFFFFF3D]"
               }`}
             >

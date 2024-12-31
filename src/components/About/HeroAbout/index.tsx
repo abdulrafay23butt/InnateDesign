@@ -19,9 +19,9 @@ const HeroAbout = () => {
       >
         “Architecture and craftsmanship is in our DNA”
       </Text>
-      <div className="w-full max-w-[1140px] mx-auto flex lg:flex-wrap justify-between lg:gap-10 items-center ">
-        <Image src={firm} alt="" width={558} height={598} />
-        <div className="w-full max-w-[457px]">
+      <div className="w-full max-w-[90%] mx-auto flex lg:flex-wrap justify-around lg:gap-10 items-center ">
+        <Image src={firm} alt="" className="w-1/2" height={598} />
+        <div className="w-full max-w-1/2 ms-5">
           <Text as="h1" className="font-inter font-light">The Firm</Text>
           <Text className="text-[24px] font-medium leading-[31.2px] my-5">
             Culture
@@ -36,8 +36,8 @@ const HeroAbout = () => {
           </Text>
         </div>
       </div>
-      <div className="w-full max-w-[1140px] mx-auto flex lg:flex-wrap justify-between lg:gap-10 items-center py-16 ">
-        <div className="w-full max-w-[457px]">
+      <div className="w-full max-w-[90%] mx-auto flex lg:flex-wrap justify-between lg:gap-10 items-center py-16 ">
+        <div className="w-full max-w-1/3 me-5">
           <Text as="h1" className="font-inter font-light">Michael Wishart</Text>
           <Text className="text-[24px] font-medium leading-[31.2px] my-5">
             Founder
@@ -62,12 +62,12 @@ const HeroAbout = () => {
             peoples lives.
           </Text>
         </div>
-        <Image src={michel} alt="" width={508} height={357} />
+        <Image src={michel} alt="" className="w-2/3" height={357} />
       </div>
       <Text as="h2" className="text-center text-[40px] mt-8 font-inter font-light">Our Team</Text>
 
-      <div className="w-full max-w-[1140px] mx-auto flex lg:flex-wrap gap-[25px] justify-center  items-center py-16 ">
-        <div className="w-full max-w-[266px]">
+      <div className="w-full max-w-[90%] mx-auto flex lg:flex-wrap gap-[25px] justify-center  items-center py-16 ">
+        <div className="w-full max-w-[25%]">
           <Image className="" src={gelberg} alt="" width={266} height={261} />
           <Text className="text-[30px] font-semibold leading-[39px] mt-5">
             Ran Gelberg
@@ -77,7 +77,7 @@ const HeroAbout = () => {
             <Image className="" src={arrow} alt="" width={41} height={41} />
           </div>
         </div>
-        <div className="w-full max-w-[266px]">
+        <div className="w-full max-w-[25%]">
           <Image className="" src={sophia} alt="" width={266} height={261} />
           <Text className="text-[30px] font-semibold leading-[39px] mt-5">
           Sophia Assis
@@ -87,7 +87,7 @@ const HeroAbout = () => {
             <Image className="" src={arrow} alt="" width={41} height={41} />
           </div>
         </div>
-        <div className="w-full max-w-[266px]">
+        <div className="w-full max-w-[25%]">
           <Image className="" src={mridul} alt="" width={266} height={261} />
           <Text className="text-[30px] font-semibold leading-[39px] mt-5">
           Mridul Alif
@@ -97,7 +97,7 @@ const HeroAbout = () => {
             <Image className="" src={arrow} alt="" width={41} height={41} />
           </div>
         </div>
-        <div className="w-full max-w-[266px]">
+        <div className="w-full max-w-[25%]">
           <Image className="" src={amin} alt="" width={266} height={261} />
           <Text className="text-[30px] font-semibold leading-[39px] mt-5">
           Amin Foysal

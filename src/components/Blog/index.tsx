@@ -167,8 +167,8 @@ const Blog: FC<ArticleProps> = ({ id }) => {
 
   return (
     <>
-      <div className="w-full max-w-[1203px] flex gap-[90px] lg:flex-wrap lg:gap-[50px] mx-auto pt-28 lg:px-5">
-        <div className="w-full max-w-[770px]">
+      <div className="w-full max-w-[90%] flex gap-[90px] lg:flex-wrap lg:gap-[50px] mx-auto pt-28 lg:px-5">
+        <div className="w-full max-w-[90%]">
           <h2 className="text-[40px] font-medium leading-[52px] mob:text-[35px]">
             {section.title}
           </h2>
