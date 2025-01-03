@@ -67,9 +67,11 @@ const HeroAbout = () => {
       <Text as="h2" className="text-center text-[40px] mt-8 font-inter font-light">Our Team</Text>
 
       <div className="w-full max-w-[90%] mx-auto flex lg:flex-wrap gap-[25px] justify-center  items-center py-16 ">
-        <div className="w-full max-w-[25%]">
-          <Image className="" src={gelberg} alt="" width={266} height={261} />
-          <Text className="text-[30px] font-semibold leading-[39px] mt-10">
+        <div className="w-full max-w-[25%] ">
+          <div className="aspect-[2/2] relative overflow-hidden">
+            <Image className="w-1/4 object-cover" src={gelberg} alt="" fill />
+          </div>
+          <Text className="text-[30px] font-semibold leading-[39px] mt-5">
             Ran Gelberg
           </Text>
           <div className="flex items-center">
@@ -77,9 +79,11 @@ const HeroAbout = () => {
             <Image className="" src={arrow} alt="" width={41} height={41} />
           </div>
         </div>
-        <div className="w-full max-w-[25%]">
-          <Image className="" src={sophia} alt="" width={266} height={261} />
-          <Text className="text-[30px] font-semibold leading-[39px] mt-10">
+        <div className="w-full max-w-[25%] ">
+          <div className="aspect-[2/2] relative overflow-hidden">
+            <Image className="w-1/4 object-cover" src={sophia} alt="" fill />
+          </div>
+          <Text className="text-[30px] font-semibold leading-[39px] mt-5">
           Sophia Assis
           </Text>
           <div className="flex items-center">
@@ -87,9 +91,11 @@ const HeroAbout = () => {
             <Image className="" src={arrow} alt="" width={41} height={41} />
           </div>
         </div>
-        <div className="w-full max-w-[25%]">
-          <Image className="" src={mridul} alt="" width={266} height={261} />
-          <Text className="text-[30px] font-semibold leading-[39px] mt-10">
+        <div className="w-full max-w-[25%] ">
+          <div className="aspect-[2/2] relative overflow-hidden">
+            <Image className="w-1/4 object-cover" src={mridul} alt="" fill />
+          </div>
+          <Text className="text-[30px] font-semibold leading-[39px] mt-5">
           Mridul Alif
           </Text>
           <div className="flex items-center">
@@ -97,9 +103,11 @@ const HeroAbout = () => {
             <Image className="" src={arrow} alt="" width={41} height={41} />
           </div>
         </div>
-        <div className="w-full max-w-[25%]">
-          <Image className="" src={amin} alt="" width={266} height={261} />
-          <Text className="text-[30px] font-semibold leading-[39px] mt-10">
+        <div className="w-full max-w-[25%] ">
+          <div className="aspect-[2/2] relative overflow-hidden">
+            <Image className="object-cover" src={amin} alt="" fill />
+          </div>
+          <Text className="text-[30px] font-semibold leading-[39px] mt-5">
           Amin Foysal
           </Text>
           <div className="flex items-center">

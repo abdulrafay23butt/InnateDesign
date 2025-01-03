@@ -12,7 +12,7 @@ const Testimonials = () => {
     <div className=" w-full mx-auto py-32 tab:px-5">
       <div
         className="flex flex-wrap justify-center gap-[20px]">
-        <div className="w-full max-w-[25%] border border-black rounded-[10px] aspect-[6/5]">
+        <div className="w-full max-w-[25%] border border-black rounded-[10px] aspect-[6/5] mob:aspect-[3/5]">
           <iframe
             src="https://www.youtube.com/embed/RdjFPFmJqmw?start=6
 "

@@ -53,7 +53,7 @@ const Form = () => {
   };
   return (
     <>
-      <form className="w-full max-w-[611px]">
+      <form className="mob:flex-1 mob:flex-col max-w-[45%] mob:max-w-[90%] w-full ">
         <div className="relative w-full">
           <input
             type="text"

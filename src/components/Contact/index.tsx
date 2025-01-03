@@ -12,11 +12,11 @@ const Contact = () => {
     <>
       <div className="gradient min-h-screen py-32 flex flex-col justify-center px-5">
         <div className="mx-auto w-full max-w-[90%] flex flex-wrap justify-around lg:gap-[50px] gap-10">
-          <div className="flex-1 max-w-[50%] ">
-            <Text as="h1" className="text-[40px] text-white font-medium">
+          <div className="flex-1 max-w-[40%] mob:max-w-[100%] ">
+            <Text as="h1" className="text-[3rem] text-white font-medium">
               Contact Us
             </Text>
-            <Text className="mt-4 text-[#D9D9D9]">
+            <Text className="mt-4 text-[#D9D9D9] ">
               If you’re looking for an architect, engineer, or builder to help with
               your project, this form is the best way to reach us. We are based in
               Bellevue, Washington, but are open to working with clients both near

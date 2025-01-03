@@ -8,24 +8,23 @@ const Philosophy = () => {
   return (
     <>
 
-      <div className="flex justify-center items-center  py-20 mob:my-12 px-5">
-        <div className="w-full flex mob:flex-wrap items-center justify-around">
-          <div className="flex-grow px-44 mob:px-0 w-3/4">
-            <Text className="text-[32px] text-white  font-semibold leading-[41.2px] mt-3 mb-4">
+      <div className="flex justify-center items-center  py-20 mob:my-12 ">
+        <div className="w-[90%] flex mob:flex-col items-center justify-around">
+          <div className="w-4/5 px-36 mob:px-0 ">
+            <Text className="text-[32px] text-white font-semibold leading-[41.2px] mt-3 mb-4">
               When design is both functional and beautiful, it has the most impact
               on peoples lives.
             </Text>
           </div>
-          <div className=" flex-grow mob:px-0 justify-items-center  w-1/4">
+          <div className=" mob:px-0 justify-items-center aspect-[7/5] relative overflow-hidden w-1/5 mob:w-4/5">
             <Image
               data-aos="zoom-in"
               data-aos-duration="1000"
               data-aos-delay="200"
-              className="mr-24 mob:mr-0"
+              className="mr-24 mob:mr-0 object-cover"
               src={rightimg}
               alt="rightimg"
-              width={339}
-              height={222}
+             fill
             />
           </div>
         </div>

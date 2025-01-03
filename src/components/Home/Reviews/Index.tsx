@@ -12,7 +12,7 @@ const Reviews = () => {
       
       <div className="w-full max-w-[1104px] mx-auto relative">
         <Image
-          className="absolute left-0 top-[-40px]"
+          className="absolute left-0 top-[-40px] mob:top-[-70px]"
           src={leftdot}
           alt=""
           width={74.95}
