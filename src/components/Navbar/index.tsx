@@ -154,7 +154,7 @@ const Navbar = () => {
                       </div>
                       {/* Dropdown menu */}
                       {isDropdownOpen && (
-                        <ul className="absolute left-0 min-w-[180px] bg-[#333333] text-white shadow-lg rounded-lg">
+                        <ul className="absolute left-0 min-w-[200px] bg-[#333333] text-white shadow-lg rounded-lg">
                           <li>
                             <Link
                               href=""
@@ -216,7 +216,7 @@ const Navbar = () => {
                               href=""
                               className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
                             >
-                              Interior Design
+                              Natural Disaster Migitation
                             </Link>
                           </li>
                         </ul>
@@ -331,7 +331,7 @@ const Navbar = () => {
                           {/* Dropdown menu */}
                           <div className="relative">
                             {isDropdownOpen && (
-                              <ul className="absolute left-1 bg-[#333333] text-white shadow-lg rounded-lg z-[1000] min-w-[180px]">
+                              <ul className="absolute left-1 bg-[#333333] text-white shadow-lg rounded-lg z-[1000] min-w-[200px]">
                                 <li>
                                   <Link
                                     href=""
@@ -393,7 +393,7 @@ const Navbar = () => {
                                     href=""
                                     className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
                                   >
-                                    Interior Design
+                                    Natural Disaster Migitation
                                   </Link>
                                 </li>
                               </ul>

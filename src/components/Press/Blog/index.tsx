@@ -4,7 +4,7 @@ import Link from "next/link";
 
 import Text from "@/components/ui/Text";
 
-// import arrow from "@/public/images/press/white arrow.png";
+import arrow from "@/public/images/press/white arrow.png";
 import blog1 from "@/public/images/press/approvedblog.png";
 import blog2 from "@/public/images/press/blog2.png";
 import blog3 from "@/public/images/press/blog3.png";
@@ -20,7 +20,7 @@ const Blog = () => {
     <div className=" pt-16">
       <div className="w-full max-w-[90%] flex flex-wrap justify-center gap-[24px] mb-[44px] mob:mb-[24px] mx-auto">
         <div className="max-w-[22%] border border-black rounded-[10px]">
-          <Link href={`/blogs/5`}><Image src={blog1} alt="" height={192} className="rounded-t-xl w-[100%]" /></Link>
+          <Image src={blog1} alt="" height={192} className="rounded-t-xl w-[100%]" />
           <div className="p-4">
             <Text className="text-white">Blog</Text>
             <Text className="text-white text-[20px] leading-[28px] my-2">
@@ -37,7 +37,7 @@ const Blog = () => {
           </div>
         </div>
         <div className="max-w-[22%] border border-black rounded-[10px]">
-          <Link href={`/blogs/5`}><Image src={blog2} alt="" height={192} className="rounded-t-xl w-[100%]" /></Link>
+          <Image src={blog2} alt="" height={192} className="rounded-t-xl w-[100%]" />
           <div className="p-4">
             <Text className="text-white">Press</Text>
             <Text className="text-white text-[20px] leading-[28px] my-2">
@@ -52,7 +52,7 @@ const Blog = () => {
           </div>
         </div>
         <div className="max-w-[22%] border border-black rounded-[10px]">
-          <Link href={`/blogs/5`}><Image src={blog3} alt="" height={192} className="rounded-t-xl w-[100%]" /></Link>
+          <Image src={blog3} alt="" height={192} className="rounded-t-xl w-[100%]" />
           <div className="p-4">
             <Text className="text-white">Blog</Text>
             <Text className="text-white text-[20px] leading-[28px] my-2">
@@ -67,7 +67,7 @@ const Blog = () => {
           </div>
         </div>
         <div className="max-w-[22%] border border-black rounded-[10px]">
-          <Link href={`/blogs/5`}><Image src={blog4} alt="" height={192} className="rounded-t-xl w-[100%]" /></Link>
+          <Image src={blog4} alt="" height={192} className="rounded-t-xl w-[100%]" />
           <div className="p-4">
             <Text className="text-white">Blog</Text>
             <Text className="text-white text-[20px] leading-[28px] my-2">
@@ -86,7 +86,7 @@ const Blog = () => {
       {/* row2 */}
       <div className="w-full max-w-[90%] flex flex-wrap justify-center gap-[24px] mb-[24px] mx-auto">
         <div className="max-w-[44%] border border-black rounded-[10px]">
-          <Link href={`/blogs/5`}> <Image src={blogb} alt="" height={294} className="rounded-t-xl w-[100%]" /></Link>
+          <Image src={blogb} alt="" height={294} className="rounded-t-xl w-[100%]" />
           <div className="p-4">
             <Text className="text-white">Blog</Text>
             <Text className="text-white text-[20px] leading-[28px] my-2">
@@ -98,12 +98,18 @@ const Blog = () => {
               success. Construction companies operate within a dynamic
             </Text>
 
+            <Link
+              href={`/blogs/5`}
+              className="text-white flex items-center mt-5"
+            >
+              LEARN MORE <Image src={arrow} alt="" width={44} height={28} className="-ms-3"/>
+            </Link>
 
           </div>
         </div>
 
         <div className="max-w-[23%] border border-black rounded-[10px]">
-          <Link href={`/blogs/5`}><Image src={blog5} alt="" height={192} className="rounded-t-xl w-[100%]" /></Link>
+          <Image src={blog5} alt="" height={192} className="rounded-t-xl w-[100%]" />
           <div className="p-4">
             <Text className="text-white">Press</Text>
             <Text className="text-white text-[20px] leading-[28px] my-2">
@@ -119,7 +125,7 @@ const Blog = () => {
           </div>
         </div>
         <div className="max-w-[23%] border border-black rounded-[10px]">
-          <Link href={`/blogs/5`}><Image src={blog2} alt="" height={192} className="rounded-t-xl w-[100%]" /></Link>
+          <Image src={blog2} alt="" height={192} className="rounded-t-xl w-[100%]" />
           <div className="p-4">
             <Text className="text-white">Press</Text>
             <Text className="text-white text-[20px] leading-[28px] my-2">
