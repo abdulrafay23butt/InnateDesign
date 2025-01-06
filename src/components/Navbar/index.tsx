@@ -5,6 +5,9 @@ import Link from "next/link";
 import { gsap } from "gsap";
 import arrow from "@/public/Arrow (1).png"
 import Drawer from "../ui/Drawer";
+import Tippy from '@tippyjs/react';
+import 'tippy.js/dist/tippy.css';
+import 'tippy.js/themes/light.css';
 
 import logo from "@/public/logo-innate.png";
 import Image from "next/image";
@@ -13,13 +16,13 @@ import { useTabContext } from "@/context/TabContsxt";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { activeTab, setActiveTab } = useTabContext();
-  const onClose = () => {setIsOpen(false);setIsDropdownOpen(false)}
+  const onClose = () => { setIsOpen(false); setIsDropdownOpen(false) }
   const onOpen = () => setIsOpen(true);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const toggleDropdown = () => {
     setIsDropdownOpen((prev) => !prev);
-    console.log(isDropdownOpen);
+    // console.log(isDropdownOpen);
   };
   const handleTabChange = (tab: string) => {
     setActiveTab(tab); // Update context
@@ -64,6 +67,74 @@ const Navbar = () => {
     saveTabTitle(activeTab);
   }, [activeTab]);
 
+  const dropdownContent = (
+    <ul className="bg-[#333333] text-white shadow-lg rounded-lg z-[1000] min-w-[200px]">
+      <li>
+        <a
+          href=""
+          className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
+        >
+          Architecture
+        </a>
+      </li>
+      <li>
+        <a
+          href=""
+          className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
+        >
+          Kitchens & Bathrooms
+        </a>
+      </li>
+      <li>
+        <a
+          href=""
+          className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
+        >
+          Construction
+        </a>
+      </li>
+      <li>
+        <a
+          href=""
+          className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
+        >
+          Roofing
+        </a>
+      </li>
+      <li>
+        <a
+          href=""
+          className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
+        >
+          Decks & Patio Covers
+        </a>
+      </li>
+      <li>
+        <a
+          href=""
+          className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
+        >
+          Siding
+        </a>
+      </li>
+      <li>
+        <a
+          href=""
+          className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
+        >
+          Windows & Doors
+        </a>
+      </li>
+      <li>
+        <a
+          href=""
+          className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
+        >
+          Natural Disaster Mitigation
+        </a>
+      </li>
+    </ul>
+  );
 
   return (
     <>
@@ -284,7 +355,7 @@ const Navbar = () => {
                 </div>
                 <div className="relative z-40">
                   <Drawer isOpen={isOpen} onClose={onClose}>
-                    <div className="flex items-center h-full w-full ">
+                    <div className="flex items-center h-full w-full z-0 ">
                       <ul className="font-light  w-full  mob:left-0 mob:w-full z-50 flex flex-col py-4 md:p-0 mt-4 gap-[0px]  rtl:space-x-reverse md:mt-0 ">
                         <Link
                           href="/about"
@@ -314,91 +385,22 @@ const Navbar = () => {
                         </Link>
                         <hr className="h-px  bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr>
 
-                        <li className="flex justify-center py-[15px] list-items group relative">
-                          <div
-                            onClick={() => {
-                              toggleDropdown();
-                            }}
-                            className={`block text-center text-[20px] font-inter font-medium leading-[25.5px] ${activeTab === "/services" ? "text-[#2CFF06]" : "text-[#FFFFFF]"
-                              } hover:text-[#2CFF06]`}
+                        <li className="flex justify-center py-[15px] list-items z-40">
+                          <Tippy
+                            content={dropdownContent}
+                            interactive={true}                            
+                            placement="bottom" 
+                            arrow={false} 
+                            visible={isDropdownOpen}
+                            onClickOutside={() => setIsDropdownOpen(false)}
                           >
-                            <div className="flex items-center gap-1">
-                              Services
-                              <Image src={arrow} alt="" width={24} height={24} />
+                            <div className="z-50 block text-center text-[20px] font-inter font-medium leading-[25.5px] text-[#FFFFFF] hover:text-[#2CFF06] cursor-pointer" onClick={toggleDropdown}>
+                              <div className="flex items-center gap-1">
+                                Services
+                                <Image src={arrow} alt="Dropdown arrow" width={24} height={24} />
+                              </div>
                             </div>
-                          </div>
-
-                          {/* Dropdown menu */}
-                          <div className="relative">
-                            {isDropdownOpen && (
-                              <ul className="absolute left-1 bg-[#333333] text-white shadow-lg rounded-lg z-[1000] min-w-[200px]">
-                                <li>
-                                  <Link
-                                    href=""
-                                    className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
-                                  >
-                                    Architecture
-                                  </Link>
-                                </li>
-                                <li>
-                                  <Link
-                                    href=""
-                                    className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
-                                  >
-                                    Kitchens & Bathrooms
-                                  </Link>
-                                </li>
-                                <li>
-                                  <Link
-                                    href=""
-                                    className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
-                                  >
-                                    Construction
-                                  </Link>
-                                </li>
-                                <li>
-                                  <Link
-                                    href=""
-                                    className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
-                                  >
-                                    Roofing
-                                  </Link>
-                                </li>
-                                <li>
-                                  <Link
-                                    href=""
-                                    className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
-                                  >
-                                    Decks & Patio Covers
-                                  </Link>
-                                </li>
-                                <li>
-                                  <Link
-                                    href=""
-                                    className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
-                                  >
-                                    Siding
-                                  </Link>
-                                </li>
-                                <li>
-                                  <Link
-                                    href=""
-                                    className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
-                                  >
-                                    Windows & Doors
-                                  </Link>
-                                </li>
-                                <li>
-                                  <Link
-                                    href=""
-                                    className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
-                                  >
-                                    Natural Disaster Migitation
-                                  </Link>
-                                </li>
-                              </ul>
-                            )}
-                          </div>
+                          </Tippy>
                         </li>
 
                         <hr className="h-px  bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr>

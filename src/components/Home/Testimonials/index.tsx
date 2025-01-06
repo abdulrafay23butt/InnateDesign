@@ -12,7 +12,7 @@ const Testimonials = () => {
     <div className=" w-full mx-auto py-32 tab:px-5">
       <div
         className="flex flex-wrap justify-center gap-[20px]">
-        <div className="w-full max-w-[25%] border border-black rounded-[10px] aspect-[6/5] mob:aspect-[3/5]">
+        <div className="w-full max-w-[25%] border mob:max-w-[100%] border-black rounded-[10px] aspect-[6/5] ">
           <iframe
             src="https://www.youtube.com/embed/RdjFPFmJqmw?start=6
 "
@@ -34,7 +34,7 @@ const Testimonials = () => {
             <Text className="text-gray-400  text-sm  mt-3 ">This service is amazing!</Text>
           </div>
         </div>
-        <div className="w-full max-w-[25%] border border-[#0000001A] rounded-[10px]">
+        <div className="w-full max-w-[25%] border mob:max-w-[100%] border-[#0000001A] rounded-[10px]">
           <iframe
             src="https://www.youtube.com/embed/RdjFPFmJqmw?start=6
 "
@@ -56,7 +56,7 @@ const Testimonials = () => {
             <Text className="text-gray-400  text-sm  mt-3 ">This service is amazing!</Text>
           </div>
         </div>
-        <div className="w-full max-w-[25%] border border-[#0000001A] rounded-[10px]">
+        <div className="w-full max-w-[25%] border mob:max-w-[100%] border-[#0000001A] rounded-[10px]">
           <iframe
             src="https://www.youtube.com/embed/RdjFPFmJqmw?start=6
 "

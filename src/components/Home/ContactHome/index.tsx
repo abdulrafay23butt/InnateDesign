@@ -10,7 +10,7 @@ const ContactHome = () => {
   return (
     <div className=" py-36 px-5" id="contactHome">
       <div className="mx-auto w-full max-w-[90%] flex lg:flex-wrap justify-around lg:justify-center lg:gap-[50px]">
-        <div className="max-w-[40%]">
+        <div className="max-w-[40%] mob:max-w-[90%]">
           <Text as="h1" className="text-[40px] text-white font-medium ">
             Book a free consultation
           </Text>

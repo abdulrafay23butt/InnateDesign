@@ -20,7 +20,7 @@ const HeroAbout = () => {
         “Architecture and craftsmanship is in our DNA”
       </Text>
       <div className="w-full max-w-[90%] mx-auto flex lg:flex-wrap justify-around lg:gap-10 items-center ">
-        <Image src={firm} alt="" className="w-1/2" height={598} />
+        <Image src={firm} alt="" className="w-1/2 mob:w-[90%]" height={598} />
         <div className="w-full max-w-1/2 ms-10">
           <Text as="h1" className="font-inter font-light">The Firm</Text>
           <Text className="text-[24px] font-medium leading-[31.2px] my-5">
@@ -62,14 +62,14 @@ const HeroAbout = () => {
             peoples lives.
           </Text>
         </div>
-        <Image src={michel} alt="" className="w-2/3" height={357} />
+        <Image src={michel} alt="" className="w-2/3 mob:w-[90%]" height={357} />
       </div>
       <Text as="h2" className="text-center text-[40px] mt-8 font-inter font-light">Our Team</Text>
 
       <div className="w-full max-w-[90%] mx-auto flex lg:flex-wrap gap-[25px] justify-center  items-center py-16 ">
-        <div className="w-full max-w-[25%] ">
+        <div className="w-full max-w-[25%] mob:max-w-[90%]">
           <div className="aspect-[2/2] relative overflow-hidden">
-            <Image className="w-1/4 object-cover" src={gelberg} alt="" fill />
+            <Image className="w-1/4 object-cover mob:w-full" src={gelberg} alt="" fill />
           </div>
           <Text className="text-[30px] font-semibold leading-[39px] mt-5">
             Ran Gelberg
@@ -79,7 +79,7 @@ const HeroAbout = () => {
             <Image className="" src={arrow} alt="" width={41} height={41} />
           </div>
         </div>
-        <div className="w-full max-w-[25%] ">
+        <div className="w-full max-w-[25%] mob:max-w-[90%]">
           <div className="aspect-[2/2] relative overflow-hidden">
             <Image className="w-1/4 object-cover" src={sophia} alt="" fill />
           </div>
@@ -91,7 +91,7 @@ const HeroAbout = () => {
             <Image className="" src={arrow} alt="" width={41} height={41} />
           </div>
         </div>
-        <div className="w-full max-w-[25%] ">
+        <div className="w-full max-w-[25%] mob:max-w-[90%]">
           <div className="aspect-[2/2] relative overflow-hidden">
             <Image className="w-1/4 object-cover" src={mridul} alt="" fill />
           </div>
@@ -103,7 +103,7 @@ const HeroAbout = () => {
             <Image className="" src={arrow} alt="" width={41} height={41} />
           </div>
         </div>
-        <div className="w-full max-w-[25%] ">
+        <div className="w-full max-w-[25%] mob:max-w-[90%]">
           <div className="aspect-[2/2] relative overflow-hidden">
             <Image className="object-cover" src={amin} alt="" fill />
           </div>

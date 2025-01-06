@@ -12,21 +12,21 @@ const Confidence = () => {
     <div className="pb-16 px-5">
       <div className="w-full max-w-[1140px] mx-auto  h-[300px] rounded-[10px] relative flex items-center justify-center">
         <Image
-          className="bottom-0 left-0 absolute"
+          className="bottom-0 left-0 absolute mob:max-w-[45%] mob:bottom-32"
           src={leftbg}
           alt=""
           width={308}
           height={328}
         />
         <Image
-          className="top-36 right-0 absolute"
+          className="top-36 right-0 absolute mob:max-w-[45%] mob:top-72"
           src={rightbg}
           alt=""
           width={308}
           height={328}
         />
         <div className=" pt-72">
-          <Text as="h1" className="text-[40px]  text-center font-medium">
+          <Text as="h1" className="text-[40px]  text-center font-medium ">
             Design and Build with confidence
           </Text>
           <div className="flex justify-center mt-8">
