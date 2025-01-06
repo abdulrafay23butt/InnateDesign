@@ -33,7 +33,7 @@ const Contact = () => {
           <Link href="/onboarding" className="w-[172.63px]">
             <button
               type="submit"
-              className="w-[172.63px] h-[50px] mt-8 border border-white text-white text-[16px] font-medium flex items-center justify-center gap-1"
+              className="w-[172.63px] h-[50px] mt-8 border border-white text-white hover:bg-white hover:text-black hover:border-black text-[16px] font-medium flex items-center justify-center gap-1"
             >
               Start project
               <Image src={rightarrow} alt="" width={18} height={18} />
