@@ -10,10 +10,10 @@ import Link from "next/link";
 const Contact = () => {
   return (
     <>
-      <div className="gradient min-h-screen py-32 flex flex-col justify-center px-5">
-        <div className="mx-auto w-full max-w-[90%] flex flex-wrap justify-around lg:gap-[50px] gap-10">
+      <div className="gradient min-h-screen py-44 flex flex-col justify-center px-5">
+        <div className="mx-auto w-full max-w-[90%] flex flex-wrap justify-between lg:gap-[50px] gap-10">
           <div className="flex-1 max-w-[40%] mob:max-w-[100%] ">
-            <Text as="h1" className="text-[3rem] text-white font-medium">
+            <Text as="h1" className="text-[2.5rem] text-white font-medium">
               Contact Us
             </Text>
             <Text className="mt-4 text-[#D9D9D9] ">

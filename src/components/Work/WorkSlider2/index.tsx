@@ -16,7 +16,14 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 import "../slider.css";
-import Second from "../Content/Second";
+import First from "../Content/GrayBathroom/First";
+import Second from "../Content/GrayBathroom/Second";
+import Third from "../Content/GrayBathroom/Third";
+import Fourth from "../Content/GrayBathroom/Fourth";
+import Fifth from "../Content/GrayBathroom/Fifth";
+import Sixth from "../Content/GrayBathroom/Sixth";
+import Seventh from "../Content/GrayBathroom/Seventh";
+import Eight from "../Content/GrayBathroom/Eight";
 import leftarrow from "@/public/images/work/Arrowleftblue.png"
 import rightarrow from "@/public/images/work/Arrowrightblue.png"
 
@@ -41,7 +48,7 @@ function WorkSlider2() {
       // data-aos-duration="1000"
       // data-aos-easing="ease-in-out"
       >
-        <div className=" w-full overflow-hidden work1-slider-parent flex justify-center items-center relative border-b-2">
+        <div className=" w-full overflow-hidden work1-slider-parent flex justify-center items-center relative " >
         <Image
           className="cards-custom-prev2"
           onClick={handleprevbtn}
@@ -67,7 +74,7 @@ function WorkSlider2() {
             className="mySwiper"
           >
             <SwiperSlide>
-              <Second />
+              <First />
             </SwiperSlide>
 
             <SwiperSlide>
@@ -75,7 +82,27 @@ function WorkSlider2() {
             </SwiperSlide>
 
             <SwiperSlide>
-              <Second />
+              <Third />
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <Fourth />
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <Fifth />
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <Sixth />
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <Seventh />
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <Eight />
             </SwiperSlide>
           </Swiper>
         </div>

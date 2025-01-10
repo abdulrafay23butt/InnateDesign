@@ -18,6 +18,16 @@ input[type="number"]::-webkit-inner-spin-button,  input[type="number"]::-webkit-
   @apply appearance-none; 
 }
 
+.scroll-section {
+  height: 100vh; /* Each section takes up the full viewport height */
+  position: relative;
+  overflow: hidden;
+}
+
+.scroll-section > div {
+  height: 100%; /* Ensure child components fill the section */
+}
+
 body {
   color: var(--foreground);
   background: var(--background);

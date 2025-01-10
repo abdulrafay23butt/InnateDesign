@@ -16,7 +16,14 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 import "../slider.css";
-import Third from "../Content/Third";
+import First from "../Content/Japandi/First";
+import Second from "../Content/Japandi/Second";
+import Third from "../Content/Japandi/Third";
+import Fourth from "../Content/Japandi/Fourth";
+import Fifth from "../Content/Japandi/Fifth";
+import Sixth from "../Content/Japandi/Sixth";
+import Seventh from "../Content/Japandi/Seventh";
+import Eight from "../Content/Japandi/Eight";
 import leftarrow from "@/public/images/work/Arrowleftblue.png"
 import rightarrow from "@/public/images/work/Arrowrightblue.png"
 
@@ -67,7 +74,11 @@ function WorkSlider3() {
             className="mySwiper"
           >
             <SwiperSlide>
-              <Third />
+              <First />
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <Second />
             </SwiperSlide>
 
             <SwiperSlide>
@@ -75,8 +86,25 @@ function WorkSlider3() {
             </SwiperSlide>
 
             <SwiperSlide>
-              <Third />
+              <Fourth />
             </SwiperSlide>
+
+            <SwiperSlide>
+              <Fifth />
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <Sixth />
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <Seventh />
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <Eight />
+            </SwiperSlide>
+
           </Swiper>
         </div>
       </div>

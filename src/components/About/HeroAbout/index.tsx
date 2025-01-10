@@ -15,11 +15,11 @@ const HeroAbout = () => {
     <div className="min-h-screen pt-32 px-5">
       <Text
         as="h1"
-        className="max-w-[871px] text-center text-[64px] mob:text-[42px] leading-[70px] mob:leading-[60px] font-bold pt-20 pb-32 mx-auto"
+        className="max-w-[971px] text-center text-[56px] mob:text-[42px] leading-[70px] mob:leading-[60px] pt-20 pb-32 mx-auto"
       >
         “Architecture and craftsmanship is in our DNA”
       </Text>
-      <div className="w-full max-w-[90%] mx-auto flex lg:flex-wrap justify-around lg:gap-10 items-center ">
+      <div className="w-full max-w-[90%] mx-auto flex lg:flex-wrap justify-around lg:gap-10 items-center " data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
         <Image src={firm} alt="" className="w-1/2 mob:w-[90%]" height={598} />
         <div className="w-full max-w-1/2 ms-10">
           <Text as="h1" className="font-inter font-light">The Firm</Text>
@@ -36,7 +36,7 @@ const HeroAbout = () => {
           </Text>
         </div>
       </div>
-      <div className="w-full max-w-[90%] mx-auto flex lg:flex-wrap justify-between lg:gap-10 items-center py-16 ">
+      <div className="w-full max-w-[90%] mx-auto flex lg:flex-wrap justify-between lg:gap-10 items-center py-16 " data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
         <div className="w-full max-w-1/3 me-10">
           <Text as="h1" className="font-inter font-light">Michael Wishart</Text>
           <Text className="text-[24px] font-medium leading-[31.2px] my-5">
@@ -64,53 +64,61 @@ const HeroAbout = () => {
         </div>
         <Image src={michel} alt="" className="w-2/3 mob:w-[90%]" height={357} />
       </div>
-      <Text as="h2" className="text-center text-[40px] mt-8 font-inter font-light">Our Team</Text>
+      <Text as="h2" className="text-center text-[40px] mt-8 font-inter font-light" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Our Team</Text>
 
       <div className="w-full max-w-[90%] mx-auto flex lg:flex-wrap gap-[25px] justify-center  items-center py-16 ">
         <div className="w-full max-w-[25%] mob:max-w-[90%]">
-          <div className="aspect-[2/2] relative overflow-hidden">
+          <div className="aspect-[2/2] relative overflow-hidden" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
             <Image className="w-1/4 object-cover mob:w-full" src={gelberg} alt="" fill />
           </div>
-          <Text className="text-[30px] font-semibold leading-[39px] mt-5">
-            Ran Gelberg
-          </Text>
-          <div className="flex items-center">
+          <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+            <Text className="text-[30px] font-semibold leading-[39px] mt-5">
+              Ran Gelberg
+            </Text>
+          </div>
+          <div className="flex items-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
             <Text className="text-[18px] leading-[24px]">Project Manager</Text>
             <Image className="" src={arrow} alt="" width={41} height={41} />
           </div>
         </div>
         <div className="w-full max-w-[25%] mob:max-w-[90%]">
-          <div className="aspect-[2/2] relative overflow-hidden">
+          <div className="aspect-[2/2] relative overflow-hidden" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
             <Image className="w-1/4 object-cover" src={sophia} alt="" fill />
           </div>
-          <Text className="text-[30px] font-semibold leading-[39px] mt-5">
-          Sophia Assis
-          </Text>
-          <div className="flex items-center">
+          <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+            <Text className="text-[30px] font-semibold leading-[39px] mt-5">
+              Sophia Assis
+            </Text>
+          </div>
+          <div className="flex items-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
             <Text className="text-[18px] leading-[24px]">Office Manager</Text>
             <Image className="" src={arrow} alt="" width={41} height={41} />
           </div>
         </div>
         <div className="w-full max-w-[25%] mob:max-w-[90%]">
-          <div className="aspect-[2/2] relative overflow-hidden">
+          <div className="aspect-[2/2] relative overflow-hidden" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
             <Image className="w-1/4 object-cover" src={mridul} alt="" fill />
           </div>
-          <Text className="text-[30px] font-semibold leading-[39px] mt-5">
-          Mridul Alif
-          </Text>
-          <div className="flex items-center">
+          <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+            <Text className="text-[30px] font-semibold leading-[39px] mt-5">
+              Mridul Alif
+            </Text>
+          </div>
+          <div className="flex items-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
             <Text className="text-[18px] leading-[24px]">Architect</Text>
             <Image className="" src={arrow} alt="" width={41} height={41} />
           </div>
         </div>
         <div className="w-full max-w-[25%] mob:max-w-[90%]">
-          <div className="aspect-[2/2] relative overflow-hidden">
+          <div className="aspect-[2/2] relative overflow-hidden" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">
             <Image className="object-cover" src={amin} alt="" fill />
           </div>
-          <Text className="text-[30px] font-semibold leading-[39px] mt-5">
-          Amin Foysal
-          </Text>
-          <div className="flex items-center">
+          <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700">
+            <Text className="text-[30px] font-semibold leading-[39px] mt-5">
+              Amin Foysal
+            </Text>
+          </div>
+          <div className="flex items-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700">
             <Text className="text-[18px] leading-[24px]">Web Design</Text>
             <Image className="" src={arrow} alt="" width={41} height={41} />
           </div>

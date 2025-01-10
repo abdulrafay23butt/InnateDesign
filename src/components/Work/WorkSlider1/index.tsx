@@ -16,7 +16,14 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 import "../slider.css";
-import First from "../Content/First";
+import First from "../Content/DesertOasis/First";
+import Second from "../Content/DesertOasis/Second";
+import Third from "../Content/DesertOasis/Third";
+import Fourth from "../Content/DesertOasis/Fourth";
+import Fifth from "../Content/DesertOasis/Fifth";
+import Sixth from "../Content/DesertOasis/Sixth";
+import Seventh from "../Content/DesertOasis/Seventh";
+import Eight from "../Content/DesertOasis/Eight";
 import leftarrow from "@/public/images/work/Arrowleft.png"
 import rightarrow from "@/public/images/work/Arrowright.png"
 
@@ -41,7 +48,7 @@ function WorkSlider1() {
       // data-aos-duration="1000"
       // data-aos-easing="ease-in-out"
       >
-        <div className=" w-full  work1-slider-parent flex justify-center items-center relative border-b-2">
+        <div className=" w-full  work1-slider-parent flex justify-center items-center relative">
         <Image
           className="cards-custom-prev"
           onClick={handleprevbtn}
@@ -71,14 +78,35 @@ function WorkSlider1() {
             </SwiperSlide>
 
             <SwiperSlide>
-              <First />
+              <Second />
             </SwiperSlide>
 
             <SwiperSlide>
-              <First />
+              <Third />
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <Fourth />
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <Fifth />
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <Sixth />
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <Seventh />
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <Eight />
             </SwiperSlide>
           </Swiper>
         </div>
+        {/* <First/> */}
       </div>
     </div>
   );
