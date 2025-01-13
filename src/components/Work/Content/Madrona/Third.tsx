@@ -18,7 +18,7 @@ const Third = () => {
 
       <div className="w-full  relative z-10 min-h-[350px] flex items-center justify-center">
         <div className="text-center">
-          <Text as="h1" className="text-[64px] leading-[28px] text-[#FFFFFF] mt-24">
+          <Text as="h1" className="text-[64px] leading-[28px] mob:leading-[56px] text-[#FFFFFF] mt-24">
           Madrona Remodel
           </Text>
           <Text className="text-[28px] leading-[36.4px] text-[#FFFFFF] mb-3 flex items-center gap-1 mt-5 text-center justify-center">

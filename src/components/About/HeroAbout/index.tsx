@@ -15,18 +15,18 @@ const HeroAbout = () => {
     <div className="min-h-screen pt-32 px-5">
       <Text
         as="h1"
-        className="max-w-[971px] text-center text-[56px] mob:text-[42px] leading-[70px] mob:leading-[60px] pt-20 pb-32 mx-auto"
+        className="max-w-[971px] text-center text-[2.71vw] mob:text-[42px] leading-[70px] mob:leading-[60px] pt-20 pb-32 mx-auto font-light font-serif"
       >
         “Architecture and craftsmanship is in our DNA”
       </Text>
-      <div className="w-full max-w-[90%] mx-auto flex lg:flex-wrap justify-around lg:gap-10 items-center " data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+      <div className="w-full max-w-full px-16 mob:px-0 flex lg:flex-wrap justify-around lg:gap-10 items-center " data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
         <Image src={firm} alt="" className="w-1/2 mob:w-[90%]" height={598} />
         <div className="w-full max-w-1/2 ms-10">
           <Text as="h1" className="font-inter font-light">The Firm</Text>
-          <Text className="text-[24px] font-medium leading-[31.2px] my-5">
+          <Text className="text-[28px] font-medium leading-[31.2px] my-5">
             Culture
           </Text>
-          <Text>
+          <Text className="">
             At Innate, We believe every client and every project have unique
             needs that require unique solutions. Whether it is a small
             residential remodel or a large commercial project, effective
@@ -36,10 +36,10 @@ const HeroAbout = () => {
           </Text>
         </div>
       </div>
-      <div className="w-full max-w-[90%] mx-auto flex lg:flex-wrap justify-between lg:gap-10 items-center py-16 " data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+      <div className="w-full max-w-full px-16 mob:px-0 flex lg:flex-wrap justify-between lg:gap-10 items-center py-16 " data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
         <div className="w-full max-w-1/3 me-10">
           <Text as="h1" className="font-inter font-light">Michael Wishart</Text>
-          <Text className="text-[24px] font-medium leading-[31.2px] my-5">
+          <Text className="text-[28px] font-medium leading-[31.2px] my-5">
             Founder
           </Text>
           <Text>
@@ -66,7 +66,7 @@ const HeroAbout = () => {
       </div>
       <Text as="h2" className="text-center text-[40px] mt-8 font-inter font-light" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Our Team</Text>
 
-      <div className="w-full max-w-[90%] mx-auto flex lg:flex-wrap gap-[25px] justify-center  items-center py-16 ">
+      <div className="w-full max-w-full px-16 mob:px-0 flex lg:flex-wrap gap-[25px] justify-center  items-center py-16 ">
         <div className="w-full max-w-[25%] mob:max-w-[90%]">
           <div className="aspect-[2/2] relative overflow-hidden" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
             <Image className="w-1/4 object-cover mob:w-full" src={gelberg} alt="" fill />

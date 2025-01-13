@@ -11,7 +11,7 @@ const Contact = () => {
   return (
     <>
       <div className="gradient min-h-screen py-44 flex flex-col justify-center px-5">
-        <div className="mx-auto w-full max-w-[90%] flex flex-wrap justify-between lg:gap-[50px] gap-10">
+        <div className=" w-full max-w-full px-16 mob:px-0 flex flex-wrap justify-between lg:gap-[50px] gap-10">
           <div className="flex-1 max-w-[40%] mob:max-w-[100%] ">
             <Text as="h1" className="text-[2.5rem] text-white font-medium">
               Contact Us

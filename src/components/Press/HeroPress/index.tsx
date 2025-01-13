@@ -5,8 +5,8 @@ import Text from "@/components/ui/Text";
 import filter from "@/public/images/press/filter.png";
 const HeroPress = () => {
   return (
-    <div className="gradient  flex justify-center items-center px-5">
-      <div className="w-full max-w-[90%] min-h-[488px] relative h-full flex justify-center items-center">
+    <div className="gradient  flex justify-center items-center">
+      <div className="w-full max-w-[93%] mob:mx-5 min-h-[488px] relative h-full flex justify-center items-center">
         <Text
           as="h1"
           className="text-[64px] text-[#D9D9D9] font-bold leading-[70.4px] text-center mt-6"

@@ -18,7 +18,7 @@ const Blog = () => {
 
   return (
     <div className=" pt-16">
-      <div className="w-full max-w-[95%] flex flex-wrap justify-center gap-[24px] mb-[44px] mob:mb-[24px] mx-auto">
+      <div className="w-full max-w-full xs:px-11 flex flex-wrap justify-center gap-[24px] mb-[44px] mob:mb-[24px] ">
         <div className="max-w-[22.5%] mob:max-w-[90%] border border-white rounded-[10px]">
           <Image src={blog1} alt="" height={192} className="rounded-t-xl w-[100%]" />
           <div className="p-4">
@@ -84,7 +84,7 @@ const Blog = () => {
         </div>
       </div>
       {/* row2 */}
-      <div className="w-full max-w-[95%] flex flex-wrap justify-center gap-[24px] mb-[24px] mx-auto">
+      <div className="w-full max-w-full xs:px-11 flex flex-wrap justify-center gap-[24px] mb-[24px] mx-auto">
         <div className="max-w-[45%] border mob:max-w-[90%] border-white rounded-[10px]">
           <Image src={blogb} alt="" height={294} className="rounded-t-xl w-[100%]" />
           <div className="p-4">

@@ -138,7 +138,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className=" absolute  min-h-[134px] z-50  w-full px-20 mob:px-5 ">
+      <nav className=" absolute  min-h-[134px] z-50  w-full px-16 md:px-20 mob:px-5 ">
         <div className="flex justify-center items-center w-full min-h-[134px] ">
           <div className="  min-h-[134px] w-full flex flex-wrap items-center justify-between mx-auto py-4">
             <div className="flex    justify-between w-full    pb-4">

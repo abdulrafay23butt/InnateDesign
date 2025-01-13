@@ -24,7 +24,7 @@ const DesignAndBuild = () => {
         Design and build the <span className="italic">Innate </span> way
       </Text>
       {/* avoid surprise */}
-      <div className="flex lg:flex-wrap gap-[47px] items-center p-[43px] mob:px-[20px] w-[80%] min-h-[439px] mt-16 mb-8 mx-auto rounded-[50px] mob:rounded-[19.05px] gradient2 justify-center">
+      <div className="flex  lg:flex-wrap gap-[47px] items-center p-[43px] mob:px-[20px] w-[80%] mob:w-full min-h-[439px] mt-16 mb-8 mx-auto rounded-[50px] mob:rounded-[19.05px] gradient2 justify-center">
         <div className="w-full max-w-[437.84px] relative flex justify-center items-center">
           <Image
             data-aos="zoom-in"
@@ -75,7 +75,7 @@ const DesignAndBuild = () => {
 
 
       {/* Save Time */}
-      <div className="flex lg:flex-wrap gap-[47px] items-center p-[43px] mob:px-[20px] w-[80%] min-h-[439px] my-8 mx-auto rounded-[50px] mob:rounded-[19.05px] gradient2 justify-center">
+      <div className="flex lg:flex-wrap gap-[47px] items-center p-[43px] mob:px-[20px] w-[80%] mob:w-full min-h-[439px] my-8 mx-auto rounded-[50px] mob:rounded-[19.05px] gradient2 justify-center">
         <div className="">
           <Text as="h2" className="">
             Save Time
@@ -103,7 +103,7 @@ const DesignAndBuild = () => {
       </div>
 
       {/* Avoid Stress */}
-      <div className="flex lg:flex-wrap gap-[47px] items-center p-[43px] mob:px-[20px] w-[80%] min-h-[439px] my-8 mx-auto rounded-[50px] mob:rounded-[19.05px] gradient2 justify-center">
+      <div className="flex lg:flex-wrap gap-[47px] items-center p-[43px] mob:px-[20px] w-[80%] mob:w-full min-h-[439px] my-8 mx-auto rounded-[50px] mob:rounded-[19.05px] gradient2 justify-center">
         <div className="w-full max-w-[430px] flex justify-end items-end relative">
           <Image
             data-aos="fade-right"
@@ -143,7 +143,7 @@ const DesignAndBuild = () => {
       </div>
 
       {/* Track Progress */}
-      <div className="flex lg:flex-wrap gap-[47px] items-center p-[43px] mob:px-[20px] w-[80%] min-h-[439px] mt-8 mx-auto rounded-[50px] mob:rounded-[19.05px] gradient2 justify-center">
+      <div className="flex lg:flex-wrap gap-[47px] items-center p-[43px] mob:px-[20px] w-[80%] mob:w-full min-h-[439px] mt-8 mx-auto rounded-[50px] mob:rounded-[19.05px] gradient2 justify-center">
         <div className="">
           <Text as="h2" className="">
             Track Progress

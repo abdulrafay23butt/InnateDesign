@@ -118,10 +118,11 @@ const Services = () => {
 
       {/*  */}
       <div className="flex flex-wrap justify-center w-full min-h-[484px]  overflow-hidden   mx-auto">
-        <div className="w-[50%] border-[0.5px] border-y-0 border-r-0 border-white  tab:w-full relative group aspect-[7/5]">
+        <div className="w-[50%] border-[0.5px] border-y-0 border-white  tab:w-full relative group min-h-[484px]  overflow-hidden">
           <div className="overflow-hidden h-full flex justify-center items-center relative">
             {/* Overlay */}
             <div className="absolute inset-0 bg-black bg-opacity-40 z-10 transition-opacity duration-300 ease-in-out group-hover:opacity-0"></div>
+
             <Image
               src={frame4}
               alt="Roofing Service"
@@ -138,7 +139,7 @@ const Services = () => {
                 height={95}
               />
               <Text className="text-[24px] font-light text-center my-4">
-                Architectural Services
+              Architectural Services
               </Text>
               <div className="flex justify-center">
                 <Button className="w-[136px] bg-transparent text-white border border-white hover:bg-white hover:text-black hover:border-black transition duration-300">

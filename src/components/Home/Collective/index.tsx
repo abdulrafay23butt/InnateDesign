@@ -11,7 +11,7 @@ const Collective = () => {
       <div className="lowergradient h-10 border-none"></div>
       <div className="flex justify-center items-center  py-20 mob:my-12 px-5">
         <div className="w-full flex mob:flex-col items-center justify-around">
-          <div className="flex-grow px-44 mob:px-0 w-3/4 mob:w-">
+          <div className="flex-grow px-44 mob:px-0 w-3/5 mob:w-4/5 ">
             <Text className="text-[24px] font-medium leading-[31.2px] mb-4">
               We are a collective of architects, engineers and craftsmen
               collaborating to create beautiful spaces and structures that meet
@@ -29,17 +29,16 @@ const Collective = () => {
               Learn More
             </Button>
           </div>
-          <div className=" flex-grow mob:px-0 justify-items-center  w-1/4 mob:w-4/5">
-            <Image
+          <div className=" flex-grow mob:px-0 justify-items-center  w-2/5 mob:w-5/6 mob:mt-20">
+            <video
               data-aos="zoom-in"
               data-aos-duration="1000"
               data-aos-delay="200"
               className="mr-24 mob:mr-0"
-              src={rightimg}
-              alt="rightimg"
-              width={339}
-              height={222}
-            />
+              autoPlay
+              loop
+              muted
+            ><source src="https://res.cloudinary.com/dpibcz7ui/video/upload/v1736766393/Guide_to_Successful_Construction_Projects___%EF%B8%8F_vpqniq.mp4" /></video>
           </div>
         </div>
       </div>
