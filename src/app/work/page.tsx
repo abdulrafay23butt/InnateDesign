@@ -20,7 +20,8 @@ import WorkSlider14 from '@/components/Work/WorkSlider14';
 const WorkPage = () => {
   const [scrollY, setScrollY] = useState(0);
   const windowHeight = typeof window !== 'undefined' ? window.innerHeight : 0;
-  const animationFrameRef = useRef<number | null>(null); // Use useRef for animationFrame
+  const isMobile = typeof window !== 'undefined' ? window.innerWidth <= 768 : false; // Check if the device is mobile
+  const animationFrameRef = useRef<number | null>(null);
 
   useEffect(() => {
     const smoothScroll = () => {
@@ -30,14 +31,14 @@ const WorkPage = () => {
         if (Math.abs(diff) < 1) return targetScrollY;
         return prevScrollY + diff * 0.1; // Adjust the smoothing factor (0.1) as needed
       });
-      animationFrameRef.current = requestAnimationFrame(smoothScroll); // Store the animationFrame in useRef
+      animationFrameRef.current = requestAnimationFrame(smoothScroll);
     };
 
     smoothScroll();
 
     return () => {
       if (animationFrameRef.current) {
-        cancelAnimationFrame(animationFrameRef.current); // Cancel the animation frame on cleanup
+        cancelAnimationFrame(animationFrameRef.current);
       }
     };
   }, []);
@@ -45,7 +46,7 @@ const WorkPage = () => {
   const components = [
     WorkSlider0, WorkSlider1, WorkSlider2, WorkSlider3, WorkSlider4, WorkSlider5,
     WorkSlider6, WorkSlider7, WorkSlider8, WorkSlider9, WorkSlider10, WorkSlider11,
-    WorkSlider12, WorkSlider13, WorkSlider14
+    WorkSlider12, WorkSlider13, WorkSlider14,
   ];
 
   return (
@@ -56,15 +57,15 @@ const WorkPage = () => {
       <div className="relative">
         {components.map((Component, index) => {
           const start = index * windowHeight;
-          const end = (index + 1) * windowHeight * 16;
+          const end = (index + 1) * windowHeight * (isMobile ? 32 : 16); // Adjust multiplier based on screen size
 
           // Calculate translateY for each section
           const translateY =
             scrollY >= start && scrollY < end
               ? -(scrollY - start)
               : scrollY >= end
-                ? -windowHeight
-                : 0;
+              ? -windowHeight
+              : 0;
 
           return (
             <div
@@ -77,7 +78,7 @@ const WorkPage = () => {
                 left: 0,
                 width: '100%',
                 height: '100vh',
-                transition: 'transform 0.03s ease-out'
+                transition: 'transform 0.03s ease-out',
               }}
             >
               <Component />

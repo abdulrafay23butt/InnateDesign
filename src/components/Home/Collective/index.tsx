@@ -3,8 +3,6 @@ import React from "react";
 import Button from "@/components/ui/Button";
 import Text from "@/components/ui/Text";
 
-import rightimg from "@/public/images/home/collective.png";
-import Image from "next/image";
 const Collective = () => {
   return (
     <>
