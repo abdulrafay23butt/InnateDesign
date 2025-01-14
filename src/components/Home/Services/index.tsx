@@ -24,7 +24,7 @@ const Services = () => {
   return (
     <div className="py-32">
       <div className="flex flex-wrap justify-center w-full mx-auto">
-        <div className="w-[33.3%] border-[0.5px]  border-b-0 border-white tab:w-full group relative overflow-hidden aspect-[5/5]">
+        <div className="w-[33.3%] tab:w-full group relative overflow-hidden aspect-[5/5]" style={{border:"1px solid rgba(255, 255, 255, 0.6)",borderBottom:"none"}}>
           <div className="overflow-hidden h-full flex justify-center items-center relative">
             {/* Overlay */}
             <div className="absolute inset-0 bg-black bg-opacity-40 z-10 transition-opacity duration-300 ease-in-out group-hover:opacity-0"></div>
@@ -51,7 +51,7 @@ const Services = () => {
         </div>
 
         {/* Repeat the same for other items */}
-        <div className="w-[33.3%] border-l-0 border-r-0  border-b-0 border-[0.5px] border-white min-h-[484px] tab:w-full group relative overflow-hidden">
+        <div className="w-[33.3%] min-h-[484px] tab:w-full group relative overflow-hidden" style={{borderTop:"1px solid rgba(255, 255, 255, 0.6)"}}>
           <div className="overflow-hidden h-full flex justify-center items-center relative">
             {/* Overlay */}
             <div className="absolute inset-0 bg-black bg-opacity-40 z-10 transition-opacity duration-300 ease-in-out group-hover:opacity-0"></div>
@@ -82,7 +82,7 @@ const Services = () => {
           </div>
         </div>
 
-        <div className="w-[33.4%] border-[0.5px] border-b-0 border-white min-h-[484px] tab:w-full group relative overflow-hidden">
+        <div className="w-[33.4%] min-h-[484px] tab:w-full group relative overflow-hidden" style={{border:"1px solid rgba(255, 255, 255, 0.6)",borderBottom:"none"}}>
           <div className="overflow-hidden h-full flex justify-center items-center relative">
             {/* Overlay */}
             <div className="absolute inset-0 bg-black bg-opacity-40 z-10 transition-opacity duration-300 ease-in-out group-hover:opacity-0"></div>
@@ -118,7 +118,7 @@ const Services = () => {
 
       {/*  */}
       <div className="flex flex-wrap justify-center w-full min-h-[484px]  overflow-hidden   mx-auto">
-        <div className="w-[50%] border-none tab:w-full relative group min-h-[484px]  overflow-hidden">
+        <div className="w-[50%] tab:w-full relative group min-h-[484px]  overflow-hidden" >
           <div className="overflow-hidden h-full flex justify-center items-center relative">
             {/* Overlay */}
             <div className="absolute inset-0 bg-black bg-opacity-40 z-10 transition-opacity duration-300 ease-in-out group-hover:opacity-0"></div>
