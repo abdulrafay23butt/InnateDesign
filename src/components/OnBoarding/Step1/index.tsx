@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import Text from "@/components/ui/Text";
 import arrow from "@/public/images/onboarding/majesticons_arrow-up-line.png";
 import Image from "next/image";
+import Swal from "sweetalert2";
 
 interface Step1Props {
   onNext: () => void;
@@ -22,6 +23,14 @@ const Step1: React.FC<Step1Props> = ({ onNext, onPrevious, onChange }) => {
 
   const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
   const [comment, setComment] = useState<string>("");
+  useEffect(() => {
+    const savedData = localStorage.getItem("step1");
+    if (savedData) {
+      const { selectedOptions, comment } = JSON.parse(savedData);
+      setSelectedOptions(selectedOptions || []);
+      setComment(comment || "");
+    }
+  }, []);
 
   const handleCheckboxChange = (option: string) => {
     const updatedOptions = selectedOptions.includes(option)
@@ -40,7 +49,13 @@ const Step1: React.FC<Step1Props> = ({ onNext, onPrevious, onChange }) => {
 
   const handleNextClick = () => {
     if (selectedOptions.length === 0) {
-      alert("Please select at least one option to proceed.");
+      Swal.fire({
+        title: 'Error!',
+        text: '"Please select at least one option to proceed."',
+        icon: 'error',
+        showConfirmButton: false,
+        timer: 2000,
+      });
       return;
     }
     onNext();
@@ -113,7 +128,8 @@ const Step1: React.FC<Step1Props> = ({ onNext, onPrevious, onChange }) => {
               Previous
             </button>
             <button
-              onClick={handleNextClick}
+              onClick={()=>{handleNextClick(); localStorage.setItem("step1", JSON.stringify({ selectedOptions, comment }));
+            }}
               className="flex items-center justify-center gap-2 border border-[#FFFFFF] w-[116px] bg-transparent h-[50px] text-[16px] text-white leading-[22.4px]"
             >
               Next

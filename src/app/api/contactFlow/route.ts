@@ -244,8 +244,8 @@ export async function POST(req: NextRequest) {
 
     // Set up email options
     const mailOptions = {
-      from: "abdulrafay23butt@gmail.com", // sender address
-      to: "abdulrafay23butt@gmail.com", // recipient address
+      from: data.email, 
+      to: "info@innate-nw.com", 
       subject: "New Form Submission",
       html: emailTemplate,
     };

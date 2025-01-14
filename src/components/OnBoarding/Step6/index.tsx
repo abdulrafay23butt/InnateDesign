@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 
 import Text from "@/components/ui/Text";
 
 import arrow from "@/public/images/onboarding/majesticons_arrow-up-line.png";
 import user from "@/public/images/onboarding/users-01.png";
+import Swal from "sweetalert2";
 
 interface Step6Props {
   onNext: () => void;
@@ -20,11 +21,23 @@ const Step6: React.FC<Step6Props> = ({ onNext, onPrevious, onChange }) => {
     onChange({ address: e.target.value }); // Send the address to the parent component
   };
 
+  useEffect(() => {
+    const savedData = localStorage.getItem("step6"); 
+    setAddress(savedData || "");
+  }, []);
+
   const handleNextClick = () => {
     if (!address.trim()) {
-      alert("Please enter your address before proceeding.");
+      Swal.fire({
+        title: 'Error!',
+        text: 'Please enter your address before proceeding.',
+        icon: 'error',
+        showConfirmButton: false,
+        timer: 2000,
+      });
       return;
     }
+    localStorage.setItem("step6", address);
     onNext();
   };
 

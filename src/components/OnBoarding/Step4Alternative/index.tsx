@@ -5,6 +5,7 @@ import Text from "@/components/ui/Text";
 
 import arrow from "@/public/images/onboarding/majesticons_arrow-up-line.png";
 import ADU from "@/public/images/onboarding/ADU_enhanced.png"
+import Swal from "sweetalert2";
 
 interface Step5Props {
     onNext: () => void;
@@ -26,14 +27,31 @@ const Step4Alternative: React.FC<Step5Props> = ({ onNext, onPrevious, onChange }
         if (selectedId !== null) {
             const selectedOptions = styles.find((style) => style.id === selectedId);
             if (selectedOptions) {
-                onChange({ selectedOptions }); // Pass the selected style to the parent
+                onChange({ selectedOptions });
+                localStorage.setItem("step4Alternative", JSON.stringify(selectedOptions));
             }
         }
     }, [selectedId, onChange, styles]);
 
+    useEffect(() => {
+        const savedData = localStorage.getItem("step5");
+        if (savedData) {
+            const selectedOptions = JSON.parse(savedData);
+
+            // Assuming `selectedStyle` has an `id` property, set `selectedId`
+            setSelectedId(selectedOptions?.id || null);
+        }
+    }, []);
+
     const handleNextClick = () => {
         if (selectedId === null) {
-            alert("Please select a style before proceeding.");
+            Swal.fire({
+                title: 'Error!',
+                text: 'Please select a style before proceeding.',
+                icon: 'error',
+                showConfirmButton: false,
+                timer: 2000,
+            });
             return;
         }
         onNext();
@@ -55,7 +73,7 @@ const Step4Alternative: React.FC<Step5Props> = ({ onNext, onPrevious, onChange }
                             ${selectedId === id ? "border border-white bg-[#1F1F1F]" : "border border-[#FFFFFF3D] bg-transparent"}`}
                         >
                             <div className="w-[100%] relative aspect-[10/5]">
-                                <Image src={imageSrc} alt=""  className="rounded-[4px] " fill/>
+                                <Image src={imageSrc} alt="" className="rounded-[4px] " fill />
                             </div>
                             <div className="text-center">
                                 <Text className="text-[20px] leading-[28px] mb-1 text-left">{title}</Text>

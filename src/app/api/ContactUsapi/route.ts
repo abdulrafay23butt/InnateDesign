@@ -2,25 +2,25 @@ import { NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
 export async function POST(req: NextRequest) {
-    try {
-        // Parse the request body
-        const data = await req.json();
-        console.log(JSON.stringify(data, null, 2))
+  try {
+    // Parse the request body
+    const data = await req.json();
+    console.log(JSON.stringify(data, null, 2))
 
-        // Configure the email transport using SMTP (for example, using Gmail)
-        const transporter = nodemailer.createTransport({
-            service: "gmail",
-            host: "smtp.gmail.com",
-            port: 587,
-            secure: false,
-            auth: {
-                user: "salmanamjad902@gmail.com",
-                pass: "bpfw lpov nuis adbm",
-            },
-        });
+    // Configure the email transport using SMTP (for example, using Gmail)
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      host: "smtp.gmail.com",
+      port: 587,
+      secure: false,
+      auth: {
+        user: "salmanamjad902@gmail.com",
+        pass: "bpfw lpov nuis adbm",
+      },
+    });
 
-        // Create a dynamic HTML email template
-        const emailTemplate = `
+    // Create a dynamic HTML email template
+    const emailTemplate = `
     <div
       style="
         min-height: 100vh;
@@ -209,37 +209,37 @@ export async function POST(req: NextRequest) {
     </div>
   `;
 
-        // Set up email options
-        const mailOptions = {
-            from: "abdulrafay23butt@gmail.com", // sender address
-            to: "abdulrafay23butt@gmail.com", // recipient address
-            subject: "New Form Submission",
-            html: emailTemplate,
-        };
+    // Set up email options
+    const mailOptions = {
+      from: data.email, // Sender's email (from form submission)
+      to: "info@innate-nw.com",
+      subject: "New Form Submission",
+      html: emailTemplate,
+    };
 
-        // Send the email
-        await transporter.sendMail(mailOptions);
+    // Send the email
+    await transporter.sendMail(mailOptions);
 
-        // Return success response
-        return NextResponse.json({
-            success: true,
-            message: "Data received and email sent successfully",
-        });
-    } catch (error: unknown) {
-        // Cast error as `unknown`
-        if (error instanceof Error) {
-            // Check if error is an instance of Error
-            console.error("Error sending email:", error);
-            return NextResponse.json(
-                { message: "Error processing request", error: error.message },
-                { status: 400 }
-            );
-        } else {
-            console.error("Unexpected error:", error);
-            return NextResponse.json(
-                { message: "Unexpected error", error: "Unknown error occurred" },
-                { status: 400 }
-            );
-        }
+    // Return success response
+    return NextResponse.json({
+      success: true,
+      message: "Data received and email sent successfully",
+    });
+  } catch (error: unknown) {
+    // Cast error as `unknown`
+    if (error instanceof Error) {
+      // Check if error is an instance of Error
+      console.error("Error sending email:", error);
+      return NextResponse.json(
+        { message: "Error processing request", error: error.message },
+        { status: 400 }
+      );
+    } else {
+      console.error("Unexpected error:", error);
+      return NextResponse.json(
+        { message: "Unexpected error", error: "Unknown error occurred" },
+        { status: 400 }
+      );
     }
+  }
 }

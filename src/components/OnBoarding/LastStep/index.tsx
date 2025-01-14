@@ -50,7 +50,7 @@ const LastStep: React.FC<LastStepProps> = ({  onPrevious }) => {
             <Link
               href="/"
               className="flex items-center justify-center gap-2 border border-[#FFFFFF] w-[116px]     bg-transparent   h-[50px] text-[16px] text-white leading-[22.4px]"
-              onClick={()=>localStorage.setItem("currentStep","0")}
+              onClick={()=>{localStorage.setItem("currentStep","0");localStorage.removeItem("step1");localStorage.removeItem("step2");localStorage.removeItem("step4");localStorage.removeItem("step4Alternative");localStorage.removeItem("step5");localStorage.removeItem("step6");localStorage.removeItem("step8");}}
             >
               Next
               <Image src={arrow} alt="" width={24} height={24} />

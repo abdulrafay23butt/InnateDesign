@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import Image from "next/image";
 
 import Text from "@/components/ui/Text";
 
 import arrow from "@/public/images/onboarding/majesticons_arrow-up-line.png";
+import Swal from "sweetalert2";
 
 interface Step8Props {
   onNext: () => void;
@@ -14,6 +15,15 @@ interface Step8Props {
 const Step8: React.FC<Step8Props> = ({ onNext, onPrevious, onChange }) => {
   const [name, setName] = useState<string>("");
   const [phone, setPhone] = useState<string>("");
+
+  useEffect(() => {
+      const savedData = localStorage.getItem("step8");
+      if (savedData) {
+        const { name, phone } = JSON.parse(savedData);
+        setName(name || "");
+        setPhone(phone || "");
+      }
+    }, []);
 
   const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setName(e.target.value);
@@ -27,9 +37,16 @@ const Step8: React.FC<Step8Props> = ({ onNext, onPrevious, onChange }) => {
 
   const handleNextClick = () => {
     if (!name.trim() || !phone.trim()) {
-      alert("Please fill in both your name and phone number before proceeding.");
+      Swal.fire({
+        title: 'Error!',
+        text: 'Please fill in both your name and phone number before proceeding.',
+        icon: 'error',
+        showConfirmButton: false,
+        timer: 2000,
+      });
       return;
     }
+    localStorage.setItem("step8", JSON.stringify({ name, phone }));
     onNext();
   };
 

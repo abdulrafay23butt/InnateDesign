@@ -1,13 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Text from "@/components/ui/Text";
 import arrow from "@/public/images/onboarding/majesticons_arrow-up-line.png";
 import Image from "next/image";
+import Swal from "sweetalert2";
 
 interface Step2Props {
   onNext: () => void;
   onPrevious: () => void;
-  onChange: (data: { selectedOptions: string[] }) => void; // Data structure
+  onChange: (data: { selectedOptions: string[] }) => void;
+  data?: { selectedOptions: string[] }
 }
+
+
 
 const Step2: React.FC<Step2Props> = ({ onNext, onPrevious, onChange }) => {
   const options = [
@@ -19,6 +23,13 @@ const Step2: React.FC<Step2Props> = ({ onNext, onPrevious, onChange }) => {
   ];
 
   const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
+  useEffect(() => {
+    const savedData = localStorage.getItem("step2");
+    if (savedData) {
+      const { selectedOptions } = JSON.parse(savedData);
+      setSelectedOptions(selectedOptions || []);
+    }
+  }, []);
 
   const handleCheckboxChange = (option: string) => {
     const updatedOptions = selectedOptions.includes(option)
@@ -31,7 +42,13 @@ const Step2: React.FC<Step2Props> = ({ onNext, onPrevious, onChange }) => {
 
   const handleNextClick = () => {
     if (selectedOptions.length === 0) {
-      alert("Please select at least one option to proceed.");
+      Swal.fire({
+        title: 'Error!',
+        text: '"Please select at least one option to proceed."',
+        icon: 'error',
+        showConfirmButton: false,
+        timer: 2000,
+      });
       return;
     }
     onNext();
@@ -91,7 +108,9 @@ const Step2: React.FC<Step2Props> = ({ onNext, onPrevious, onChange }) => {
               Previous
             </button>
             <button
-              onClick={handleNextClick} // Updated handler for validation
+              onClick={() => {
+                handleNextClick(); localStorage.setItem("step2", JSON.stringify({ selectedOptions }));
+              }}
               className="flex items-center justify-center gap-2 border border-[#FFFFFF] w-[116px] bg-transparent h-[50px] text-[16px] text-white leading-[22.4px]"
             >
               Next
