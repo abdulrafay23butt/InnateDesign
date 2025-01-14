@@ -1,4 +1,4 @@
-// import type { Metadata } from "next";
+import type { Metadata } from "next";
 
 import {
   Inter,
@@ -12,6 +12,12 @@ import "./globals.css";
 import Footer from "@/components/Footer";
 import { TabProvider } from "@/context/TabContsxt";
 import MyProvider from "@/components/MyProvider";
+
+export const metadata: Metadata = {
+  title: "Innate Design - Innovative Web Solutions",
+  description: "Explore cutting-edge web design and development solutions at Innate Design. Transform your ideas into engaging digital experiences with our expert team.",
+  keywords: "web design, web development, digital solutions, innovative design, UX/UI, modern websites"
+};
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 

@@ -41,9 +41,9 @@ const Contact = () => {
           </Link>
         </div>
         {/* right form */}
-        <div className="w-full flex justify-end">
+        {/* <div className="w-full flex justify-end px-0 mx-0"> */}
           <Form />
-        </div>
+        {/* </div> */}
       </div>
     </div>
   );

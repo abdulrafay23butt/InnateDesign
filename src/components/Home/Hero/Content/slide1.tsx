@@ -2,6 +2,12 @@ import React from "react";
 
 import Text from "@/components/ui/Text";
 const Slide1 = () => {
+    const scrollToSection = (id: string) => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
     return (
         <div className="relative h-screen mob:h-full min-h-[784px] flex justify-center items-center">
             <video
@@ -18,11 +24,12 @@ const Slide1 = () => {
                     Design+ Build <br />
                     It’s Innate
                 </Text>
-                <a href="#contactHome">
-                    <button className="mt-[20px] border border-[#FFFFFF]  font-medium font-inter backdrop-blur-[15px] bg-opacity-5  w-full max-w-[208px] h-[50px] text-[16px] leading-[22.4px] hover:bg-white hover:text-black hover:border-black transition duration-300">
-                        Book Consultation
-                    </button>
-                </a>
+                <button
+                    className="mt-[20px] border border-[#FFFFFF] font-medium font-inter backdrop-blur-[15px] bg-opacity-5 w-full max-w-[208px] h-[50px] text-[16px] leading-[22.4px] hover:bg-white hover:text-black hover:border-black transition duration-300"
+                    onClick={() => scrollToSection('contactHome')}
+                >
+                    Book Consultation
+                </button>
 
                 <Text className="text-[20px] leading-[28px] text-[#FFFFFF] mt-20">Project</Text>
                 <Text className="text-[28px] leading-[36.4px] text-[#FFFFFF]">Palm Springs ADU</Text>
