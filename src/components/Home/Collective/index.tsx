@@ -6,7 +6,7 @@ import Text from "@/components/ui/Text";
 const Collective = () => {
   return (
     <>
-      <div className="lowergradient h-10 border-none"></div>
+      {/* <div className="lowergradient h-10 border-none"></div> */}
       <div className="flex justify-center items-center  py-20 mob:my-12 px-5">
         <div className="w-full flex mob:flex-col items-center justify-around">
           <div className="flex-grow px-44 mob:px-0 w-3/5 mob:w-4/5 ">
@@ -29,9 +29,6 @@ const Collective = () => {
           </div>
           <div className=" flex-grow mob:px-0 justify-items-center  w-2/5 mob:w-5/6 mob:mt-20">
             <video
-              data-aos="zoom-in"
-              data-aos-duration="1000"
-              data-aos-delay="200"
               className="mr-24 mob:mr-0"
               autoPlay
               loop
