@@ -10,7 +10,7 @@ const Slide3 = () => {
                 autoPlay
                 loop
                 muted
-            ><source src="https://res.cloudinary.com/dpibcz7ui/video/upload/q_auto,f_auto/v1736762793/PR_ptwlqr.mp4" /></video>
+            ><source src="https://res.cloudinary.com/dpibcz7ui/video/upload/q_auto,f_auto/v1736517831/NB5_m3ekwu.mp4" /></video>
 
 
             <div className="w-full px-20 mob:px-5 relative z-10  mt-[140px]">
