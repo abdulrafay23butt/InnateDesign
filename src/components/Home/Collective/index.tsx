@@ -33,7 +33,7 @@ const Collective = () => {
               autoPlay
               loop
               muted
-            ><source src="https://res.cloudinary.com/dpibcz7ui/video/upload/q_auto,f_auto/v1736761198/website-homepage_cl4w0k.mp4
+            ><source src="https://res.cloudinary.com/dpibcz7ui/video/upload/q_auto,f_auto/v1736766393/Guide_to_Successful_Construction_Projects___%EF%B8%8F_vpqniq.mp4
 " /></video>
           </div>
         </div>
