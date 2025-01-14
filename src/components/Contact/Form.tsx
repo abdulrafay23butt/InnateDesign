@@ -3,6 +3,10 @@ import React, { useState } from "react";
 import Image from "next/image";
 import rightarrow from "@/public/images/press/RightArrowblue.png";
 import Swal from 'sweetalert2';
+import logo from "@/public/logo-innate.png";
+import facebook from "@/public/fbb.png";
+import linkedin from "@/public/LinkedIn.png";
+import instagaram from "@/public/Instagram.png";
 
 const Form = () => {
 
@@ -23,7 +27,7 @@ const Form = () => {
     });
   };
 
-  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+  const handleClick = async (event: React.MouseEvent<HTMLButtonElement>): Promise<void> => {
     event.preventDefault();
 
     if (
@@ -43,13 +47,72 @@ const Form = () => {
       });
       return;
     }
+    const apiEndpoint = "/api/ContactUsapi"; // Replace with your actual API URL
 
-    Swal.fire({
-      title: 'Success!',
-      icon: 'success',
-      showConfirmButton: false,
-      timer: 2000,
-    });
+    try {
+
+
+      // Add images to the formData
+      const formDataWithImages = {
+        ...formData,
+        images: {
+          logo: logo.src,
+          facebook: facebook.src,
+          linkedin: linkedin.src,
+          instagram: instagaram.src,
+        },
+      };
+      // console.log("API response:", formDataWithImages);
+      // Call the API with the collected data
+      const response: Response = await fetch(apiEndpoint, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formDataWithImages),
+      });
+      // console.log("API response:", response);
+
+      // Check if the response is successful
+      if (!response.ok) {
+        throw new Error(`API call failed with status: ${response.status}`);
+      }
+
+      // Parse the API response
+      const data: { success: boolean; message: string } = await response.json();
+      // console.log("API response:", data);
+
+      // Check the response success
+      if (data.success) {
+        Swal.fire({
+          title: 'Success!',
+          icon: 'success',
+          showConfirmButton: false,
+          timer: 2000,
+        });
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          projectAddress: '',
+          projectType: '',
+          message: '',
+        });
+      } else {
+        Swal.fire({
+          title: 'Error!',
+          text: data.message,
+          icon: 'error',
+          showConfirmButton: false,
+          timer: 2000,
+        });
+      }
+    } catch (error) {
+      console.error("Error calling contactFlow API:", error instanceof Error ? error.message : error);
+      alert("Something went wrong. Please try again.");
+    }
+
+
   };
   return (
     <>
@@ -68,16 +131,18 @@ const Form = () => {
             }}
             placeholder=""
             required
-            className="peer block py-2 mb-9 w-full appearance-none border-b-2 border-[#FFFFFF3D] text-[16px] bg-transparent px-0 text-sm text-white  focus:outline-none focus:ring-0"
-
+            className={`peer block py-2 mb-9 w-full appearance-none border-b-2 border-[#FFFFFF3D] text-[16px] bg-transparent px-0 text-sm text-white focus:outline-none focus:ring-0`}
           />
           <label
             htmlFor="name"
-            className="absolute left-0 top-2.5 text-sm text-white transition-all peer-placeholder-shown:top-25  peer-placeholder-shown:text-base peer-focus:-top-2  peer-focus:text-sm"
+            className={`absolute left-0 text-sm text-white transition-all ${formData.name ? "-top-3 text-sm" : "top-2.5 text-base peer-focus:-top-3 peer-focus:text-sm"
+              }`}
           >
             Name
           </label>
         </div>
+
+
         <div className="relative w-full">
           <input
             type="email"
@@ -87,33 +152,40 @@ const Form = () => {
             onChange={handleChange}
             placeholder=""
             required
-            className="peer block py-2 mb-9 w-full appearance-none border-b-2 border-[#FFFFFF3D] text-[16px] bg-transparent px-0 text-sm text-white  focus:outline-none focus:ring-0"
+            className="peer block py-2 mb-9 w-full appearance-none border-b-2 border-[#FFFFFF3D] text-[16px] bg-transparent px-0 text-sm text-white focus:outline-none focus:ring-0"
           />
           <label
             htmlFor="email"
-            className="absolute left-0 top-2.5 text-sm text-white transition-all peer-placeholder-shown:top-25  peer-placeholder-shown:text-base peer-focus:-top-2  peer-focus:text-sm"
+            className={`absolute left-0 text-sm text-white transition-all ${formData.email ? "-top-3 text-sm" : "top-2.5 text-base peer-focus:-top-3 peer-focus:text-sm"
+              }`}
           >
             Email
           </label>
         </div>
+
         <div className="relative w-full">
           <input
             type="number"
             name="phone"
             id="phone"
-            value={formData.phone}
+            value={formData.phone || ""}
             onChange={handleChange}
             placeholder=""
             required
-            className="peer block py-2 mb-9 w-full appearance-none border-b-2 border-[#FFFFFF3D] text-[16px] bg-transparent px-0 text-sm text-white  focus:outline-none focus:ring-0"
+            className="peer block py-2 mb-9 w-full appearance-none border-b-2 border-[#FFFFFF3D] text-[16px] bg-transparent px-0 text-sm text-white focus:outline-none focus:ring-0"
           />
           <label
             htmlFor="phone"
-            className="absolute left-0 top-2.5 text-sm text-white transition-all peer-placeholder-shown:top-25  peer-placeholder-shown:text-base peer-focus:-top-2  peer-focus:text-sm"
+            className={`absolute left-0 text-sm text-white transition-all ${formData.phone && formData.phone.toString().length > 0
+              ? "-top-3 text-sm"
+              : "top-2.5 text-base peer-focus:-top-3 peer-focus:text-sm"
+              }`}
           >
             Phone
           </label>
         </div>
+
+
         <div className="relative w-full">
           <input
             type="text"
@@ -123,15 +195,17 @@ const Form = () => {
             onChange={handleChange}
             placeholder=""
             required
-            className="peer block py-2 mb-9 w-full appearance-none border-b-2 border-[#FFFFFF3D] text-[16px] bg-transparent px-0 text-sm text-white  focus:outline-none focus:ring-0"
+            className="peer block py-2 mb-9 w-full appearance-none border-b-2 border-[#FFFFFF3D] text-[16px] bg-transparent px-0 text-sm text-white focus:outline-none focus:ring-0"
           />
           <label
             htmlFor="projectAddress"
-            className="absolute left-0 top-2.5 text-sm text-white transition-all peer-placeholder-shown:top-25  peer-placeholder-shown:text-base peer-focus:-top-2  peer-focus:text-sm"
+            className={`absolute left-0 text-sm text-white transition-all ${formData.projectAddress ? "-top-3 text-sm" : "top-2.5 text-base peer-focus:-top-3 peer-focus:text-sm"
+              }`}
           >
             Project Address
           </label>
         </div>
+
         <select
           name="projectType"
           value={formData.projectType}
@@ -166,15 +240,17 @@ const Form = () => {
             onChange={handleChange}
             placeholder=""
             required
-            className="peer block py-2 mb-9 w-full appearance-none border-b-2 border-[#FFFFFF3D] text-[16px] bg-transparent px-0 text-sm text-white  focus:outline-none focus:ring-0"
+            className="peer block py-2 mb-9 w-full appearance-none border-b-2 border-[#FFFFFF3D] text-[16px] bg-transparent px-0 text-sm text-white focus:outline-none focus:ring-0"
           />
           <label
             htmlFor="message"
-            className="absolute left-0 top-2.5 text-sm text-white transition-all peer-placeholder-shown:top-25  peer-placeholder-shown:text-base peer-focus:-top-2  peer-focus:text-sm"
+            className={`absolute left-0 text-sm text-white transition-all ${formData.message ? "-top-3 text-sm" : "top-2.5 text-base peer-focus:-top-3 peer-focus:text-sm"
+              }`}
           >
             Message
           </label>
         </div>
+
         <button
           type="submit"
           className="w-[130.63px] h-[50px] hover:bg-white hover:text-black hover:border-black transition duration-300 border border-white text-white text-[16px] font-medium flex items-center justify-center gap-1"

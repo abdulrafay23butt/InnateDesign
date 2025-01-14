@@ -20,11 +20,22 @@ const Hero = () => {
           Design+ Build <br />
           It’s Innate
         </Text>
-        <a href="#contactHome">
-          <button className="mt-[20px] border border-[#FFFFFF]  font-medium font-inter backdrop-blur-[15px] bg-opacity-5  w-full max-w-[208px] h-[50px] text-[16px] leading-[22.4px] hover:bg-white hover:text-black hover:border-black transition duration-300">
-            Book Consultation
-          </button>
-        </a>
+        <button
+          className="mt-[20px] border border-[#FFFFFF] font-medium font-inter backdrop-blur-[15px] bg-opacity-5 w-full max-w-[208px] h-[50px] text-[16px] leading-[22.4px] hover:bg-white hover:text-black hover:border-black transition duration-300"
+          onClick={(e) => {
+            e.preventDefault(); 
+            const targetElement = document.getElementById("contactHome");
+            if (targetElement) {
+              targetElement.scrollIntoView({ behavior: "smooth" });
+            }
+          }}
+        >
+          Book Consultation
+        </button>
+
+
+
+
 
         <Text className="text-[20px] leading-[28px] text-[#FFFFFF] mt-20">Project</Text>
         <Text className="text-[28px] leading-[36.4px] text-[#FFFFFF]">Palm Springs ADU</Text>
