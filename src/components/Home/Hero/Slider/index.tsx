@@ -61,9 +61,9 @@ function HomeSlider() {
           modules={[Keyboard, Navigation, Scrollbar, Autoplay, Pagination]}
           className="mySwiper"
         >
-          <SwiperSlide>
+          {/* <SwiperSlide>
             <Slide1 />
-          </SwiperSlide>
+          </SwiperSlide> */}
 
           <SwiperSlide>
             <Slide2 />
