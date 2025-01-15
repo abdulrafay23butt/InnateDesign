@@ -17,7 +17,7 @@ import "swiper/css/pagination";
 
 import "../slider.css";
 import First from "../Content/Pellegrino/First";
-import Second from "../Content/Pellegrino/Second";
+// import Second from "../Content/Pellegrino/Second";
 import leftarrow from "@/public/images/work/Arrowleftblue.png"
 import rightarrow from "@/public/images/work/Arrowrightblue.png"
 
@@ -71,9 +71,9 @@ function WorkSlider3() {
               <First />
             </SwiperSlide>
 
-            <SwiperSlide>
+            {/* <SwiperSlide>
               <Second />
-            </SwiperSlide>
+            </SwiperSlide> */}
 
             
 
