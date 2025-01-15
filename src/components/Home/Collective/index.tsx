@@ -33,7 +33,7 @@ const Collective = () => {
               autoPlay
               loop
               muted
-            ><source src="/public/images/home/Guide.mp4" /></video>
+            ><source src="/images/home/Guide.mp4" type="video/mp4"/></video>
           </div>
         </div>
       </div>
