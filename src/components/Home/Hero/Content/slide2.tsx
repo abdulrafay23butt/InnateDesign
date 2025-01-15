@@ -1,7 +1,7 @@
 import React from "react";
 // import Image from "next/image";
 
-// import slide from "@/public/images/home/slide1innate.png";
+// import slide from "@/public/public/public/images/home/slide1innate.png";
 import Text from "@/components/ui/Text";
 const Slide2 = () => {
     const scrollToSection = (id:string) => {
@@ -17,7 +17,7 @@ const Slide2 = () => {
                 autoPlay
                 loop
                 muted
-            ><source src="images/home/bosma-adu.mp4" /></video>
+            ><source src="public/images/home/bosma-adu.mp4" /></video>
 
 
             <div className="w-full px-20 mob:px-5 relative z-10  mt-[140px]">
