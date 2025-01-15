@@ -13,7 +13,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 import "./slider.css";
-import Slide1 from "../Content/slide1";
+// import Slide1 from "../Content/slide1";
 import Slide2 from "../Content/slide2";
 import Slide3 from "../Content/slide3";
 import Slide4 from "../Content/slide4";
