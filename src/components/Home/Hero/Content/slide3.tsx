@@ -1,6 +1,6 @@
 import React from "react";
 
-
+import NB5 from "@/public/images/home/NB5.mp4"
 import Text from "@/components/ui/Text";
 const Slide3 = () => {
     const scrollToSection = (id:string) => {
