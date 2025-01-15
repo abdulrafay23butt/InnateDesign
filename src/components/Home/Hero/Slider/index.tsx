@@ -20,10 +20,10 @@ import Slide4 from "../Content/slide4";
 
 function HomeSlider() {
   const slides = [
-    { component: <Slide1 />, delay: 36000 }, 
-    { component: <Slide2 />, delay: 26000 }, 
-    { component: <Slide3 />, delay: 42000 }, 
-    { component: <Slide4 />, delay: 14000 }, 
+    { component: <Slide1 />, delay: 36000 },
+    { component: <Slide2 />, delay: 26000 },
+    { component: <Slide3 />, delay: 42000 },
+    { component: <Slide4 />, delay: 14000 },
   ];
 
   return (
@@ -33,7 +33,7 @@ function HomeSlider() {
           slidesPerView={1}
           speed={2000}
           autoplay={{
-            delay: 5000, // Default delay
+            delay: 5000,
             disableOnInteraction: false,
           }}
           loop={true}
@@ -47,11 +47,10 @@ function HomeSlider() {
           modules={[Keyboard, Navigation, Scrollbar, Autoplay, Pagination]}
           className="mySwiper"
           onSlideChange={(swiper) => {
-            // Ensure autoplay exists and is of type AutoplayOptions
             if (swiper.params.autoplay && typeof swiper.params.autoplay === "object") {
               const currentSlide = swiper.realIndex;
-              swiper.params.autoplay.delay = slides[currentSlide]?.delay || 5000; // Fallback to default delay
-              swiper.autoplay.start(); // Restart autoplay to apply the new delay
+              swiper.params.autoplay.delay = slides[currentSlide]?.delay || 5000;
+              swiper.autoplay.start();
             }
           }}
         >
@@ -61,6 +60,7 @@ function HomeSlider() {
             </SwiperSlide>
           ))}
         </Swiper>
+
       </div>
     </div>
   );

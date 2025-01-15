@@ -4,20 +4,21 @@ import React from "react";
 // import slide from "@/public/public/public/images/home/slide1innate.png";
 import Text from "@/components/ui/Text";
 const Slide2 = () => {
-    const scrollToSection = (id:string) => {
+    const scrollToSection = (id: string) => {
         const element = document.getElementById(id);
         if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
+            element.scrollIntoView({ behavior: 'smooth' });
         }
-      };
+    };
     return (
         <div className="relative h-screen mob:h-full min-h-[784px] flex justify-center items-center">
             <video
+                preload="auto"
                 className="fixed top-0 left-0 w-full h-full object-cover z-0"
                 autoPlay
                 loop
                 muted
-            ><source src="/images/home/bosma-adu.mp4" type="video/mp4"/></video>
+            ><source src="/images/home/bosma-adu.mp4" type="video/mp4" /></video>
 
 
             <div className="w-full px-20 mob:px-5 relative z-10  mt-[140px]">
