@@ -17,7 +17,7 @@ const Slide3 = () => {
         autoPlay
         loop
         muted
-      ><source src="/images/home/website-homepage.mp4" type="video/mp4" /></video>
+      ><source src="/images/home/NB5.mp4" type="video/mp4" /></video>
 
 
       <div className="w-full px-20 mob:px-5 relative z-10  mt-[140px]">
