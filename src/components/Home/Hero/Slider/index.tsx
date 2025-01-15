@@ -19,21 +19,35 @@ import Slide3 from "../Content/slide3";
 import Slide4 from "../Content/slide4";
 
 function HomeSlider() {
-  const slides = [
-    { component: <Slide1 />, delay: 36000 },
-    { component: <Slide2 />, delay: 26000 },
-    { component: <Slide3 />, delay: 42000 },
-    { component: <Slide4 />, delay: 14000 },
-  ];
+  // const slides = [
+  //   { component: <Slide1 />, delay: 36000 },
+  //   { component: <Slide2 />, delay: 26000 },
+  //   { component: <Slide3 />, delay: 42000 },
+  //   { component: <Slide4 />, delay: 14000 },
+  // ];
 
   return (
     <div className="w-full overflow-hidden">
-      <div className="w-full overflow-hidden home-slider-parent">
+      <div className=" w-full overflow-hidden home-slider-parent">
         <Swiper
+          breakpoints={{
+            768: {
+              slidesPerView: 1,
+            },
+            1024: {
+              slidesPerView: 1,
+            },
+            1180: {
+              slidesPerView: 1,
+            },
+            1323: {
+              slidesPerView: 1,
+            },
+          }}
           slidesPerView={1}
           speed={2000}
           autoplay={{
-            delay: 5000,
+            delay: 4000,
             disableOnInteraction: false,
           }}
           loop={true}
@@ -46,23 +60,25 @@ function HomeSlider() {
           }}
           modules={[Keyboard, Navigation, Scrollbar, Autoplay, Pagination]}
           className="mySwiper"
-          onSlideChange={(swiper) => {
-            if (swiper.params.autoplay && typeof swiper.params.autoplay === "object") {
-              const currentSlide = swiper.realIndex;
-              swiper.params.autoplay.delay = slides[currentSlide]?.delay || 5000;
-              swiper.autoplay.start();
-            }
-          }}
         >
-          {slides.map((slide, index) => (
-            <SwiperSlide key={index}>
-              {slide.component}
-            </SwiperSlide>
-          ))}
-        </Swiper>
+          <SwiperSlide>
+            <Slide1 />
+          </SwiperSlide>
 
+          <SwiperSlide>
+            <Slide2 />
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <Slide3 />
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <Slide4 />
+          </SwiperSlide>
+        </Swiper>
       </div>
-    </div>
+    </div>    
   );
 }
 
