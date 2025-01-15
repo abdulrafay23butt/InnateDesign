@@ -9,13 +9,12 @@ export async function POST(req: NextRequest) {
 
     // Configure the email transport using SMTP (for example, using Gmail)
     const transporter = nodemailer.createTransport({
-      service: "gmail",
-      host: "smtp.gmail.com",
-      port: 587,
-      secure: false,
+      host: "smtp.titan.email",
+      port: 465,
+      secure: true,
       auth: {
-        user: "salmanamjad902@gmail.com",
-        pass: "bpfw lpov nuis adbm",
+        user: "info@innate-nw.com",
+        pass: "Innate@123",
       },
     });
 
@@ -211,8 +210,8 @@ export async function POST(req: NextRequest) {
 
     // Set up email options
     const mailOptions = {
-      from: data.email, // Sender's email (from form submission)
-      to: "abdulrafay23butt@gmail.com",
+      from: "info@innate-nw.com", // Sender's email (from form submission)
+      to: "info@innate-nw.com",
       subject: "New Form Submission",
       html: emailTemplate,
     };
