@@ -17,7 +17,7 @@ const Slide2 = () => {
                 autoPlay
                 loop
                 muted
-            ><source src="https://res.cloudinary.com/dpibcz7ui/video/upload/q_auto,f_auto/v1736517690/bosma-adu_dzerok.mp4" /></video>
+            ><source src="images/home/bosma-adu.mp4" /></video>
 
 
             <div className="w-full px-20 mob:px-5 relative z-10  mt-[140px]">

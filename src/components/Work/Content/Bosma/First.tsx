@@ -13,7 +13,7 @@ const First = () => {
         autoPlay
         loop
         muted
-      ><source src="https://res.cloudinary.com/dpibcz7ui/video/upload/v1736517690/bosma-adu_dzerok.mp4" /></video>
+      ><source src="images/home/bosma-adu.mp4" /></video>
 
       <div className="w-full  relative z-10 min-h-[350px] flex items-center justify-center">
         <div className="text-center">
