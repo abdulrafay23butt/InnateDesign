@@ -12,7 +12,7 @@ const Slide3 = () => {
   return (
     <div className="relative h-screen mob:h-full min-h-[784px] flex justify-center items-center">
       <video
-        preload="auto"
+        preload="metadata"
         className="fixed top-0 left-0 w-full h-full object-cover z-0"
         autoPlay
         loop
