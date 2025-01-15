@@ -20,7 +20,7 @@ import First from "../Content/Norman/First";
 import Second from "../Content/Norman/Second";
 import Third from "../Content/Norman/Third";
 import Fourth from "../Content/Norman/Fourth";
-import Fifth from "../Content/Norman/Fifth";
+// import Fifth from "../Content/Norman/Fifth";
 import leftarrow from "@/public/images/work/Arrowleftblue.png"
 import rightarrow from "@/public/images/work/Arrowrightblue.png"
 
