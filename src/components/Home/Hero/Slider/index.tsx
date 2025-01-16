@@ -45,7 +45,7 @@ function HomeSlider() {
             clickable: true,
           }}
           modules={[Keyboard, Navigation, Scrollbar, Autoplay, Pagination]}
-          className="mySwiper"
+          className="mySwiper swiper-backface-hidden"
           onSlideChange={(swiper) => {
             // Ensure autoplay exists and is of type AutoplayOptions
             if (swiper.params.autoplay && typeof swiper.params.autoplay === "object") {
