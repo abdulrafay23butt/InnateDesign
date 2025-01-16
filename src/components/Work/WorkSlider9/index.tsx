@@ -65,7 +65,7 @@ function WorkSlider3() {
                 prevEl: ".cards-custom-prev9",
               }}
             modules={[Keyboard, Navigation, Scrollbar, Autoplay]}
-            className="mySwiper"
+            className="mySwiper swiper-backface-hidden"
           >
             <SwiperSlide>
               <First />
