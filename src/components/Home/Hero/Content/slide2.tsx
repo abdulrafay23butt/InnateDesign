@@ -18,6 +18,7 @@ const Slide2 = () => {
                 autoPlay
                 loop
                 muted
+                playsInline
             ><source src="https://res.cloudinary.com/dpibcz7ui/video/upload/q_auto,f_auto/v1737004017/PR_tpkn5z.mp4" type="video/mp4" /></video>
 
 

@@ -15,6 +15,7 @@ const Slide4 = () => {
                 autoPlay
                 loop
                 muted
+                playsInline
             ><source src="https://res.cloudinary.com/dpibcz7ui/video/upload/q_auto,f_auto/v1737004013/bosma-adu_phzfg7.mp4" type="video/mp4" /></video>
 
 
