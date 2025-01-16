@@ -54,7 +54,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head><link rel="icon" href="/favicon.ico" /></head>
+      <head><link rel="icon" href="/logo-innate.png" /></head>
       <body
         className={`gradient ${inter.variable}  ${monts.variable} ${rajdhani.variable} ${inknut.variable} ${Bodoni.variable} bg-[#000]`}
       >
