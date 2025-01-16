@@ -73,7 +73,21 @@ const Step8: React.FC<Step8Props> = ({ onNext, onPrevious, onChange }) => {
             placeholder="Phone"
             type="number"
             value={phone}
-            onChange={handlePhoneChange} // Handle phone change
+            onChange={(e) => {
+              const value = e.target.value;
+              if (value.length <= 14) {
+                handlePhoneChange(e);
+              }
+              else{
+                Swal.fire({
+                  title: 'Error!',
+                  text: "Enter max 14 digits",
+                  icon: 'error',
+                  showConfirmButton: false,
+                  timer: 2000,
+                });
+              }
+            }} // Handle phone change
             className="pl-4 mt-3 w-full max-w-[900px] h-[60px] border border-[#FFFFFF3D] bg-transparent outline-none text-white text-[16px] placeholder:text-[16px] placeholder:text-white"
           />
         </div>

@@ -203,7 +203,21 @@ const Form = () => {
               name="phone"
               id="phone"
               value={formData.phone || ""}
-              onChange={handleChange}
+              onChange={(e) => {
+                const value = e.target.value;
+                if (value.length <= 14) {
+                  handleChange(e);
+                }
+                else{
+                  Swal.fire({
+                    title: 'Error!',
+                    text: "Enter max 14 digits",
+                    icon: 'error',
+                    showConfirmButton: false,
+                    timer: 2000,
+                  });
+                }
+              }}
               placeholder=""
               required
               className="peer block py-2 mb-9 w-full appearance-none border-b-2 border-[#FFFFFF3D] text-[16px] bg-transparent px-0 text-sm text-white focus:outline-none focus:ring-0"

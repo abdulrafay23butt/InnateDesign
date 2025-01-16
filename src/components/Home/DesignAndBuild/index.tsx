@@ -16,7 +16,7 @@ import rightarrow from "@/public/images/press/RightArrowblue.png";
 
 const DesignAndBuild = () => {
   return (
-    <div className="w-full h-full gradient py-16 px-5">
+    <div className="w-full h-full gradient py-16 px-5 mob:py-0">
       <Text
         as="h1"
         className="text-center font-normal mob:text-[30px] mt-6 mb-4 mob:leading-[33px] mob:px-5"

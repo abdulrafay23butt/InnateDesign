@@ -9,7 +9,7 @@ import profile3 from "@/public/images/home/profile (2).png";
 
 const Testimonials = () => {
   return (
-    <div className=" w-full mx-auto py-44 tab:px-5">
+    <div className=" w-full mx-auto py-44 tab:px-5 mob:pb-20">
       <div
         className="flex flex-wrap justify-center gap-[20px]">
         <div className="w-full max-w-[25%] border mob:max-w-[100%] border-[#0000001A] rounded-[10px]">

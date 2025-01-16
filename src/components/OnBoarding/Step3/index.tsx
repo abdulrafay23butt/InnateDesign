@@ -33,7 +33,7 @@ const Step3: React.FC<Step1Props> = ({ onNext, onPrevious }) => {
           </div>
         </div>
 
-        <div className="flex mob:flex-wrap justify-end mt-10">
+        <div className="flex mob:flex-wrap justify-between mt-10">
           <div className="flex gap-5 mt-6">
           <button
               onClick={onPrevious}

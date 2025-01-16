@@ -76,12 +76,12 @@ const Step5: React.FC<Step5Props> = ({ onNext, onPrevious, onChange }) => {
         <Text as="h1" className="text-[40px] font-firaSans font-normal mb-8">
           What style best fits your vision?
         </Text>
-        <div className="flex flex-wrap gap-5">
+        <div className="flex flex-wrap gap-5 mob:flex-row">
           {styles.map(({ id, imageSrc, title, description }) => (
             <button
               key={id}
               onClick={() => setSelectedId(id)}
-              className={`flex items-center justify-start gap-[15px] w-[30%] h-[154px] rounded-[10px] p-[16px] ${selectedId === id ? "border border-white" : "border border-[#FFFFFF3D]"
+              className={`flex items-center justify-start gap-[15px] w-[30%] mob:w-full h-[154px] rounded-[10px] p-[16px] ${selectedId === id ? "border border-white" : "border border-[#FFFFFF3D]"
                 }`}
             >
               <Image src={imageSrc} alt="" width={128} height={128} />

@@ -64,12 +64,12 @@ const Step4Alternative: React.FC<Step5Props> = ({ onNext, onPrevious, onChange }
                     What type of Accessory Dwelling Unit (ADU) are you planning to build?
                 </Text>
 
-                <div className="flex flex-wrap gap-5">
+                <div className="flex flex-wrap gap-5 mob:flex-row">
                     {styles.map(({ id, imageSrc, title, description }) => (
                         <button
                             key={id}
                             onClick={() => setSelectedId(id)}
-                            className={`flex flex-col items-center justify-start gap-5 mx-auto w-[30%] rounded-[10px] p-[16px] 
+                            className={`flex flex-col items-center justify-start gap-5 mx-auto w-[30%] mob:w-full rounded-[10px] p-[16px] 
                             ${selectedId === id ? "border border-white bg-[#1F1F1F]" : "border border-[#FFFFFF3D] bg-transparent"}`}
                         >
                             <div className="w-[100%] relative aspect-[10/5]">
