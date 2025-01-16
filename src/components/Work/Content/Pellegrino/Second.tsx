@@ -13,7 +13,7 @@ const Second = () => {
         autoPlay
         loop
         muted
-      ><source src="/images/home/PR.mp4" type="video/mp4"/></video>
+      ><source src="https://res.cloudinary.com/dpibcz7ui/video/upload/q_auto,f_auto/v1737004017/PR_tpkn5z.mp4" type="video/mp4"/></video>
 
       <div className="w-full  relative z-10 min-h-[350px] flex items-center justify-center">
         <div className="text-center">

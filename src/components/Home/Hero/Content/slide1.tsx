@@ -16,7 +16,7 @@ const Slide1 = () => {
                 autoPlay
                 loop
                 muted
-            ><source src="/images/home/NB5.mp4" type="video/mp4" /></video>
+            ><source src="https://res.cloudinary.com/dpibcz7ui/video/upload/q_auto,f_auto/v1737004016/website-homepage_lja4bt.mp4" type="video/mp4" /></video>
 
 
             <div className="w-full px-20 mob:px-5 relative z-10  mt-[140px]">
