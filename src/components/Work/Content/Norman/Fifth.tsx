@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 import Text from "@/components/ui/Text";
-
 import arrowwhite from "@/public/images/work/Arrowwhite.png";
 const Fifth = () => {
   return (
@@ -13,7 +12,8 @@ const Fifth = () => {
         autoPlay
         loop
         muted
-      ><source src="https://res.cloudinary.com/dpibcz7ui/video/upload/q_auto,f_auto/v1737004008/NB5_ntcswx.mp4" type="video/mp4"/></video>
+      ><source src="https://res.cloudinary.com/dpibcz7ui/video/upload/q_auto,f_auto/v1737004008/NB5_ntcswx.mp4" type="video/mp4" /></video>
+
 
       <div className="w-full  relative z-10 min-h-[350px] flex items-center justify-center">
         <div className="text-center">
