@@ -6,9 +6,9 @@ import Marquee from "./Marquee";
 
 const OurPartners = () => {
   return (
-    <div className="px-5 py-16">
-      <Text className="text-[24px] font-medium mb-8 text-center mob:mb-0">Loved by Our Partners at</Text>
-      <div className="w-full max-w-[95%] mx-auto flex lg:flex-wrap lg:justify-center lg:gap-[40px] justify-between items-center">
+    <div className="px-5 pt-16">
+      <Text className="text-[24px] font-medium text-center mob:mb-0">Loved by Our Partners at</Text>
+      <div className="w-full h-[250px] max-w-[95%] mx-auto flex lg:flex-wrap lg:justify-center lg:gap-[40px] justify-between items-center">
         {/* <div className="max-w-[45px] mob:max-w-full mob:w-full ">
         <Image className="mob:mx-auto" src={p1} alt="" width={45} height={53} />
         </div>

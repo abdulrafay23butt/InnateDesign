@@ -1,3 +1,5 @@
+'use client'
+import { useEffect } from "react";
 import Collective from "@/components/Home/Collective";
 import Confidence from "@/components/Home/Confidence";
 import ContactHome from "@/components/Home/ContactHome";
@@ -12,8 +14,20 @@ import Services from "@/components/Home/Services";
 import Testimonials from "@/components/Home/Testimonials";
 import Navbar from "@/components/Navbar";
 
-
 export default function Home() {
+ 
+  useEffect(()=>{
+    const s=localStorage.getItem("link")
+    
+    if(s==="#contactHome")
+    {
+      const element = document.getElementById("contactHome");
+      console.log(element);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+  },[])
   return (
     <>
       <div className="gradient">

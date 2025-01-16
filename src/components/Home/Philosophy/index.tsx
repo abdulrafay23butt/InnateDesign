@@ -8,7 +8,7 @@ const Philosophy = () => {
   return (
     <>
 
-      <div className="flex justify-center items-center  py-20 mob:my-12 px-20">
+      <div className="flex justify-center items-center  py-20 mob:my-12 px-5">
         <div className="w-[90%] flex mob:flex-col items-center justify-center">
           <div className="w-4/5 mob:px-0 ">
             <Text className="text-[32px] text-white font-semibold leading-[41.2px] mt-3 mb-4">

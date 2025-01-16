@@ -176,8 +176,8 @@ const Blog: FC<ArticleProps> = ({ id }) => {
             </Text>
             <div className="flex gap-3">
               <Image src={share} alt="" width={32} height={32} />
-              <Image src={fb} alt="" width={32} height={32} />
-              <Image src={linkedin} alt="" width={32} height={32} />
+              <a href="https://www.facebook.com/innateaec" target="_blank"><Image src={fb} alt="" width={32} height={32} /></a>
+              <a href="https://www.linkedin.com/company/innate-nw/" target="_blank"><Image src={linkedin} alt="" width={32} height={32} /></a>
             </div>
           </div>
           {section.content.map((item, index) => (

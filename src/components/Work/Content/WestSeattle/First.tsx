@@ -16,8 +16,8 @@ const First = () => {
           width={1440}
           height={757}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black"></div>
-        <div className="absolute bottom-0 left-0 w-full h-10 bg-black"></div>
+        {/* <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black"></div>
+        <div className="absolute bottom-0 left-0 w-full h-10 bg-black"></div> */}
 
         <div className="w-full relative z-10 min-h-[350px] flex items-center justify-center">
           <div className="text-center">
@@ -37,7 +37,7 @@ const First = () => {
         </div>
       </div>
 
-      <div className="lowergradient h-10 border-none"></div>
+      {/* <div className="lowergradient h-10 border-none"></div> */}
     </>
   );
 };

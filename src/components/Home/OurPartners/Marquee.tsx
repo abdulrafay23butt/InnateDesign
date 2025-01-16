@@ -38,7 +38,7 @@ const Marquee = (props: Props) => {
   const duplicatedImageData = [...imageData, ...imageData];
 
   return (
-    <div className="py-14 overflow-hidden">
+    <div className="pb-14 overflow-hidden">
      
       <ReactMarquee {...rest} className="flex items-center">
         {duplicatedImageData.map((image, index) => (
