@@ -168,7 +168,7 @@ const Form = () => {
             />
             <label
               htmlFor="name"
-              className={`absolute left-0 text-sm text-white transition-all ${formData.name ? "-top-3 text-sm" : "top-2.5 text-base peer-focus:-top-3 peer-focus:text-sm"
+              className={`absolute left-0 text-sm text-white transition-all ${formData.name ? "-top-4 text-sm" : "top-2.5 text-base peer-focus:-top-4 peer-focus:text-sm"
                 }`}
             >
               Name
@@ -190,7 +190,7 @@ const Form = () => {
             />
             <label
               htmlFor="email"
-              className={`absolute left-0 text-sm text-white transition-all ${formData.email ? "-top-3 text-sm" : "top-2.5 text-base peer-focus:-top-3 peer-focus:text-sm"
+              className={`absolute left-0 text-sm text-white transition-all ${formData.email ? "-top-4 text-sm" : "top-2.5 text-base peer-focus:-top-4 peer-focus:text-sm"
                 }`}
             >
               Email
@@ -211,8 +211,8 @@ const Form = () => {
             <label
               htmlFor="phone"
               className={`absolute left-0 text-sm text-white transition-all ${formData.phone && formData.phone.toString().length > 0
-                ? "-top-3 text-sm"
-                : "top-2.5 text-base peer-focus:-top-3 peer-focus:text-sm"
+                ? "-top-4 text-sm"
+                : "top-2.5 text-base peer-focus:-top-4 peer-focus:text-sm"
                 }`}
             >
               Phone
@@ -233,7 +233,7 @@ const Form = () => {
             />
             <label
               htmlFor="projectAddress"
-              className={`absolute left-0 text-sm text-white transition-all ${formData.projectAddress ? "-top-3 text-sm" : "top-2.5 text-base peer-focus:-top-3 peer-focus:text-sm"
+              className={`absolute left-0 text-sm text-white transition-all ${formData.projectAddress ? "-top-4 text-sm" : "top-2.5 text-base peer-focus:-top-4 peer-focus:text-sm"
                 }`}
             >
               Project Address
@@ -278,7 +278,7 @@ const Form = () => {
             />
             <label
               htmlFor="message"
-              className={`absolute left-0 text-sm text-white transition-all ${formData.message ? "-top-3 text-sm" : "top-2.5 text-base peer-focus:-top-3 peer-focus:text-sm"
+              className={`absolute left-0 text-sm text-white transition-all ${formData.message ? "-top-4 text-sm" : "top-2.5 text-base peer-focus:-top-4 peer-focus:text-sm"
                 }`}
             >
               Message

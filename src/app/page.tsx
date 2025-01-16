@@ -15,19 +15,19 @@ import Testimonials from "@/components/Home/Testimonials";
 import Navbar from "@/components/Navbar";
 
 export default function Home() {
- 
-  useEffect(()=>{
-    const s=localStorage.getItem("link")
-    
-    if(s==="#contactHome")
-    {
+
+  useEffect(() => {
+    const s = localStorage.getItem("link")
+
+    if (s === "#contactHome") {
       const element = document.getElementById("contactHome");
       console.log(element);
-        if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
-        }
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+      localStorage.removeItem("link")
     }
-  },[])
+  }, [])
   return (
     <>
       <div className="gradient">

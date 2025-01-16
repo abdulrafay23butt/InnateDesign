@@ -8,7 +8,7 @@ import Form from "@/components/Contact/Form";
 
 const ContactHome = () => {
   return (
-    <div className="py-36 px-28 mob:px-5" id="contactHome">
+    <div className="py-36 px-32 xl:px-24 mob:px-5" id="contactHome">
       <div className="mx-auto w-full max-w-full flex justify-bewteen lg:flex-wrap gap-[200px] lg:gap-[50px] ">
         <div className="max-w-[40%] mob:max-w-[90%]">
           <Text as="h1" className="text-[40px] text-white font-medium ">
