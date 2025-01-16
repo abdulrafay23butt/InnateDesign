@@ -7,7 +7,7 @@ const Collective = () => {
   return (
     <>
       {/* <div className="lowergradient h-10 border-none"></div> */}
-      <div className="flex justify-center items-center  py-20 mob:my-12 px-5">
+      <div className="flex justify-center items-center  py-20 mob:my-12 px-">
         <div className="w-full flex mob:flex-col items-center justify-around">
           <div className="flex flex-col px- mob:px-0 w-2/5 mob:w-4/5 ">
             <Text className="text-[24px] font-medium leading-[31.2px] mb-4">
