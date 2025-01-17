@@ -38,7 +38,7 @@ const Testimonials = () => {
         <div className="w-full max-w-[25%] border mob:max-w-[100%] border-[#0000001A] rounded-[10px]">
           <div className="relative w-full pb-[56.25%] rounded-xl overflow-hidden"> {/* 16:9 Aspect Ratio */}
             <iframe
-              src="https://www.youtube.com/embed/RdjFPFmJqmw?start=6&rel=0"
+              src="https://www.youtube.com/embed/CIfc5KXFhx8?si=ka96dqKPIVHT7MoX?rel=0"
               title="YouTube Video Player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
@@ -61,7 +61,7 @@ const Testimonials = () => {
         <div className="w-full max-w-[25%] border mob:max-w-[100%] border-[#0000001A] rounded-[10px]">
           <div className="relative w-full pb-[56.25%] rounded-xl overflow-hidden"> {/* 16:9 Aspect Ratio */}
             <iframe
-              src="https://www.youtube.com/embed/RdjFPFmJqmw?start=6&rel=0"
+              src="https://www.youtube.com/embed/uJDgiKqd178?si=8Y3_IVeBGpBZOyCR?rel=0"
               title="YouTube Video Player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen

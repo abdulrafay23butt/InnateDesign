@@ -2,14 +2,14 @@ import React from "react";
 // import Image from "next/image";
 
 // import slide from "@/public/public/public/images/home/slide1innate.png";
-import Text from "@/components/ui/Text";
+// import Text from "@/components/ui/Text";
 const Slide2 = () => {
-    const scrollToSection = (id: string) => {
-        const element = document.getElementById(id);
-        if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
-        }
-    };
+    // const scrollToSection = (id: string) => {
+    //     const element = document.getElementById(id);
+    //     if (element) {
+    //         element.scrollIntoView({ behavior: 'smooth' });
+    //     }
+    // };
     return (
         <div className="relative h-screen mob:h-full min-h-[784px] flex justify-center items-center">
             <video
@@ -22,7 +22,7 @@ const Slide2 = () => {
             ><source src="https://res.cloudinary.com/dpibcz7ui/video/upload/q_auto,f_auto/v1737004017/PR_tpkn5z.mp4" type="video/mp4" /></video>
 
 
-            <div className="w-full px-20 mob:px-5 relative z-10  mt-[140px]">
+            {/* <div className="w-full px-20 mob:px-5 relative z-10  mt-[140px]">
                 <Text as="h2" className="my-3 ">
                     Design+ Build <br />
                     It’s Innate
@@ -36,7 +36,7 @@ const Slide2 = () => {
 
                 <Text className="text-[20px] leading-[28px] text-[#FFFFFF] mt-20">Project</Text>
                 <Text className="text-[28px] leading-[36.4px] text-[#FFFFFF]">Palm Springs ADU</Text>
-            </div>
+            </div> */}
         </div>
     );
 };

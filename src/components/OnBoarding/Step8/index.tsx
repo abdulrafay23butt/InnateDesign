@@ -17,7 +17,7 @@ const Step8: React.FC<Step8Props> = ({ onNext, onPrevious, onChange }) => {
   const [phone, setPhone] = useState<string>("");
 
   useEffect(() => {
-      const savedData = localStorage.getItem("step8");
+      const savedData = sessionStorage.getItem("step8");
       if (savedData) {
         const { name, phone } = JSON.parse(savedData);
         setName(name || "");
@@ -46,7 +46,7 @@ const Step8: React.FC<Step8Props> = ({ onNext, onPrevious, onChange }) => {
       });
       return;
     }
-    localStorage.setItem("step8", JSON.stringify({ name, phone }));
+    sessionStorage.setItem("step8", JSON.stringify({ name, phone }));
     onNext();
   };
 

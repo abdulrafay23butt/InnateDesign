@@ -4,7 +4,7 @@ import Image from "next/image";
 import Text from "@/components/ui/Text";
 
 import arrow from "@/public/images/onboarding/majesticons_arrow-up-line.png";
-import step3 from "@/public/images/onboarding/step3.png"
+import savetime from "@/public/images/home/savetimee.png";
  
 interface Step1Props {
   onNext: () => void;
@@ -29,7 +29,7 @@ const Step3: React.FC<Step1Props> = ({ onNext, onPrevious }) => {
             </Text>
           </div>
           <div className="">
-            <Image src={step3} alt="" width={473} height={404} />
+            <Image src={savetime} alt="" width={473} height={404} />
           </div>
         </div>
 

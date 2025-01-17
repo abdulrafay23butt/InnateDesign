@@ -28,13 +28,13 @@ const Step4Alternative: React.FC<Step5Props> = ({ onNext, onPrevious, onChange }
             const selectedOptions = styles.find((style) => style.id === selectedId);
             if (selectedOptions) {
                 onChange({ selectedOptions });
-                localStorage.setItem("step4Alternative", JSON.stringify(selectedOptions));
+                sessionStorage.setItem("step4Alternative", JSON.stringify(selectedOptions));
             }
         }
     }, [selectedId, onChange, styles]);
 
     useEffect(() => {
-        const savedData = localStorage.getItem("step5");
+        const savedData = sessionStorage.getItem("step5");
         if (savedData) {
             const selectedOptions = JSON.parse(savedData);
 

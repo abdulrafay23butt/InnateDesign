@@ -22,7 +22,7 @@ const Step6: React.FC<Step6Props> = ({ onNext, onPrevious, onChange }) => {
   };
 
   useEffect(() => {
-    const savedData = localStorage.getItem("step6"); 
+    const savedData = sessionStorage.getItem("step6"); 
     setAddress(savedData || "");
   }, []);
 
@@ -37,7 +37,7 @@ const Step6: React.FC<Step6Props> = ({ onNext, onPrevious, onChange }) => {
       });
       return;
     }
-    localStorage.setItem("step6", address);
+    sessionStorage.setItem("step6", address);
     onNext();
   };
 

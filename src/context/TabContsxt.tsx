@@ -12,13 +12,13 @@ export const TabProvider = ({ children }: { children: ReactNode }) => {
   const [activeTab, setActiveTab] = useState<string | null>(null); // Initial state is null to indicate loading
 
   useEffect(() => {
-    const storedTab = localStorage.getItem("activeTab") || "/";
+    const storedTab = sessionStorage.getItem("activeTab") || "/";
     setActiveTab(storedTab); // Load value from localStorage
   }, []);
 
   useEffect(() => {
     if (activeTab) {
-      localStorage.setItem("activeTab", activeTab);
+      sessionStorage.setItem("activeTab", activeTab);
     }
   }, [activeTab]);
 

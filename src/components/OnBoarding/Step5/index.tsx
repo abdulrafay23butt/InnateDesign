@@ -37,14 +37,14 @@ const Step5: React.FC<Step5Props> = ({ onNext, onPrevious, onChange }) => {
       if (selectedStyle) {
         onChange({ selectedStyle });
         console.log("w", selectedStyle)
-        localStorage.setItem("step5", JSON.stringify(selectedStyle));
+        sessionStorage.setItem("step5", JSON.stringify(selectedStyle));
       }
     }
   }, [selectedId, onChange, styles]);
 
   // Second useEffect (for retrieving selectedStyle from localStorage)
   useEffect(() => {
-    const savedData = localStorage.getItem("step5");
+    const savedData = sessionStorage.getItem("step5");
     if (savedData) {
       // Since you stored `selectedStyle` directly, parse it correctly
       const selectedStyle = JSON.parse(savedData);

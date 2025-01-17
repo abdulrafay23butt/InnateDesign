@@ -18,14 +18,14 @@ const SlideBar: React.FC<Step4Props> = ({ onChange }) => {
     const selectedOptions = [`Range: ${start}K - ${end}K`];
     
     // Save to localStorage
-    localStorage.setItem("step4", JSON.stringify(selectedOptions));
+    sessionStorage.setItem("step4", JSON.stringify(selectedOptions));
     
     // Notify parent
     onChange({ selectedOptions });
   };
 
   useEffect(() => {
-    const savedData = localStorage.getItem("step4");
+    const savedData = sessionStorage.getItem("step4");
     if (savedData) {
       const selectedOptions = JSON.parse(savedData);
       

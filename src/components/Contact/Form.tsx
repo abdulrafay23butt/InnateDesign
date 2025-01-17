@@ -134,7 +134,14 @@ const Form = () => {
       }
     } catch (error) {
       console.error("Error calling contactFlow API:", error instanceof Error ? error.message : error);
-      alert("Something went wrong. Please try again.");
+      Swal.fire({
+        title: 'Error!',
+        text: "Something went Wrong. Please Try Again",
+        icon: 'error',
+        showConfirmButton: false,
+        timer: 2000,
+      });
+      setLoading(false);
     }
 
 

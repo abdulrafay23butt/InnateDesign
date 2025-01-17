@@ -24,7 +24,7 @@ const Step2: React.FC<Step2Props> = ({ onNext, onPrevious, onChange }) => {
 
   const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
   useEffect(() => {
-    const savedData = localStorage.getItem("step2");
+    const savedData = sessionStorage.getItem("step2");
     if (savedData) {
       const { selectedOptions } = JSON.parse(savedData);
       setSelectedOptions(selectedOptions || []);
@@ -109,7 +109,7 @@ const Step2: React.FC<Step2Props> = ({ onNext, onPrevious, onChange }) => {
             </button>
             <button
               onClick={() => {
-                handleNextClick(); localStorage.setItem("step2", JSON.stringify({ selectedOptions }));
+                handleNextClick(); sessionStorage.setItem("step2", JSON.stringify({ selectedOptions }));
               }}
               className="flex items-center justify-center gap-2 border border-[#FFFFFF] w-[116px] bg-transparent h-[50px] text-[16px] text-white leading-[22.4px]"
             >

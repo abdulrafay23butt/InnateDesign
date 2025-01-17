@@ -11,17 +11,19 @@ import Step6 from "./Step6";
 import Step7 from "./Step7";
 import Step8 from "./Step8";
 import LastStep from "./LastStep";
-
+import { ClipLoader } from "react-spinners"
 import logo from "@/public/logo-innate.png";
 import facebook from "@/public/fbb.png";
 import linkedin from "@/public/LinkedIn.png";
+import Swal from 'sweetalert2';
 import instagaram from "@/public/Instagram.png";
 
 const OnBoarding: React.FC = () => {
   // Initialize state with a function that retrieves the saved step from localStorage
   const totalSteps = 9; // Total number of steps
+  const [loading, setLoading] = useState(false);
   const [currentStep, setCurrentStep] = useState<number>(() => {
-    const savedStep = localStorage.getItem("currentStep");
+    const savedStep = sessionStorage.getItem("currentStep");
     return savedStep ? Number(savedStep) : 0;
   });
 
@@ -30,19 +32,19 @@ const OnBoarding: React.FC = () => {
   }
 
   const [formData, setFormData] = useState<FormData>(() => {
-    const savedData = localStorage.getItem("formData");
+    const savedData = sessionStorage.getItem("formData");
     return savedData ? (JSON.parse(savedData) as FormData) : {}; // Retrieve data from localStorage
   });
 
 
   useEffect(() => {
     // Save the current step to localStorage
-    localStorage.setItem("currentStep", String(currentStep));
+    sessionStorage.setItem("currentStep", String(currentStep));
   }, [currentStep]);
 
   useEffect(() => {
     // Save form data to localStorage whenever it changes
-    localStorage.setItem("formData", JSON.stringify(formData));
+    sessionStorage.setItem("formData", JSON.stringify(formData));
   }, [formData]);
 
   const handleNext = () => {
@@ -57,7 +59,7 @@ const OnBoarding: React.FC = () => {
       if (prev === 4.5) {
         return 5
       }
-      
+
       // Default navigation
       return prev < totalSteps ? prev + 1 : prev;
     });
@@ -98,11 +100,19 @@ const OnBoarding: React.FC = () => {
 
     // Define your API endpoint
     const apiEndpoint = "/api/contactFlow"; // Replace with your actual API URL
+    setLoading(true);
 
     try {
       // Check if formData is valid before sending the API request
       if (!formData || Object.keys(formData).length === 0) {
-        alert("Please complete the form before proceeding.");
+        Swal.fire({
+          title: 'Error!',
+          text: "Please complete the form before proceeding.",
+          icon: 'error',
+          showConfirmButton: false,
+          timer: 2000,
+        });
+        setLoading(false);
         return;
       }
       // Add images to the formData
@@ -139,12 +149,26 @@ const OnBoarding: React.FC = () => {
       if (data.success) {
         handleNext(); // Proceed to the next step
       } else {
-        alert(`Error: ${data.message}`);
+        Swal.fire({
+          title: 'Error!',
+          text: data.message,
+          icon: 'error',
+          showConfirmButton: false,
+          timer: 2000,
+        });
       }
     } catch (error) {
       console.error("Error calling contactFlow API:", error instanceof Error ? error.message : error);
-      alert("Something went wrong. Please try again.");
+      Swal.fire({
+        title: 'Error!',
+        text: "Something went Wrong. Please Try Again",
+        icon: 'error',
+        showConfirmButton: false,
+        timer: 2000,
+      });
     }
+    setLoading(false);
+
   };
 
 
@@ -155,6 +179,11 @@ const OnBoarding: React.FC = () => {
 
   return (
     <div className="onboarding-container gradient px-5">
+      {loading && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+          <ClipLoader color="#007bff" size={50} />
+        </div>
+      )}
       {currentStep !== 0 && (
         <div className="pt-40 flex justify-center mob:px-5">
           <div
@@ -256,7 +285,7 @@ const OnBoarding: React.FC = () => {
       {currentStep === 9 && (
         <LastStep
           onPrevious={handlePrevious}
-           />
+        />
       )}
     </div>
   );

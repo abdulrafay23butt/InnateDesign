@@ -24,7 +24,7 @@ const Step1: React.FC<Step1Props> = ({ onNext, onPrevious, onChange }) => {
   const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
   const [comment, setComment] = useState<string>("");
   useEffect(() => {
-    const savedData = localStorage.getItem("step1");
+    const savedData = sessionStorage.getItem("step1");
     if (savedData) {
       const { selectedOptions, comment } = JSON.parse(savedData);
       setSelectedOptions(selectedOptions || []);
@@ -128,7 +128,7 @@ const Step1: React.FC<Step1Props> = ({ onNext, onPrevious, onChange }) => {
               Previous
             </button>
             <button
-              onClick={()=>{handleNextClick(); localStorage.setItem("step1", JSON.stringify({ selectedOptions, comment }));
+              onClick={()=>{handleNextClick(); sessionStorage.setItem("step1", JSON.stringify({ selectedOptions, comment }));
             }}
               className="flex items-center justify-center gap-2 border border-[#FFFFFF] w-[116px] bg-transparent h-[50px] text-[16px] text-white leading-[22.4px]"
             >

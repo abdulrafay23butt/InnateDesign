@@ -1,7 +1,7 @@
 import React from "react";
-import Image from "next/image";
+// import Image from "next/image";
 
-import slide from "@/public/images/home/slide1innate.png";
+// import slide from "@/public/images/home/slide1innate.png";
 import Text from "@/components/ui/Text";
 const Hero = () => {
   const scrollToSection = (id:string) => {
@@ -12,13 +12,7 @@ const Hero = () => {
   };
   return (
     <div className="relative h-screen mob:h-full min-h-[784px] flex justify-center items-center">
-      <Image
-        className="absolute top-0 left-0 w-full h-full object-cover z-0"
-        src={slide}
-        alt=""
-        width={1440}
-        height={757}
-      />
+     
 
 
       <div className="w-full px-20 mob:px-5 relative z-10  mt-[140px]">
