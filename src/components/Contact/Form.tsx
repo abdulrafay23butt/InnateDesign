@@ -71,7 +71,7 @@ const Form = () => {
       return;
     }
 
-    const apiEndpoint = "https://innate-design.vercel.appapi/ContactUsapi"; // Replace with your actual API URL
+    const apiEndpoint = "/api/ContactUsapi"; // Replace with your actual API URL
 
     try {
       setLoading(true)
