@@ -1,31 +1,33 @@
-import Text from "@/components/ui/Text";
-import Image from "next/image";
-import React from "react";
+import Text from '@/components/ui/Text'
+import Image from 'next/image'
+import React from 'react'
 
-import Button from "@/components/ui/Button";
+import Button from '@/components/ui/Button'
 
-import stressbg from "@/public/images/home/dsignbuild/avoidbg.png";
-import stresstop from "@/public/images/home/dsignbuild/avoidtop.png";
+import stressbg from '@/public/images/home/dsignbuild/avoidbg.png'
+import stresstop from '@/public/images/home/dsignbuild/avoidtop.png'
 
-import avoidleft from "@/public/images/home/dsignbuild/avoidleft.png";
-import avoidright from "@/public/images/home/dsignbuild/avoidright.png";
-import avoidcenter from "@/public/images/home/dsignbuild/avoidcenter.png";
-import savetime from "@/public/images/home/savetimee.png";
-import track from "@/public/images/home/cabinetry.png";
-import rightarrow from "@/public/images/press/RightArrowblue.png";
+import avoidleft from '@/public/images/home/dsignbuild/avoidleft.png'
+import avoidright from '@/public/images/home/dsignbuild/avoidright.png'
+import avoidcenter from '@/public/images/home/dsignbuild/avoidcenter.png'
+import savetime from '@/public/images/home/savetimee.png'
+import track from '@/public/images/home/cabinetry.png'
+import rightarrow from '@/public/images/press/RightArrowblue.png'
 
 const DesignAndBuild = () => {
   return (
-    <div className="w-full h-full gradient py-16 px-5 mob:py-0">
+    <div className="w-full h-full gradient py-16 px-5 mob:pt-5">
       <Text
         as="h1"
-        className="text-center font-normal mob:text-[30px] mt-6 mb-4 mob:leading-[33px] mob:px-5"
+        className="text-center font-normal mob:text-[30px] mb-4 mob:leading-[33px] mob:px-5"
       >
         Design and build the <span className="italic">Innate </span> way
       </Text>
       {/* avoid surprise */}
       <div className="flex  lg:flex-wrap gap-[47px] items-center p-[43px] mob:px-[20px] w-[80%] mob:w-full min-h-[439px] mt-16 mb-8 mx-auto rounded-[50px] mob:rounded-[19.05px] gradient2 justify-center">
-        <div className="w-full max-w-[437.84px] relative flex justify-center items-center border">
+
+        <div className="w-full max-w-[437.84px] relative flex justify-center items-center mob:order-2">
+
           <Image
             data-aos="zoom-in"
             data-aos-duration="1000"
@@ -57,7 +59,7 @@ const DesignAndBuild = () => {
             height={244.25}
           />
         </div>
-        <div className="">
+        <div className="mob:order-1">
           <Text as="h2" className="">
             Avoid Surprises
           </Text>
@@ -72,11 +74,9 @@ const DesignAndBuild = () => {
         </div>
       </div>
 
-
-
       {/* Save Time */}
       <div className="flex lg:flex-wrap gap-[47px] items-center p-[43px] mob:px-[20px] w-[80%] mob:w-full min-h-[439px] my-8 mx-auto rounded-[50px] mob:rounded-[19.05px] gradient2 justify-center">
-        <div className="">
+        <div className="mob:order-1">
           <Text as="h2" className="">
             Save Time
           </Text>
@@ -89,7 +89,7 @@ const DesignAndBuild = () => {
             <Image src={rightarrow} alt="" width={18} height={18} />
           </Button>
         </div>
-        <div className="w-full max-w-[431.81px] flex justify-center items-center">
+        <div className="w-full max-w-[431.81px] flex justify-center items-center mob:order-2">
           <Image
             data-aos="zoom-in"
             data-aos-duration="1000"
@@ -103,8 +103,8 @@ const DesignAndBuild = () => {
       </div>
 
       {/* Avoid Stress */}
-      <div className="flex lg:flex-wrap gap-[47px] items-center p-[43px] mob:px-[20px] w-[80%] mob:w-full min-h-[439px] my-8 mx-auto rounded-[50px] mob:rounded-[19.05px] gradient2 justify-center">
-        <div className="w-full max-w-[430px] flex justify-end items-end relative">
+      <div className="flex lg:flex-wrap gap-[47px] items-center p-[43px] mob:px-[20px] w-[80%] mob:w-full min-h-[439px] my-8 mx-auto rounded-[50px] mob:rounded-[19.05px] mob:gap-[80px] gradient2 justify-center">
+        <div className="w-full max-w-[430px] flex justify-end items-end relative mob:mt-12 mob:order-2">
           <Image
             data-aos="fade-right"
             data-aos-duration="1000"
@@ -126,7 +126,7 @@ const DesignAndBuild = () => {
             height={98}
           />
         </div>
-        <div className="">
+        <div className="mob:order-1">
           <Text as="h2" className="">
             Avoid Stress
           </Text>
@@ -144,7 +144,7 @@ const DesignAndBuild = () => {
 
       {/* Track Progress */}
       <div className="flex lg:flex-wrap gap-[47px] items-center p-[43px] mob:px-[20px] w-[80%] mob:w-full min-h-[439px] mt-8 mx-auto rounded-[50px] mob:rounded-[19.05px] gradient2 justify-center">
-        <div className="">
+        <div className="mob:order-1">
           <Text as="h2" className="">
             Track Progress
           </Text>
@@ -157,7 +157,7 @@ const DesignAndBuild = () => {
             <Image src={rightarrow} alt="" width={18} height={18} />
           </Button>
         </div>
-        <div className="w-full max-w-[448px] flex justify-center items-center">
+        <div className="w-full max-w-[448px] flex justify-center items-center mob:order-2">
           <Image
             data-aos="fade-up"
             data-aos-duration="1000"
@@ -169,10 +169,8 @@ const DesignAndBuild = () => {
           />
         </div>
       </div>
-
-
     </div>
-  );
-};
+  )
+}
 
-export default DesignAndBuild;
+export default DesignAndBuild
