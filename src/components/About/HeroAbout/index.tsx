@@ -19,9 +19,9 @@ const HeroAbout = () => {
       >
         “Architecture and craftsmanship is in our DNA”
       </Text>
-      <div className="w-full max-w-full px-16 mob:px-0 flex lg:flex-wrap justify-around lg:gap-10 items-center " data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-        <Image src={firm} alt="" className="w-1/2 mob:w-[90%]" height={598} />
-        <div className="w-full max-w-1/2 ms-10">
+      <div className="w-full max-w-full px-16 mob:px-0 flex lg:flex-wrap justify-around mob:justify-center lg:gap-10 items-center " data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+        <Image src={firm} alt="" className="w-1/2 mob:w-full" height={598} />
+        <div className="w-full max-w-1/2 ms-10 mob:ms-0">
           <Text as="h1" className="font-inter font-light">The Firm</Text>
           <Text className="text-[28px] font-medium leading-[31.2px] my-5">
             Culture
@@ -36,8 +36,8 @@ const HeroAbout = () => {
           </Text>
         </div>
       </div>
-      <div className="w-full max-w-full px-16 mob:px-0 flex lg:flex-wrap justify-between lg:gap-10 items-center py-16 " data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-        <div className="w-full max-w-1/3 me-10">
+      <div className="w-full max-w-full px-16 mob:px-0 flex lg:flex-wrap justify-between mob:justify-center lg:gap-10 items-center py-16 " data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+        <div className="w-full max-w-1/3 me-10 mob:order-2 mob:me-0">
           <Text as="h1" className="font-inter font-light">Michael Wishart</Text>
           <Text className="text-[28px] font-medium leading-[31.2px] my-5">
             Founder
@@ -62,12 +62,12 @@ const HeroAbout = () => {
             peoples lives.
           </Text>
         </div>
-        <Image src={michel} alt="" className="w-2/3 mob:w-[90%]" height={357} />
+        <Image src={michel} alt="" className="w-2/3 mob:w-full mob:order-1" height={357} />
       </div>
       <Text as="h2" className="text-center text-[40px] mt-8 font-inter font-light" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Our Team</Text>
 
       <div className="w-full max-w-full px-16 mob:px-0 flex lg:flex-wrap gap-[25px] justify-center  items-center py-16 ">
-        <div className="w-full max-w-[25%] mob:max-w-[90%]">
+        <div className="w-full max-w-[25%] mob:max-w-full">
           <div className="aspect-[2/2] relative overflow-hidden" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
             <Image className="w-1/4 object-cover mob:w-full" src={gelberg} alt="" fill />
           </div>
@@ -81,7 +81,7 @@ const HeroAbout = () => {
             <Image className="" src={arrow} alt="" width={41} height={41} />
           </div>
         </div>
-        <div className="w-full max-w-[25%] mob:max-w-[90%]">
+        <div className="w-full max-w-[25%] mob:max-w-full">
           <div className="aspect-[2/2] relative overflow-hidden" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
             <Image className="w-1/4 object-cover" src={sophia} alt="" fill />
           </div>
@@ -95,7 +95,7 @@ const HeroAbout = () => {
             <Image className="" src={arrow} alt="" width={41} height={41} />
           </div>
         </div>
-        <div className="w-full max-w-[25%] mob:max-w-[90%]">
+        <div className="w-full max-w-[25%] mob:max-w-full">
           <div className="aspect-[2/2] relative overflow-hidden" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
             <Image className="w-1/4 object-cover" src={mridul} alt="" fill />
           </div>
@@ -109,7 +109,7 @@ const HeroAbout = () => {
             <Image className="" src={arrow} alt="" width={41} height={41} />
           </div>
         </div>
-        <div className="w-full max-w-[25%] mob:max-w-[90%]">
+        <div className="w-full max-w-[25%] mob:max-w-full">
           <div className="aspect-[2/2] relative overflow-hidden" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">
             <Image className="object-cover" src={amin} alt="" fill />
           </div>

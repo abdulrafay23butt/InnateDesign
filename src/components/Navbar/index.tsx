@@ -3,11 +3,12 @@ import React, { useEffect, useState } from "react";
 // import Image from "next/image";
 import Link from "next/link";
 import { gsap } from "gsap";
-import arrow from "@/public/Arrow (1).png"
+import arrow from "@/public/Arrow Right.png";
+import downwardarrow from "@/public/Arrow (1).png";
 import Drawer from "../ui/Drawer";
-import Tippy from '@tippyjs/react';
-import 'tippy.js/dist/tippy.css';
-import 'tippy.js/themes/light.css';
+// import Tippy from '@tippyjs/react';
+// import 'tippy.js/dist/tippy.css';
+// import 'tippy.js/themes/light.css';
 
 import logo from "@/public/logo-innate.png";
 import Image from "next/image";
@@ -16,9 +17,13 @@ import { useTabContext } from "@/context/TabContsxt";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { activeTab, setActiveTab } = useTabContext();
-  const onClose = () => { setIsOpen(false); setIsDropdownOpen(false) }
+  const onServicesClose = () => { setIsServicesOpen(false); }
+  const onClose = () => { setIsOpen(false); setIsDropdownOpen(false); console.log(isOpen) }
   const onOpen = () => setIsOpen(true);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+
+
 
   const toggleDropdown = () => {
     setIsDropdownOpen((prev) => !prev);
@@ -67,74 +72,74 @@ const Navbar = () => {
     saveTabTitle(activeTab);
   }, [activeTab]);
 
-  const dropdownContent = (
-    <ul className="bg-[#333333] text-white shadow-lg rounded-lg z-[1000] min-w-[200px]">
-      <li>
-        <a
-          href=""
-          className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
-        >
-          Architecture
-        </a>
-      </li>
-      <li>
-        <a
-          href=""
-          className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
-        >
-          Kitchens & Bathrooms
-        </a>
-      </li>
-      <li>
-        <a
-          href=""
-          className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
-        >
-          Construction
-        </a>
-      </li>
-      <li>
-        <a
-          href=""
-          className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
-        >
-          Roofing
-        </a>
-      </li>
-      <li>
-        <a
-          href=""
-          className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
-        >
-          Decks & Patio Covers
-        </a>
-      </li>
-      <li>
-        <a
-          href=""
-          className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
-        >
-          Siding
-        </a>
-      </li>
-      <li>
-        <a
-          href=""
-          className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
-        >
-          Windows & Doors
-        </a>
-      </li>
-      <li>
-        <a
-          href=""
-          className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
-        >
-          Natural Disaster Mitigation
-        </a>
-      </li>
-    </ul>
-  );
+  // const dropdownContent = (
+  //   <ul className="bg-[#333333] text-white shadow-lg rounded-lg z-[1000] min-w-[200px]">
+  //     <li>
+  //       <a
+  //         href=""
+  //         className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
+  //       >
+  //         Architecture
+  //       </a>
+  //     </li>
+  //     <li>
+  //       <a
+  //         href=""
+  //         className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
+  //       >
+  //         Kitchens & Bathrooms
+  //       </a>
+  //     </li>
+  //     <li>
+  //       <a
+  //         href=""
+  //         className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
+  //       >
+  //         Construction
+  //       </a>
+  //     </li>
+  //     <li>
+  //       <a
+  //         href=""
+  //         className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
+  //       >
+  //         Roofing
+  //       </a>
+  //     </li>
+  //     <li>
+  //       <a
+  //         href=""
+  //         className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
+  //       >
+  //         Decks & Patio Covers
+  //       </a>
+  //     </li>
+  //     <li>
+  //       <a
+  //         href=""
+  //         className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
+  //       >
+  //         Siding
+  //       </a>
+  //     </li>
+  //     <li>
+  //       <a
+  //         href=""
+  //         className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
+  //       >
+  //         Windows & Doors
+  //       </a>
+  //     </li>
+  //     <li>
+  //       <a
+  //         href=""
+  //         className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
+  //       >
+  //         Natural Disaster Mitigation
+  //       </a>
+  //     </li>
+  //   </ul>
+  // );
 
   return (
     <>
@@ -220,7 +225,7 @@ const Navbar = () => {
                           : "text-[#FFFFFF]"
                           }`}
                       >
-                        <div className="flex items-center gap-1 "> Services <Image src={arrow} alt="" width={24} height={24} /></div>
+                        <div className="flex items-center gap-1 "> Services <Image src={downwardarrow} alt="" width={24} height={24} /></div>
 
                       </div>
                       {/* Dropdown menu */}
@@ -228,7 +233,7 @@ const Navbar = () => {
                         <ul className="absolute left-0 min-w-[200px] bg-[#333333] text-white shadow-lg rounded-lg">
                           <li>
                             <Link
-                              href=""
+                              href="/services"
                               className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
                             >
                               Architecture
@@ -236,7 +241,7 @@ const Navbar = () => {
                           </li>
                           <li>
                             <Link
-                              href=""
+                              href="/services"
                               className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
                             >
                               Kitchens & Bathrooms
@@ -244,7 +249,7 @@ const Navbar = () => {
                           </li>
                           <li>
                             <Link
-                              href=""
+                              href="/services"
                               className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
                             >
                               Construction
@@ -252,7 +257,7 @@ const Navbar = () => {
                           </li>
                           <li>
                             <Link
-                              href=""
+                              href="/services"
                               className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
                             >
                               Roofing
@@ -260,7 +265,7 @@ const Navbar = () => {
                           </li>
                           <li>
                             <Link
-                              href=""
+                              href="/services"
                               className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
                             >
                               Decks & Patio Covers
@@ -268,7 +273,7 @@ const Navbar = () => {
                           </li>
                           <li>
                             <Link
-                              href=""
+                              href="/services"
                               className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
                             >
                               Siding
@@ -276,7 +281,7 @@ const Navbar = () => {
                           </li>
                           <li>
                             <Link
-                              href=""
+                              href="/services"
                               className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
                             >
                               Windows & Doors
@@ -284,7 +289,7 @@ const Navbar = () => {
                           </li>
                           <li>
                             <Link
-                              href=""
+                              href="/services"
                               className="block px-4 py-2 hover:bg-[#444444] text-sm font-light"
                             >
                               Natural Disaster Migitation
@@ -326,36 +331,36 @@ const Navbar = () => {
               <div className="hidden xl:block  ">
                 <div
                   className="relative cursor-pointer flex pt-[5px]"
-                  onClick={onOpen}
+                  onClick={() => {
+                    if (isOpen) {
+                      onClose();
+                      onServicesClose();
+                    } else {
+                      onOpen();
+                    }
+                  }}
+
                 >
                   <button
-                    // onClick={toggleMenu}
                     type="button"
-                    className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm font-light   bg-transparent text-white rounded-lg  "
+                    className={`relative z-50 flex flex-col items-center justify-center w-10 h-10 rounded-md focus:outline-none ${isOpen}? "hidden" : `}
                     aria-controls="navbar-default"
                     aria-expanded={isOpen ? "true" : "false"}
                   >
-                    <span className="sr-only">Open main menu</span>
-                    <svg
-                      className="w-5 h-5"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 17 14"
-                    >
-                      <path
-                        stroke="currentColor"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M1 1h15M1 7h15M1 13h15"
-                      />
-                    </svg>
+                    <span
+                      className={`block w-6 h-0.5 bg-white transition-transform duration-300 ease-in-out ${isOpen ? "rotate-45 translate-y-[4px]" : ""}`}
+                    ></span>
+                    <span
+                      className={`block w-6 h-0.5 bg-white mt-1.5 transition-transform duration-300 ease-in-out ${isOpen ? "-rotate-45 -translate-y-[4px]" : ""}`}
+                    ></span>
                   </button>
+
                 </div>
+
+                {/* side menu */}
                 <div className="relative z-40">
-                  <Drawer isOpen={isOpen} onClose={onClose}>
-                    <div className="flex items-center h-full w-full z-0 ">
+                  <Drawer isOpen={isOpen} >
+                    <div className="flex h-full w-full z-0 ">
                       <ul className="font-light  w-full  mob:left-0 mob:w-full z-50 flex flex-col py-4 md:p-0 mt-4 gap-[0px]  rtl:space-x-reverse md:mt-0 ">
                         <Link
                           href="/about"
@@ -365,11 +370,11 @@ const Navbar = () => {
                             : "text-[#FFFFFF]"
                             }`}
                         >
-                          <li className="flex justify-center py-[15px] list-items">
+                          <li className="flex ms-5 py-[15px] list-items">
                             About
                           </li>
                         </Link>
-                        <hr className="h-px  bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr>
+                        {/* <hr className="h-px  bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr> */}
 
                         <Link
                           href="/work"
@@ -379,18 +384,27 @@ const Navbar = () => {
                             : "text-[#FFFFFF]"
                             }`}
                         >
-                          <li className="flex justify-center py-[15px] list-items">
+                          <li className="flex ms-5 py-[15px] list-items">
                             Work
                           </li>
                         </Link>
-                        <hr className="h-px  bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr>
+                        {/* <hr className="h-px  bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr> */}
 
-                        <li className="flex justify-center py-[15px] list-items z-40">
-                          <Tippy
+                        <li className="flex ms-5 py-[15px] list-items z-40">
+                          <div className="z-50 block text-center text-[20px] font-inter font-medium leading-[25.5px] text-[#FFFFFF] hover:text-[#2CFF06] cursor-pointer" onClick={toggleDropdown}>
+                            <div className="flex items-center gap-1"
+                              aria-controls="navbar-default"
+                              aria-expanded={isServicesOpen ? "true" : "false"}
+                              onClick={() => setIsServicesOpen(true)}>
+                              Services
+                              <Image src={arrow} alt="Dropdown arrow" width={24} height={24} />
+                            </div>
+                          </div>
+                          {/* <Tippy
                             content={dropdownContent}
-                            interactive={true}                            
-                            placement="bottom" 
-                            arrow={false} 
+                            interactive={true}
+                            placement="bottom"
+                            arrow={false}
                             visible={isDropdownOpen}
                             onClickOutside={() => setIsDropdownOpen(false)}
                           >
@@ -400,10 +414,10 @@ const Navbar = () => {
                                 <Image src={arrow} alt="Dropdown arrow" width={24} height={24} />
                               </div>
                             </div>
-                          </Tippy>
+                          </Tippy> */}
                         </li>
 
-                        <hr className="h-px  bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr>
+                        {/* <hr className="h-px  bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr> */}
 
                         <Link
                           href="/press"
@@ -413,11 +427,11 @@ const Navbar = () => {
                             : "text-[#FFFFFF]"
                             }`}
                         >
-                          <li className="flex justify-center py-[15px] list-items">
+                          <li className="flex ms-5 py-[15px] list-items">
                             Press
                           </li>
                         </Link>
-                        <hr className="h-px  bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr>
+                        {/* <hr className="h-px  bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr> */}
 
                         <Link
                           href="/contact"
@@ -427,7 +441,7 @@ const Navbar = () => {
                             : "text-[#FFFFFF]"
                             }`}
                         >
-                          <li className="flex justify-center py-[15px] list-items">
+                          <li className="flex ms-5 py-[15px] list-items">
                             Contact
                           </li>
                         </Link>
@@ -435,6 +449,132 @@ const Navbar = () => {
                     </div>
                   </Drawer>
                 </div>
+
+
+                {/* services menu */}
+                <div className="relative z-40">
+                  <Drawer isOpen={isServicesOpen} >
+                    <div className="flex flex-col h-full w-full z-0 ">
+                      {/* <div> */}
+                      {/* <div className=" " > */}
+                      <div className="flex items-center text-center text-[20px] font-inter font-medium leading-[25.5px]  mt-10 text-[#FFFFFF]">
+                        <Image src={arrow} alt="Dropdown arrow" className="rotate-180 cursor-pointer hover:text-[#2CFF06]" width={50} height={50} onClick={() => setIsServicesOpen(false)} />
+                        Services
+                      </div>
+                      {/* </div> */}
+                      {/* </div> */}
+                      <ul className="font-light  w-full  mob:left-0 mob:w-full z-50 flex flex-col py-4 md:p-0 mt-4 gap-[0px]  rtl:space-x-reverse md:mt-0 ">
+                        <Link
+                          href="/services"
+                          onClick={() => handleTabChange("/about")}
+                          className={`block  text-[20px] font-inter font-medium leading-[25.5px] text-[#FFFFFF] hover:text-[#2CFF06] ${activeTab === "/about"
+                            ? "text-[#2CFF06]"
+                            : "text-[#FFFFFF]"
+                            }`}
+                        >
+                          <li className="flex ms-5 py-[15px] list-items">
+                            Architecture
+                          </li>
+                        </Link>
+                        {/* <hr className="h-px  bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr> */}
+
+                        <Link
+                          href="/serives"
+                          onClick={() => handleTabChange("/work")}
+                          className={`block  text-[20px] font-inter font-medium leading-[25.5px] text-[#FFFFFF] hover:text-[#2CFF06] ${activeTab === "/work"
+                            ? "text-[#2CFF06]"
+                            : "text-[#FFFFFF]"
+                            }`}
+                        >
+                          <li className="flex ms-5 py-[15px] list-items">
+                            Kitchens & Bathrooms
+                          </li>
+                        </Link>
+                        {/* <hr className="h-px  bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr> */}
+
+                        <Link
+                          href="/serives"
+                          onClick={() => handleTabChange("/work")}
+                          className={`block  text-[20px] font-inter font-medium leading-[25.5px] text-[#FFFFFF] hover:text-[#2CFF06] ${activeTab === "/work"
+                            ? "text-[#2CFF06]"
+                            : "text-[#FFFFFF]"
+                            }`}
+                        >
+                          <li className="flex ms-5 py-[15px] list-items">
+                            Construction
+                          </li>
+                        </Link>
+
+                        {/* <hr className="h-px  bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr> */}
+
+                        <Link
+                          href="/services"
+                          onClick={() => handleTabChange("/press")}
+                          className={`block  text-[20px] font-inter font-medium leading-[25.5px] text-[#FFFFFF] hover:text-[#2CFF06] ${activeTab === "/press"
+                            ? "text-[#2CFF06]"
+                            : "text-[#FFFFFF]"
+                            }`}
+                        >
+                          <li className="flex ms-5 py-[15px] list-items">
+                            Roofing
+                          </li>
+                        </Link>
+                        {/* <hr className="h-px  bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr> */}
+
+                        <Link
+                          href="/services"
+                          onClick={() => handleTabChange("/contact")}
+                          className={`block  text-[20px] font-inter font-medium leading-[25.5px] text-[#FFFFFF] hover:text-[#2CFF06] ${activeTab === "/contact"
+                            ? "text-[#2CFF06]"
+                            : "text-[#FFFFFF]"
+                            }`}
+                        >
+                          <li className="flex ms-5 py-[15px] list-items">
+                            Decks & Patio Covers
+                          </li>
+                        </Link>
+
+                        <Link
+                          href="/services"
+                          onClick={() => handleTabChange("/contact")}
+                          className={`block  text-[20px] font-inter font-medium leading-[25.5px] text-[#FFFFFF] hover:text-[#2CFF06] ${activeTab === "/contact"
+                            ? "text-[#2CFF06]"
+                            : "text-[#FFFFFF]"
+                            }`}
+                        >
+                          <li className="flex ms-5 py-[15px] list-items">
+                            Siding
+                          </li>
+                        </Link>
+                        <Link
+                          href="/services"
+                          onClick={() => handleTabChange("/contact")}
+                          className={`block  text-[20px] font-inter font-medium leading-[25.5px] text-[#FFFFFF] hover:text-[#2CFF06] ${activeTab === "/contact"
+                            ? "text-[#2CFF06]"
+                            : "text-[#FFFFFF]"
+                            }`}
+                        >
+                          <li className="flex ms-5 py-[15px] list-items">
+                            Windows & Doors
+                          </li>
+                        </Link>
+                        <Link
+                          href="/services"
+                          onClick={() => handleTabChange("/contact")}
+                          className={`block  text-[20px] font-inter font-medium leading-[25.5px] text-[#FFFFFF] hover:text-[#2CFF06] ${activeTab === "/contact"
+                            ? "text-[#2CFF06]"
+                            : "text-[#FFFFFF]"
+                            }`}
+                        >
+                          <li className="flex ms-5 py-[15px] list-items">
+                            Natural Disaster Mitigation
+                          </li>
+                        </Link>
+                      </ul>
+                    </div>
+                  </Drawer>
+                </div>
+
               </div>
             </div>
           </div>

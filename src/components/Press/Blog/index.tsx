@@ -19,13 +19,10 @@ const Blog = () => {
   return (
     <div className=" pt-16">
       <div className="w-full max-w-full  flex flex-wrap justify-center gap-[24px] mb-[44px] mob:mb-[24px] px-16 md:px-20 mob:px-0">
-        <Link
-          href={`/blogs/1`}
-          className="flex-grow max-w-[calc(25%-18px)] mob:max-w-[90%] border border-white rounded-[10px]"
-        >
-          <div className="">
-            <Image src={blog1} alt="" height={192} className="rounded-t-xl w-[100%]" />
-            <div className="p-4">
+        <div className="flex-grow max-w-[calc(25%-18px)] mob:max-w-[90%] border border-white rounded-[10px]  flex flex-col">
+          <Image src={blog1} alt="" height={192} className="rounded-t-xl w-[100%]" />
+          <div className="flex flex-col justify-between flex-grow p-4">
+            <div>
               <Text className="text-white">Blog</Text>
               <Text className="text-white text-[20px] leading-[28px] my-2">
                 Do you need a soils report or civil engineer for an addition in
@@ -36,38 +33,45 @@ const Blog = () => {
                 understanding the city’s zoning regulations is essential for a
                 smooth and compliant construction process. Bellevue’s zoning
               </Text>
-
-
             </div>
+            <Link
+              href={`/blogs/1`}
+              className="text-white flex items-center mt-5"
+            >
+              LEARN MORE <Image src={arrow} alt="" width={44} height={28} className="-ms-3" />
+            </Link>
+
           </div>
-        </Link>
-        <Link
-          href={`/blogs/2`}
-          className="flex-grow max-w-[calc(25%-18px)] mob:max-w-[90%] border border-white rounded-[10px]"
-        >
-          <div className="">
-            <Image src={blog2} alt="" height={192} className="rounded-t-xl w-[100%]" />
-            <div className="p-4">
+        </div>
+
+        <div className="flex-grow max-w-[calc(25%-18px)] mob:max-w-[90%] border border-white rounded-[10px] flex flex-col">
+          <Image src={blog2} alt="" height={192} className="rounded-t-xl w-[100%]" />
+          <div className="flex flex-col justify-between flex-grow p-4">
+            <div>
               <Text className="text-white">Press</Text>
               <Text className="text-white text-[20px] leading-[28px] my-2">
                 The Cost of Architecture
               </Text>
-              <Text className="text-gray-400  text-sm">
+              <Text className="text-gray-400 text-sm">
                 The cost of architecture is a contentious topic and a difficult
                 one to find a consensus on. The American Institute of Architects
                 suggests that design
               </Text>
-
             </div>
+            <Link
+              href={`/blogs/2`}
+              className="text-white flex items-center mt-5"
+            >
+              LEARN MORE <Image src={arrow} alt="" width={44} height={28} className="-ms-3" />
+            </Link>
           </div>
-        </Link>
-        <Link
-          href={`/blogs/3`}
-          className="flex-grow max-w-[calc(25%-18px)] mob:max-w-[90%] border border-white rounded-[10px]"
-        >
-          <div className="">
-            <Image src={blog3} alt="" height={192} className="rounded-t-xl w-[100%]" />
-            <div className="p-4">
+        </div>
+
+
+        <div className="flex-grow max-w-[calc(25%-18px)] mob:max-w-[90%] border border-white rounded-[10px]  flex flex-col">
+          <Image src={blog3} alt="" height={192} className="rounded-t-xl w-[100%]" />
+          <div className="flex flex-col justify-between flex-grow p-4">
+            <div>
               <Text className="text-white">Blog</Text>
               <Text className="text-white text-[20px] leading-[28px] my-2">
                 Are you being ripped off by your insurance company?
@@ -77,17 +81,19 @@ const Blog = () => {
                 damage claim with your insurance company? Have you ever wondered
                 if the estimate you
               </Text>
-
             </div>
+            <Link
+              href={`/blogs/3`}
+              className="text-white flex items-center mt-5"
+            >
+              LEARN MORE <Image src={arrow} alt="" width={44} height={28} className="-ms-3" />
+            </Link>
           </div>
-        </Link>
-        <Link
-          href={`/blogs/4`}
-          className="flex-grow max-w-[calc(25%-18px)] mob:max-w-[90%] border border-white rounded-[10px]"
-        >
-          <div className="">
-            <Image src={blog4} alt="" height={192} className="rounded-t-xl w-[100%]" />
-            <div className="p-4">
+        </div>
+        <div className="flex-grow max-w-[calc(25%-18px)] mob:max-w-[90%] border border-white rounded-[10px]  flex flex-col">
+          <Image src={blog4} alt="" height={192} className="rounded-t-xl w-[100%]" />
+          <div className="flex flex-col justify-between flex-grow p-4">
+            <div>
               <Text className="text-white">Blog</Text>
               <Text className="text-white text-[20px] leading-[28px] my-2">
                 New construction CRM app JobSync available on apple app store
@@ -97,27 +103,32 @@ const Blog = () => {
                 precision are paramount. That’s why we’re excited to introduce
                 JobSync, our revolutionary proprietary software that seamlessly
               </Text>
-
-
             </div>
+            <Link
+              href={`/blogs/4`}
+              className="text-white flex items-center mt-5"
+            >
+              LEARN MORE <Image src={arrow} alt="" width={44} height={28} className="-ms-3" />
+            </Link>
           </div>
-        </Link>
+        </div>
       </div>
       {/* row2 */}
       <div className="w-full max-w-full  flex flex-wrap justify-center gap-[24px] mb-[24px] mx-auto px-16 md:px-20 mob:px-0">
-        <div className="flex-grow max-w-[calc(50%-18px)] mob:max-w-[90%] border border-white rounded-[10px]">
+        <div className="flex-grow max-w-[calc(50%-18px)] mob:max-w-[90%] border border-white rounded-[10px]  flex flex-col">
           <Image src={blogb} alt="" height={294} className="rounded-t-xl w-[100%]" />
-          <div className="p-4">
-            <Text className="text-white">Blog</Text>
-            <Text className="text-white text-[20px] leading-[28px] my-2">
-              The Best CRM and Construction Project Management Software
-            </Text>
-            <Text className="text-gray-400  text-sm">
-              In the intricate world of construction, effective management of
-              both customer relationships and project timelines is paramount for
-              success. Construction companies operate within a dynamic
-            </Text>
-
+          <div className="flex flex-col justify-between flex-grow p-4">
+            <div>
+              <Text className="text-white">Blog</Text>
+              <Text className="text-white text-[20px] leading-[28px] my-2">
+                The Best CRM and Construction Project Management Software
+              </Text>
+              <Text className="text-gray-400  text-sm">
+                In the intricate world of construction, effective management of
+                both customer relationships and project timelines is paramount for
+                success. Construction companies operate within a dynamic
+              </Text>
+            </div>
             <Link
               href={`/blogs/5`}
               className="text-white flex items-center mt-5"
@@ -127,13 +138,10 @@ const Blog = () => {
 
           </div>
         </div>
-        <Link
-          href={`/blogs/6`}
-          className="flex-grow max-w-[calc(25%-18px)] mob:max-w-[90%] border border-white rounded-[10px]"
-        >
-          <div className="">
-            <Image src={blog5} alt="" height={192} className="rounded-t-xl w-[100%]" />
-            <div className="p-4">
+        <div className="flex-grow max-w-[calc(25%-18px)] mob:max-w-[90%] border border-white rounded-[10px]  flex flex-col">
+          <Image src={blog5} alt="" height={192} className="rounded-t-xl w-[100%]" />
+          <div className="flex flex-col justify-between flex-grow p-4">
+            <div>
               <Text className="text-white">Press</Text>
               <Text className="text-white text-[20px] leading-[28px] my-2">
                 Why aren’t general contractors getting back to me?
@@ -143,11 +151,15 @@ const Blog = () => {
                 process. When you reach out to a general contractor and ask for a
                 bid,
               </Text>
-
-
             </div>
+            <Link
+              href={`/blogs/6`}
+              className="text-white flex items-center mt-5"
+            >
+              LEARN MORE <Image src={arrow} alt="" width={44} height={28} className="-ms-3" />
+            </Link>
           </div>
-        </Link>
+        </div>
         <div className="flex-grow max-w-[calc(25%-18px)] mob:max-w-[90%] border border-white rounded-[10px]">
           <Image src={blog2} alt="" height={192} className="rounded-t-xl w-[100%]" />
           <div className="p-4">
