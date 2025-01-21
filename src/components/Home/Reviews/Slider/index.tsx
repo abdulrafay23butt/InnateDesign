@@ -1,24 +1,22 @@
-"use client";
+'use client'
 // import React, { useEffect, useRef, useState } from "react";
 
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide } from 'swiper/react'
 import {
   Keyboard,
   Navigation,
   Scrollbar,
   Autoplay,
   Pagination,
-} from "swiper/modules";
-import "swiper/css";
-import "swiper/css/scrollbar";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
+} from 'swiper/modules'
+import 'swiper/css'
+import 'swiper/css/scrollbar'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
 
 // import "./slider.css";
 // import Hero from "../../Hero";
-import Reviews from "../Index";
-
-
+import Reviews from '../Index'
 
 function ReviewsSlider() {
   return (
@@ -54,8 +52,8 @@ function ReviewsSlider() {
             }}
             loop={true}
             navigation={{
-              nextEl: ".custom-next",
-              prevEl: ".custom-prev",
+              nextEl: '.custom-next',
+              prevEl: '.custom-prev ',
             }}
             pagination={{
               clickable: true,
@@ -64,7 +62,7 @@ function ReviewsSlider() {
             className="mySwiper"
           >
             <SwiperSlide className="mob:px-5">
-            <Reviews />
+              <Reviews />
             </SwiperSlide>
 
             <SwiperSlide className="mob:px-5">
@@ -72,14 +70,13 @@ function ReviewsSlider() {
             </SwiperSlide>
 
             <SwiperSlide className="mob:px-5">
-            <Reviews />
+              <Reviews />
             </SwiperSlide>
-
           </Swiper>
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default ReviewsSlider;
+export default ReviewsSlider
