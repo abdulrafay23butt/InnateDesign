@@ -1,25 +1,25 @@
-import Text from "@/components/ui/Text";
-import Image from "next/image";
-import React from "react";
+import Text from '@/components/ui/Text'
+import Image from 'next/image'
+import React from 'react'
 
-import Button from "@/components/ui/Button";
+import Button from '@/components/ui/Button'
 
-import stressbg from "@/public/images/home/dsignbuild/avoidbg.png";
-import stresstop from "@/public/images/home/dsignbuild/avoidtop.png";
+import stressbg from '@/public/images/home/dsignbuild/avoidbg.png'
+import stresstop from '@/public/images/home/dsignbuild/avoidtop.png'
 
-import avoidleft from "@/public/images/home/dsignbuild/avoidleft.png";
-import avoidright from "@/public/images/home/dsignbuild/avoidright.png";
-import avoidcenter from "@/public/images/home/dsignbuild/avoidcenter.png";
-import savetime from "@/public/images/home/savetimee.png";
-import track from "@/public/images/home/cabinetry.png";
-import rightarrow from "@/public/images/press/RightArrowblue.png";
+import avoidleft from '@/public/images/home/dsignbuild/avoidleft.png'
+import avoidright from '@/public/images/home/dsignbuild/avoidright.png'
+import avoidcenter from '@/public/images/home/dsignbuild/avoidcenter.png'
+import savetime from '@/public/images/home/savetimee.png'
+import track from '@/public/images/home/cabinetry.png'
+import rightarrow from '@/public/images/press/RightArrowblue.png'
 
 const DesignAndBuild = () => {
   return (
     <div className="w-full h-full gradient py-16 px-5 mob:py-0">
       <Text
         as="h1"
-        className="text-center font-normal mob:text-[30px] mt-6 mb-4 mob:leading-[33px] mob:px-5"
+        className="text-center font-normal mob:text-[30px] mb-4 mob:leading-[33px] mob:px-5"
       >
         Design and build the <span className="italic">Innate </span> way
       </Text>
@@ -72,8 +72,6 @@ const DesignAndBuild = () => {
         </div>
       </div>
 
-
-
       {/* Save Time */}
       <div className="flex lg:flex-wrap gap-[47px] items-center p-[43px] mob:px-[20px] w-[80%] mob:w-full min-h-[439px] my-8 mx-auto rounded-[50px] mob:rounded-[19.05px] gradient2 justify-center">
         <div className="">
@@ -103,7 +101,7 @@ const DesignAndBuild = () => {
       </div>
 
       {/* Avoid Stress */}
-      <div className="flex lg:flex-wrap gap-[47px] items-center p-[43px] mob:px-[20px] w-[80%] mob:w-full min-h-[439px] my-8 mx-auto rounded-[50px] mob:rounded-[19.05px] gradient2 justify-center">
+      <div className="flex lg:flex-wrap gap-[47px] items-center p-[43px] mob:px-[20px] w-[80%] mob:w-full min-h-[439px] my-8 mx-auto rounded-[50px] mob:rounded-[19.05px] mob:gap-[80px] gradient2 justify-center">
         <div className="w-full max-w-[430px] flex justify-end items-end relative">
           <Image
             data-aos="fade-right"
@@ -127,7 +125,7 @@ const DesignAndBuild = () => {
           />
         </div>
         <div className="">
-          <Text as="h2" className="">
+          <Text as="h2" className="mob:mt-">
             Avoid Stress
           </Text>
           <Text className="mt-3 mb-16 text-[22px] text-[#FFFFFF66] leading-[30.14px] max-w-7xl">
@@ -169,10 +167,8 @@ const DesignAndBuild = () => {
           />
         </div>
       </div>
-
-
     </div>
-  );
-};
+  )
+}
 
-export default DesignAndBuild;
+export default DesignAndBuild
