@@ -13,7 +13,7 @@ import { useTabContext } from "@/context/TabContsxt";
 const NavbarOther = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { activeTab, setActiveTab } = useTabContext();
-  const onClose = () => setIsOpen(false);
+  // const onClose = () => setIsOpen(false);
   const onOpen = () => setIsOpen(true);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
@@ -262,7 +262,7 @@ const NavbarOther = () => {
                   </button>
                 </div>
                 <div className="relative z-40">
-                  <Drawer isOpen={isOpen} onClose={onClose}>
+                  <Drawer isOpen={isOpen} >
                     <div className="flex items-center h-full w-full ">
                       <ul className="font-light  w-full  mob:left-0 mob:w-full z-50 flex flex-col py-4 md:p-0 mt-4 gap-[0px]  rtl:space-x-reverse md:mt-0 ">
                         <Link

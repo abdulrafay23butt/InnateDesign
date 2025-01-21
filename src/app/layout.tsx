@@ -67,6 +67,7 @@ export default function RootLayout({
         </MyProvider>
 
       </body>
+      
     </html>
   );
 }

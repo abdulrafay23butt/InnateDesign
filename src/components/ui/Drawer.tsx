@@ -3,12 +3,12 @@ import { useCallback, useEffect } from "react";
 import { twMerge } from "tailwind-merge";
 
 // import Text from "@/ui/Text";
-import { AiOutlineCloseCircle } from "react-icons/ai";
+// import { AiOutlineCloseCircle } from "react-icons/ai";
 // import closeIcon from "/public/icons/close-icon.svg";
 
 type DrawerProps = {
   isOpen: boolean;
-  onClose?: () => void;
+  // onClose?: () => void;
   className?: string;
   children: React.ReactNode;
   drawerTitle?: string;
@@ -16,7 +16,7 @@ type DrawerProps = {
 
 const Drawer: React.FC<DrawerProps> = ({
   isOpen,
-  onClose,
+  // onClose,
   className,
   // drawerTitle,
   children,
@@ -62,11 +62,10 @@ const Drawer: React.FC<DrawerProps> = ({
       )}
       <div
         className={twMerge(
-          `fixed right-0 top-0 z-[999] h-full   w-[705px] ] mob:w-full transform overflow-x-hidden text-white  drawerbg transition-transform duration-300 bg-[#21201E]/90 ease-in-out ${
-            isOpen
-              ? "transition-transform duration-700 ease-in-out translate-x-0"
-              : "transition-transform duration-700 ease-in-out  translate-x-full"
-            // isOpen ? "h-[100%] w-full translate-y-[10%]" : "translate-y-full"
+          `fixed right-0 top-0 z-[999] h-full   w-[705px] ] mob:w-full transform overflow-x-hidden text-white  drawerbg transition-transform duration-300 gradient ease-in-out ${isOpen
+            ? "transition-transform duration-700 ease-in-out translate-x-0"
+            : "transition-transform duration-700 ease-in-out  translate-x-full"
+          // isOpen ? "h-[100%] w-full translate-y-[10%]" : "translate-y-full"
           }`,
           className
         )}
@@ -75,19 +74,27 @@ const Drawer: React.FC<DrawerProps> = ({
         }}
       >
         {/* Drawer Close Button */}
-        <div className="mt-[20px]  px-[60px] mob:px-[25px] flex justify-end items-center">
-          {/* <Text className="text-[#000] text-[20px] font-organetto font-extrabold leading-[60px] uppercase ">
-            {drawerTitle ? drawerTitle : "Drawer"}
-          </Text> */}
-          <button className="text-black" onClick={onClose}>
-            {/* <Image src={closeIcon} alt="closeIcon" /> */}
-            <AiOutlineCloseCircle className="text-[40px] text-white" />
+        {/* <div className="mt-[20px]  px-[60px] mob:px-[25px] flex justify-end items-center">
+          <button
+            // onClick={toggleMenu}
+            type="button"
+            className="relative z-20 flex flex-col items-center justify-center w-10 h-10 rounded-md focus:outline-none"
+            aria-controls="navbar-default"
+            aria-expanded={isOpen ? "true" : "false"}
+            onClick={onClose}
+          >
+            <span
+              className={`block w-6 h-0.5 bg-white transition-transform duration-300 ease-in-out ${isOpen ? "rotate-45 translate-y-[4px]" : ""}`}
+            ></span>
+            <span
+              className={`block w-6 h-0.5 bg-white mt-1.5 transition-transform duration-300 ease-in-out ${isOpen ? "-rotate-45 -translate-y-[4px]" : ""}`}
+            ></span>
           </button>
-        </div>
+        </div> */}
 
         {/* Drawer content */}
         {/* Conditionally render the children based on 'isOpen' */}
-        {isOpen && <div className="h-full  pb-[50px]">{children}</div>}
+        {isOpen && <div className="]">{children}</div>}
       </div>
     </>
   );

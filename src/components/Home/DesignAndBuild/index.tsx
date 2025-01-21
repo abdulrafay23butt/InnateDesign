@@ -25,7 +25,7 @@ const DesignAndBuild = () => {
       </Text>
       {/* avoid surprise */}
       <div className="flex  lg:flex-wrap gap-[47px] items-center p-[43px] mob:px-[20px] w-[80%] mob:w-full min-h-[439px] mt-16 mb-8 mx-auto rounded-[50px] mob:rounded-[19.05px] gradient2 justify-center">
-        <div className="w-full max-w-[437.84px] relative flex justify-center items-center">
+        <div className="w-full max-w-[437.84px] relative flex justify-center items-center border">
           <Image
             data-aos="zoom-in"
             data-aos-duration="1000"
@@ -65,7 +65,7 @@ const DesignAndBuild = () => {
             After doing an in-person site visit, we will provide an accurate,
             comprehensive and transparent bid, broken down by trade.
           </Text>
-          <Button className="max-w-[202px] h-[61px] flex justify-center items-center gap-2 mt-4 text-[19.5px] bg-transparent backdrop-blur-md">
+          <Button className="max-w-[202px] h-[61px] flex justify-center items-center gap-2 mt-4 text-[19.5px] bg-transparent backdrop-blur-md ">
             Get Started
             <Image src={rightarrow} alt="" width={18} height={18} />
           </Button>
