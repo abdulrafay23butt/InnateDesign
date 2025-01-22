@@ -1,15 +1,13 @@
-import React from "react";
-import Image from "next/image";
+import React from 'react'
+import Image from 'next/image'
+import Text from '@/components/ui/Text'
+import avatar from '@/public/images/home/avatarimg.png'
+import leftdot from '@/public/images/home/left“.png'
+import rightdot from '@/public/images/home/right“.png'
 
-import Text from "@/components/ui/Text";
-
-import avatar from "@/public/images/home/avatarimg.png";
-import leftdot from "@/public/images/home/left“.png";
-import rightdot from "@/public/images/home/right“.png";
 const Reviews = () => {
   return (
     <div className="py-32">
-      
       <div className="w-full max-w-[1104px] mx-auto relative">
         <Image
           className="absolute left-0 top-[-40px] mob:top-[-70px]"
@@ -26,7 +24,7 @@ const Reviews = () => {
           height={64}
         />
 
-        <Text className="text-center text-[24px] font-light leading-[31.2px] text-white  max-w-[879px] mx-auto">
+        <Text className="text-center text-[24px] font-light leading-[31.2px] text-white max-w-[879px] mx-auto mob:text-[18px]">
           I found Michael because he came highly recommended as both a designer
           and a builder. I wanted to update the style of my kitchen and bathroom
           but being unfamiliar with the construction process, I needed a
@@ -41,12 +39,14 @@ const Reviews = () => {
             <Text className=" text-[24px] font-medium leading-[31.2px] text-white ">
               Katerin C
             </Text>
-            <Text className="mt-1 text-white ">Co-founder, Head of Product</Text>
+            <Text className="mt-1 text-white ">
+              Co-founder, Head of Product
+            </Text>
           </div>
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Reviews;
+export default Reviews

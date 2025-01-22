@@ -22,13 +22,14 @@ import roof8 from '@/public/images/home/natural Disaster Logo.png'
 
 const Services = () => {
   return (
-    <div className="pt-32 pb-5">
+    <div className="pt-24 pb-5">
       <div className="flex flex-wrap justify-center w-full mx-auto">
         <div
-          className="w-[33.3%] tab:w-full group relative overflow-hidden aspect-[5/5]"
+          className="w-[33.3%] min-h-[484px] tab:w-full group relative overflow-hidden aspect-[5/5] mob:min-h-[390px]"
           style={{
             border: '1px solid rgba(255, 255, 255, 0.6)',
             borderBottom: 'none',
+            borderLeft: 'none',
           }}
         >
           <div className="overflow-hidden h-full flex justify-center items-center relative">
@@ -66,8 +67,8 @@ const Services = () => {
 
         {/* Repeat the same for other items */}
         <div
-          className="w-[33.3%] min-h-[484px] tab:w-full group relative overflow-hidden"
-          style={{ borderTop: '1px solid rgba(255, 255, 255, 0.6)' }}
+          className="border-r border-t border-[#FFFFFF99] w-[33.3%] min-h-[484px] tab:w-full group relative overflow-hidden mob:min-h-[390px] mob:border-b"
+          // style={{ borderTop: '1px solid rgba(255, 255, 255, 0.6)' }}
         >
           <div className="overflow-hidden h-full flex justify-center items-center relative">
             {/* Overlay */}
@@ -102,11 +103,12 @@ const Services = () => {
         </div>
 
         <div
-          className="w-[33.4%] min-h-[484px] tab:w-full group relative overflow-hidden"
-          style={{
-            border: '1px solid rgba(255, 255, 255, 0.6)',
-            borderBottom: 'none',
-          }}
+          className="border-t border-[#FFFFFF99] w-[33.4%] min-h-[484px] tab:w-full group relative overflow-hidden mob:min-h-[390px] mob:border-0"
+          // style={{
+          //   border: '1px solid rgba(255, 255, 255, 0.6)',
+          //   borderBottom: 'none',
+          //   borderRight: 'none',
+          // }}
         >
           <div className="overflow-hidden h-full flex justify-center items-center relative">
             {/* Overlay */}
@@ -142,10 +144,13 @@ const Services = () => {
       </div>
 
       {/*  */}
-      <div className="flex flex-wrap justify-center w-full min-h-[484px]  overflow-hidden   mx-auto">
+      <div className="flex flex-wrap justify-center w-full min-h-[484px] overflow-hidden mx-auto mob:min-h-[390px]">
         <div
-          className="w-[50%] tab:w-full relative group min-h-[484px]  overflow-hidden"
-          style={{ border: '1px solid rgba(255, 255, 255, 0.6)' }}
+          className="border-[#FFFFFF99] border-r border-t border-b w-[50%] tab:w-full relative group min-h-[484px] overflow-hidden mob:min-h-[390px] mob:border-b-0"
+          // style={{
+          //   border: '1px solid rgba(255, 255, 255, 0.6)',
+          //   borderLeft: 'none',
+          // }}
         >
           <div className="overflow-hidden h-full flex justify-center items-center relative">
             {/* Overlay */}
@@ -179,11 +184,12 @@ const Services = () => {
         </div>
 
         <div
-          className="w-[50%] border-none tab:w-full relative group min-h-[484px]  overflow-hidden"
-          style={{
-            border: '1px solid rgba(255, 255, 255, 0.6)',
-            borderLeft: 'none',
-          }}
+          className="border-y border-[#FFFFFF99] w-[50%] tab:w-full relative group min-h-[484px] overflow-hidden mob:min-h-[390px]"
+          // style={{
+          //   border: '1px solid rgba(255, 255, 255, 0.6)',
+          //   borderLeft: 'none',
+          //   borderRight: 'none',
+          // }}
         >
           <div className="overflow-hidden h-full flex justify-center items-center relative">
             {/* Overlay */}
@@ -217,14 +223,12 @@ const Services = () => {
         </div>
       </div>
       {/*  */}
-      <div className="flex flex-wrap justify-center w-full   mx-auto">
+      <div className="flex flex-wrap justify-center w-full mx-auto ">
         <div
-          className="w-[33.3%] min-h-[484px] tab:w-full group relative overflow-hidden aspect-[5/5]"
-          style={{
-            border: '1px solid rgba(255, 255, 255, 0.6)',
-            borderTop: 'none',
-            borderRight: 'none',
-          }}
+          className="border-b border-[#FFFFFF99] w-[33.3%] min-h-[484px] tab:w-full group relative overflow-hidden aspect-[5/5] mob:min-h-[390px]"
+          // style={{
+          //   borderBottom: '1px solid rgba(255, 255, 255, 0.6)',
+          // }}
         >
           <div className="overflow-hidden h-full flex justify-center items-center relative">
             {/* Overlay */}
@@ -257,11 +261,11 @@ const Services = () => {
           </div>
         </div>
         <div
-          className="w-[33.3%] min-h-[484px] tab:w-full group relative overflow-hidden "
-          style={{
-            border: '1px solid rgba(255, 255, 255, 0.6)',
-            borderTop: 'none',
-          }}
+          className="border-x border-b border-[#FFFFFF99] w-[33.3%] min-h-[484px] tab:w-full group relative overflow-hidden mob:min-h-[390px] mob:border-l-0"
+          // style={{
+          //   border: '1px solid rgba(255, 255, 255, 0.6)',
+          //   borderTop: 'none',
+          // }}
         >
           <div className="overflow-hidden h-full flex justify-center items-center relative">
             {/* Overlay */}
@@ -293,14 +297,7 @@ const Services = () => {
             </div>
           </div>
         </div>
-        <div
-          className="w-[33.4%] min-h-[484px] tab:w-full group relative overflow-hidden "
-          style={{
-            border: '1px solid rgba(255, 255, 255, 0.6)',
-            borderTop: 'none',
-            borderLeft: 'none',
-          }}
-        >
+        <div className="border-b border-[#FFFFFF99] w-[33.4%] min-h-[484px] tab:w-full group relative overflow-hidden mob:min-h-[390px]">
           <div className="overflow-hidden h-full flex justify-center items-center relative">
             {/* Overlay */}
             <div className="absolute inset-0 bg-black bg-opacity-40 z-10 transition-opacity duration-300 ease-in-out group-hover:opacity-0"></div>

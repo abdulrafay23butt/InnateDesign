@@ -27,7 +27,7 @@ const Collective = () => {
               Learn More
             </Button>
           </div>
-          <div className="flex mob:px-0 justify-items-center  w-2/5 mob:w-5/6 mob:mt-20">
+          <div className="flex mob:px-0 justify-items-center w-2/5 mob:w-5/6 mob:mt-20">
             <video className="4 mob:mr-0" autoPlay loop muted controls>
               <source src="/images/home/Guide.mp4" type="video/mp4" />
             </video>

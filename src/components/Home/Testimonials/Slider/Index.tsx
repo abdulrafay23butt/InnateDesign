@@ -16,9 +16,9 @@ import 'swiper/css/pagination'
 
 // import "./slider.css";
 // import Hero from "../../Hero";
-import Reviews from '../Index'
+import Testimonials from '@/components/Home/Testimonials/index'
 
-function ReviewsSlider() {
+function TestimonialsSlider() {
   return (
     <div className=" w-full overflow-hidden ">
       <div
@@ -45,7 +45,7 @@ function ReviewsSlider() {
               },
             }}
             slidesPerView={1}
-            speed={4000}
+            speed={2000}
             autoplay={{
               delay: 8000,
               disableOnInteraction: false,
@@ -62,15 +62,15 @@ function ReviewsSlider() {
             className="mySwiper"
           >
             <SwiperSlide className="mob:px-5">
-              <Reviews />
+              <Testimonials />
             </SwiperSlide>
 
             <SwiperSlide className="mob:px-5">
-              <Reviews />
+              <Testimonials />
             </SwiperSlide>
 
             <SwiperSlide className="mob:px-5">
-              <Reviews />
+              <Testimonials />
             </SwiperSlide>
           </Swiper>
         </div>
@@ -79,4 +79,4 @@ function ReviewsSlider() {
   )
 }
 
-export default ReviewsSlider
+export default TestimonialsSlider

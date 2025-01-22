@@ -40,7 +40,7 @@ function HomeSlider() {
   return (
     <div className="w-full overflow-hidden">
       <div className="w-full overflow-hidden home-slider-parent">
-        <div className="absolute bottom-0 left-16 p-5 w-full z-10 bg-opacity-50">
+        <div className="absolute bottom-0 left-16 p-5 z-10 bg-opacity-50 mob:left-0">
           <Text as="h2" className="my-3 text-white leading-[44px]">
             <span className="text-[40px] font-light">Design+ Build</span>
             <br />
@@ -49,7 +49,7 @@ function HomeSlider() {
           </Text>
 
           <button
-            className="mt-[20px] border border-[#FFFFFF] font-medium font-inter w-full max-w-[208px] h-[50px] text-[16px] leading-[22.4px] hover:bg-white hover:text-black hover:border-black transition duration-300 bg-transparent"
+            className="mt-[20px] mb-[160px] border border-[#FFFFFF] font-medium font-inter w-full max-w-[208px] h-[50px] text-[16px] leading-[22.4px] hover:bg-white hover:text-black hover:border-black transition duration-300 bg-transparent"
             onClick={() => scrollToSection('contactHome')}
           >
             Book Consultation
@@ -58,7 +58,7 @@ function HomeSlider() {
           <Text className="text-[20px] leading-[28px] text-[#FFFFFF] mt-5">
             Project
           </Text>
-          <Text className="text-[28px] leading-[36.4px] text-[#FFFFFF]">
+          <Text className="text-[28px] leading-[36.4px] text-[#FFFFFF] mb-[60px]">
             {slides[currentSlide]?.projectName}
           </Text>
         </div>
