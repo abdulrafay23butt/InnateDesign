@@ -1,53 +1,98 @@
-'use client';
-import React, { useEffect, useState, useRef } from 'react';
-import Navbar from '@/components/Navbar';
-import WorkSlider0 from '@/components/Work/WorkSlider0';
-import WorkSlider1 from '@/components/Work/WorkSlider1';
-import WorkSlider2 from '@/components/Work/WorkSlider2';
-import WorkSlider3 from '@/components/Work/WorkSlider3';
-import WorkSlider4 from '@/components/Work/WorkSlider4';
-import WorkSlider5 from '@/components/Work/WorkSlider5';
-import WorkSlider6 from '@/components/Work/WorkSlider6';
-import WorkSlider7 from '@/components/Work/WorkSlider7';
-import WorkSlider8 from '@/components/Work/WorkSlider8';
-import WorkSlider9 from '@/components/Work/WorkSlider9';
-import WorkSlider10 from '@/components/Work/WorkSlider10';
-import WorkSlider11 from '@/components/Work/WorkSlider11';
-import WorkSlider12 from '@/components/Work/WorkSlider12';
-import WorkSlider13 from '@/components/Work/WorkSLider13';
-import WorkSlider14 from '@/components/Work/WorkSlider14';
+'use client'
+import React, { useEffect, useState, useRef } from 'react'
+import Navbar from '@/components/Navbar'
+import dynamic from 'next/dynamic'
+
+const WorkSlider0 = dynamic(() => import('@/components/Work/WorkSlider0'), {
+  ssr: false,
+})
+const WorkSlider1 = dynamic(() => import('@/components/Work/WorkSlider1'), {
+  ssr: false,
+})
+const WorkSlider2 = dynamic(() => import('@/components/Work/WorkSlider2'), {
+  ssr: false,
+})
+const WorkSlider3 = dynamic(() => import('@/components/Work/WorkSlider3'), {
+  ssr: false,
+})
+const WorkSlider4 = dynamic(() => import('@/components/Work/WorkSlider4'), {
+  ssr: false,
+})
+const WorkSlider5 = dynamic(() => import('@/components/Work/WorkSlider5'), {
+  ssr: false,
+})
+const WorkSlider6 = dynamic(() => import('@/components/Work/WorkSlider6'), {
+  ssr: false,
+})
+const WorkSlider7 = dynamic(() => import('@/components/Work/WorkSlider7'), {
+  ssr: false,
+})
+const WorkSlider8 = dynamic(() => import('@/components/Work/WorkSlider8'), {
+  ssr: false,
+})
+const WorkSlider9 = dynamic(() => import('@/components/Work/WorkSlider9'), {
+  ssr: false,
+})
+const WorkSlider10 = dynamic(() => import('@/components/Work/WorkSlider10'), {
+  ssr: false,
+})
+const WorkSlider11 = dynamic(() => import('@/components/Work/WorkSlider11'), {
+  ssr: false,
+})
+const WorkSlider12 = dynamic(() => import('@/components/Work/WorkSlider12'), {
+  ssr: false,
+})
+const WorkSlider13 = dynamic(() => import('@/components/Work/WorkSLider13'), {
+  ssr: false,
+})
+const WorkSlider14 = dynamic(() => import('@/components/Work/WorkSlider14'), {
+  ssr: false,
+})
 
 const WorkPage = () => {
-  const [scrollY, setScrollY] = useState(0);
-  const windowHeight = typeof window !== 'undefined' ? window.innerHeight : 0;
-  const isMobile = typeof window !== 'undefined' ? window.innerWidth <= 768 : false; // Check if the device is mobile
-  const animationFrameRef = useRef<number | null>(null);
+  const [scrollY, setScrollY] = useState(0)
+  const windowHeight = typeof window !== 'undefined' ? window.innerHeight : 0
+  const isMobile =
+    typeof window !== 'undefined' ? window.innerWidth <= 768 : false // Check if the device is mobile
+  const animationFrameRef = useRef<number | null>(null)
 
   useEffect(() => {
     const smoothScroll = () => {
-      const targetScrollY = window.scrollY;
+      const targetScrollY = window.scrollY
       setScrollY((prevScrollY) => {
-        const diff = targetScrollY - prevScrollY;
-        if (Math.abs(diff) < 1) return targetScrollY;
-        return prevScrollY + diff * 0.1; // Adjust the smoothing factor (0.1) as needed
-      });
-      animationFrameRef.current = requestAnimationFrame(smoothScroll);
-    };
+        const diff = targetScrollY - prevScrollY
+        if (Math.abs(diff) < 1) return targetScrollY
+        return prevScrollY + diff * 0.1 // Adjust the smoothing factor (0.1) as needed
+      })
+      animationFrameRef.current = requestAnimationFrame(smoothScroll)
+    }
 
-    smoothScroll();
+    smoothScroll()
 
     return () => {
       if (animationFrameRef.current) {
-        cancelAnimationFrame(animationFrameRef.current);
+        cancelAnimationFrame(animationFrameRef.current)
       }
-    };
-  }, []);
+    }
+  }, [])
 
   const components = [
-    WorkSlider0, WorkSlider1, WorkSlider2, WorkSlider3, WorkSlider4, WorkSlider5,
-    WorkSlider6, WorkSlider7, WorkSlider8, WorkSlider9, WorkSlider10, WorkSlider11,
-    WorkSlider12, WorkSlider13, WorkSlider14,
-  ];
+    WorkSlider0,
+    WorkSlider1,
+    WorkSlider2,
+    WorkSlider3,
+    WorkSlider4,
+    WorkSlider5,
+    WorkSlider6,
+    WorkSlider7,
+    WorkSlider8,
+    WorkSlider9,
+    WorkSlider10,
+    WorkSlider11,
+    WorkSlider12,
+    WorkSlider13,
+    WorkSlider14,
+  ]
 
   return (
     <div>
@@ -56,8 +101,8 @@ const WorkPage = () => {
       </div>
       <div className="relative">
         {components.map((Component, index) => {
-          const start = index * windowHeight;
-          const end = (index + 1) * windowHeight * (isMobile ? 32 : 16); // Adjust multiplier based on screen size
+          const start = index * windowHeight
+          const end = (index + 1) * windowHeight * (isMobile ? 32 : 16) // Adjust multiplier based on screen size
 
           // Calculate translateY for each section
           const translateY =
@@ -65,7 +110,7 @@ const WorkPage = () => {
               ? -(scrollY - start)
               : scrollY >= end
               ? -windowHeight
-              : 0;
+              : 0
 
           return (
             <div
@@ -83,13 +128,13 @@ const WorkPage = () => {
             >
               <Component />
             </div>
-          );
+          )
         })}
       </div>
       {/* Spacer to allow scrolling */}
       <div style={{ height: `${components.length * 100}vh` }} />
     </div>
-  );
-};
+  )
+}
 
-export default WorkPage;
+export default WorkPage
