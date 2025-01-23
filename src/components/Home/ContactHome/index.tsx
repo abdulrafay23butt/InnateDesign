@@ -1,17 +1,20 @@
-import React from "react";
+import React from 'react'
 // import Image from "next/image";
 
-import Text from "@/components/ui/Text";
+import Text from '@/components/ui/Text'
 
 // import rightarrow from "@/public/images/press/RightArrowbue.png";
-import Form from "@/components/Contact/Form";
+import Form from '@/components/Contact/Form'
 
 const ContactHome = () => {
   return (
     <div className="py-36 px-32 xl:px-24 mob:px-5" id="contactHome">
       <div className="mx-auto w-full max-w-full flex justify-bewteen lg:flex-wrap gap-[200px] lg:gap-[50px] ">
         <div className="max-w-[40%] mob:max-w-[90%]">
-          <Text as="h1" className="text-[40px] text-white font-medium ">
+          <Text
+            as="h1"
+            className="text-[40px] text-white font-medium pl-10 mob:pl-0"
+          >
             Book a free consultation
           </Text>
           <Text className=" mt-4 text-[#D9D9D9]">
@@ -24,7 +27,7 @@ const ContactHome = () => {
         <Form />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ContactHome;
+export default ContactHome
